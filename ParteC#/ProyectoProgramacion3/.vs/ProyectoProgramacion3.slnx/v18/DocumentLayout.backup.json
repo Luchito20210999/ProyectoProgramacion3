@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\proyectoprogramacion3web\\components\\pages\\ventas\\ventas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\components\\pages\\ventas\\ventas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\proyectoprogramacion3web\\components\\pages\\ventas\\ventas.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\components\\pages\\ventas\\ventas.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\proyectoprogramacion3web\\components\\pages\\reclamos\\reclamos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\components\\pages\\reclamos\\reclamos.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\proyectoprogramacion3web\\components\\pages\\servicios\\servicios.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\components\\pages\\servicios\\servicios.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\proyectoprogramacion3web\\components\\pages\\servicios\\servicios.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\components\\pages\\servicios\\servicios.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\proyectoprogramacion3web\\components\\pages\\clientes\\clientes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\components\\pages\\clientes\\clientes.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\proyectoprogramacion3web\\components\\pages\\reservas\\reservas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\components\\pages\\reservas\\reservas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Ventas.razor.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Ventas\\Ventas.razor.cs",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\Components\\Pages\\Ventas\\Ventas.razor.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Ventas\\Ventas.razor.cs",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\Components\\Pages\\Ventas\\Ventas.razor.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAkwEwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T21:46:45.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Ventas.razor",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Ventas\\Ventas.razor",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\Components\\Pages\\Ventas\\Ventas.razor",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Ventas\\Ventas.razor",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\Components\\Pages\\Ventas\\Ventas.razor",
+              "ViewState": "AgIAAE8AAAAAAAAAAAAuwGkAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-30T20:15:28.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Reclamos.razor",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Reclamos\\Reclamos.razor",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\Components\\Pages\\Reclamos\\Reclamos.razor",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Reclamos\\Reclamos.razor",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\Components\\Pages\\Reclamos\\Reclamos.razor",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwCYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-30T19:23:03.054Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Servicios.razor.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Servicios\\Servicios.razor.cs",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\Components\\Pages\\Servicios\\Servicios.razor.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Servicios\\Servicios.razor.cs",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\Components\\Pages\\Servicios\\Servicios.razor.cs",
+              "ViewState": "AgIAAOMAAAAAAAAAAAAzwPgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-30T18:53:03.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Servicios.razor",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Servicios\\Servicios.razor",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\Components\\Pages\\Servicios\\Servicios.razor",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Servicios\\Servicios.razor",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\Components\\Pages\\Servicios\\Servicios.razor",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAACkAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-30T18:50:44.286Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Clientes.razor",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Clientes\\Clientes.razor",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\Components\\Pages\\Clientes\\Clientes.razor",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Clientes\\Clientes.razor",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\Components\\Pages\\Clientes\\Clientes.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-30T18:22:37.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Reservas.razor",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Reservas\\Reservas.razor",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\Components\\Pages\\Reservas\\Reservas.razor",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Reservas\\Reservas.razor",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\Components\\Pages\\Reservas\\Reservas.razor",
+              "ViewState": "AgIAALEAAAAAAAAAAAAAAMkAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-05-30T17:48:42.284Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

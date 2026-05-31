@@ -1,0 +1,64 @@
+@page "/notificaciones"
+@namespace ProyectoProgramacion3Web.Components.Pages.Notificaciones
+
+<PageTitle>Notificaciones - SACR</PageTitle>
+
+<div class="notificaciones-container">
+    <!-- Encabezado de la página -->
+    <div class="notificaciones-header">
+        <div class="header-titles">
+            <h1 class="notificaciones-title">Notificaciones</h1>
+            <p class="notificaciones-subtitle">Eventos del sistema y alertas operativas.</p>
+        </div>
+        <div class="header-actions">
+            <button class="btn btn-secondary" @onclick="MarcarTodasLeidas">
+                Marcar todas como leídas
+            </button>
+        </div>
+    </div>
+    
+    <!-- Contenedor principal de notificaciones (Bandeja continua) -->
+    <div class="notifications-card">
+        <div class="notifications-list">
+            @if (ListadoNotificaciones != null && ListadoNotificaciones.Any())
+            {
+                @foreach (var notif in ListadoNotificaciones)
+                {
+                    <div class="notification-row @(notif.Leido ? "read" : "unread")">
+                        <!-- Icono circular a la izquierda -->
+                        <div class="notif-circle-wrapper">
+                            <div class="notif-circle @notif.ColorClase">
+                                <span class="circle-icon">@notif.Icono</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Bloque de contenido al centro -->
+                        <div class="notif-content">
+                            <div class="notif-header-row">
+                                <span class="notif-title">@notif.Titulo</span>
+                                <span class="notif-time">@notif.FechaHora</span>
+                            </div>
+                            <p class="notif-desc">@notif.Descripcion</p>
+                        </div>
+                        
+                        <!-- Botón de acción a la derecha (si aplica) -->
+                        <div class="notif-action-col">
+                            @if (notif.TieneAccion)
+                            {
+                                <button class="btn-notif-action" @onclick="() => AtenderNotificacion(notif)">Atender</button>
+                            }
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="empty-state">
+                    <div style="font-size: 3rem; margin-bottom: 0.5rem;">🔔</div>
+                    <h3>Bandeja vacía</h3>
+                    <p>No tienes notificaciones ni alertas operativas pendientes en este momento.</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>

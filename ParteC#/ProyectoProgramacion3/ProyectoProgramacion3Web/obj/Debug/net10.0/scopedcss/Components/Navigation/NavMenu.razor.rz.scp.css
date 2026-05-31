@@ -1,0 +1,258 @@
+.nav-sidebar[b-6l7k4i2lmn] {
+    background-color: #0f172a;
+    color: rgba(255, 255, 255, 0.9);
+    width: 280px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    overflow-y: auto;
+    z-index: 100;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.nav-brand[b-6l7k4i2lmn] {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1.5rem 2rem;
+    font-weight: 700;
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.nav-logo-icon[b-6l7k4i2lmn] {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    display: grid;
+    place-items: center;
+    font-weight: 800;
+    font-size: 1.1rem;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-logo-text[b-6l7k4i2lmn] {
+    color: #ffffff;
+}
+
+.nav-menu[b-6l7k4i2lmn] {
+    flex: 1;
+    padding: 1.5rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.nav-group[b-6l7k4i2lmn] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.nav-group-title[b-6l7k4i2lmn] {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #64748b;
+    letter-spacing: 0.08em;
+    padding-left: 0.75rem;
+}
+
+.nav-list[b-6l7k4i2lmn] {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.nav-item[b-6l7k4i2lmn] {
+    margin: 0;
+}
+
+[b-6l7k4i2lmn] .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0.75rem;
+    color: #cbd5e1;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+[b-6l7k4i2lmn] .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #ffffff;
+}
+
+[b-6l7k4i2lmn] .nav-link.active {
+    background-color: rgba(14, 165, 233, 0.15);
+    color: #0ea5e9;
+    font-weight: 600;
+}
+
+.nav-icon[b-6l7k4i2lmn] {
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+}
+
+.nav-text[b-6l7k4i2lmn] {
+    white-space: nowrap;
+}
+
+/* Tratamiento visual para el botón de Cerrar sesión en el sidebar */
+.btn-logout-nav[b-6l7k4i2lmn] {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.65rem 0.75rem;
+    color: #cbd5e1;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.btn-logout-nav:hover[b-6l7k4i2lmn] {
+    background-color: rgba(239, 68, 68, 0.1) !important;
+    color: #ef4444 !important;
+}
+
+/* Modales de Confirmación de Cierre de Sesión (Doble Confirmación) */
+.logout-backdrop[b-6l7k4i2lmn] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(15, 23, 42, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    backdrop-filter: blur(2px);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.logout-modal-window[b-6l7k4i2lmn] {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    width: 380px;
+    max-width: 90%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    animation: logoutModalSlide-b-6l7k4i2lmn 0.2s ease-out;
+}
+
+@keyframes logoutModalSlide-b-6l7k4i2lmn {
+    from {
+        opacity: 0;
+        transform: scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.logout-modal-header[b-6l7k4i2lmn] {
+    padding: 1.25rem 1.5rem 0.75rem 1.5rem;
+}
+
+.logout-modal-header h3[b-6l7k4i2lmn] {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.logout-modal-header.danger-header h3[b-6l7k4i2lmn] {
+    color: #b91c1c;
+}
+
+.logout-modal-body[b-6l7k4i2lmn] {
+    padding: 0 1.5rem 1.25rem 1.5rem;
+}
+
+.logout-modal-body p[b-6l7k4i2lmn] {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.5;
+}
+
+.logout-modal-body p.critical-text[b-6l7k4i2lmn] {
+    font-weight: 600;
+    color: #0f172a;
+}
+
+.logout-modal-footer[b-6l7k4i2lmn] {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem 1.25rem 1.5rem;
+    background-color: #f8fafc;
+    border-top: 1px solid #f1f5f9;
+}
+
+.btn-logout-modal[b-6l7k4i2lmn] {
+    padding: 0.5rem 1.1rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.15s ease;
+    box-sizing: border-box;
+}
+
+.btn-cancel-action[b-6l7k4i2lmn] {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #475569;
+}
+
+.btn-cancel-action:hover[b-6l7k4i2lmn] {
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+.btn-confirm-action[b-6l7k4i2lmn] {
+    background-color: #0ea5e9;
+    color: #ffffff;
+}
+
+.btn-confirm-action:hover[b-6l7k4i2lmn] {
+    background-color: #0284c7;
+}
+
+.btn-danger-action[b-6l7k4i2lmn] {
+    background-color: #ef4444;
+    color: #ffffff;
+}
+
+.btn-danger-action:hover[b-6l7k4i2lmn] {
+    background-color: #dc2626;
+}

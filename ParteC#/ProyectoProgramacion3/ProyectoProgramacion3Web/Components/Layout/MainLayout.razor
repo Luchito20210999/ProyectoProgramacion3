@@ -1,0 +1,28 @@
+@inherits LayoutComponentBase
+@namespace ProyectoProgramacion3Web.Components.Layout
+@using ProyectoProgramacion3Web.Components.Navigation
+
+<div class="app-container">
+    <NavMenu />
+    
+    <div class="content-container">
+        <header class="top-bar">
+            <div class="top-bar-user">
+                <span class="user-role">@Session.Role</span>
+                <div class="user-avatar" title="@Session.Username">
+                    @Session.Initials
+                </div>
+            </div>
+        </header>
+        
+        <main class="page-body">
+            @Body
+        </main>
+    </div>
+</div>
+
+<div id="blazor-error-ui" data-nosnippet>
+    An unhandled error has occurred.
+    <a href="." class="reload">Reload</a>
+    <span class="dismiss">🗙</span>
+</div>
