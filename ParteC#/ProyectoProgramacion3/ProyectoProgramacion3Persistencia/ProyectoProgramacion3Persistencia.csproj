@@ -11,8 +11,4 @@
     <ProjectReference Include="..\ProyectoProgramacion3Model\ProyectoProgramacion3Model.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="DAO\" />
-  </ItemGroup>
-
 </Project>

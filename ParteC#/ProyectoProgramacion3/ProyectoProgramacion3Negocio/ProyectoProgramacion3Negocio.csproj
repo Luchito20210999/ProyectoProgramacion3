@@ -10,8 +10,4 @@
     <ProjectReference Include="..\ProyectoProgramacion3Persistencia\ProyectoProgramacion3Persistencia.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="BO\" />
-  </ItemGroup>
-
 </Project>
