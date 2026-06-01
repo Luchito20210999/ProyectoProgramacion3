@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\basedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\basedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -171,10 +175,6 @@
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\auth\\usuariodaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\basedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\basedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\transactionsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\transactionsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -194,11 +194,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsettings.json",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\appsettings.json",
@@ -211,20 +211,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsettings.Development.json",
-              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsettings.Development.json",
-              "RelativeToolTip": "ProyectoProgramacion3Web\\appsettings.Development.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-06-01T15:58:35.536Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ReporteReclamoBOImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteReclamoBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteReclamoBOImpl.cs",
@@ -232,12 +219,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteReclamoBOImpl.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:53:24.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:53:24.826Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "ReporteVentasBOImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteVentasBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteVentasBOImpl.cs",
@@ -245,12 +231,36 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteVentasBOImpl.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwAgAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:54:23.591Z",
+              "WhenOpened": "2026-06-01T15:54:23.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BaseDao.cs",
+              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\BaseDao.cs",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\BaseDao.cs",
+              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\BaseDao.cs",
+              "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\BaseDao.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI4AAABTAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-01T15:18:22.832Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsettings.Development.json",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-01T15:58:35.536Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "IReporteVentasBO.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteVentasBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteVentasBO.cs",
@@ -258,12 +268,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteVentasBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:53:19.22Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:53:19.22Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ClienteBOImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\crm\\ClienteBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\crm\\ClienteBOImpl.cs",
@@ -271,12 +280,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\crm\\ClienteBOImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:48:17.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:48:17.684Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "IReservaBO.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\IReservaBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reservas\\IReservaBO.cs",
@@ -284,12 +292,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reservas\\IReservaBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:55:26.551Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:55:26.551Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "IServicioBO.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\IServicioBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reservas\\IServicioBO.cs",
@@ -297,12 +304,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reservas\\IServicioBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:55:39.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:55:39.522Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "ReservaBOImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\ReservaBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reservas\\ReservaBOImpl.cs",
@@ -310,12 +316,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reservas\\ReservaBOImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:56:05.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:56:05.889Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ServicioBOImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\ServicioBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reservas\\ServicioBOImpl.cs",
@@ -323,12 +328,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reservas\\ServicioBOImpl.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:57:35.624Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:57:35.624Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "IReporteReclamoBO.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteReclamoBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteReclamoBO.cs",
@@ -336,12 +340,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteReclamoBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:52:57.062Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:52:57.062Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ReclamoBOImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reclamos\\ReclamoBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reclamos\\ReclamoBOImpl.cs",
@@ -349,12 +352,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reclamos\\ReclamoBOImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:52:15.549Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:52:15.549Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "IReclamoBO.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reclamos\\IReclamoBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reclamos\\IReclamoBO.cs",
@@ -362,12 +364,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reclamos\\IReclamoBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:52:04.185Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:52:04.185Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "NotificacionBOImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\notificaciones\\NotificacionBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\notificaciones\\NotificacionBOImpl.cs",
@@ -375,12 +376,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\notificaciones\\NotificacionBOImpl.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAkwAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:51:05.744Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:51:05.744Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "INotificacionBO.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\notificaciones\\INotificacionBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\notificaciones\\INotificacionBO.cs",
@@ -388,12 +388,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\notificaciones\\INotificacionBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:50:36.694Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:50:36.694Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "UsuarioBOImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auth\\UsuarioBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\auth\\UsuarioBOImpl.cs",
@@ -401,12 +400,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\auth\\UsuarioBOImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:47:17.953Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:47:17.953Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "IUsuarioBO.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auth\\IUsuarioBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\auth\\IUsuarioBO.cs",
@@ -414,12 +412,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\auth\\IUsuarioBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:46:59.553Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:46:59.553Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "IClienteBO.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\crm\\IClienteBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\crm\\IClienteBO.cs",
@@ -427,12 +424,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\crm\\IClienteBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:48:51.826Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:48:51.826Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "LogAuditoriaBOImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auditoria\\LogAuditoriaBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\auditoria\\LogAuditoriaBOImpl.cs",
@@ -440,12 +436,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\auditoria\\LogAuditoriaBOImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:45:10.996Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:45:10.996Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "ILogAuditoriaBO.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auditoria\\ILogAuditoriaBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\auditoria\\ILogAuditoriaBO.cs",
@@ -453,12 +448,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\auditoria\\ILogAuditoriaBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:44:35.81Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:44:35.81Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "IGestionable.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\IGestionable.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\IGestionable.cs",
@@ -466,12 +460,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\IGestionable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:43:02.267Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:43:02.267Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "BaseBo.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\BaseBo.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\BaseBo.cs",
@@ -479,12 +472,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\BaseBo.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAgwAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:42:49.67Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:42:49.67Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "ReclamoDaoImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reclamos\\ReclamoDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reclamos\\ReclamoDaoImpl.cs",
@@ -492,12 +484,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reclamos\\ReclamoDaoImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:23:24.922Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:23:24.922Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "IReclamoDao.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reclamos\\IReclamoDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reclamos\\IReclamoDao.cs",
@@ -505,12 +496,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reclamos\\IReclamoDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:22:50.605Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:22:50.605Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "IClienteDao.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\crm\\IClienteDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\crm\\IClienteDao.cs",
@@ -518,12 +508,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\crm\\IClienteDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:22:03.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:22:03.094Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "ClienteDaoImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\crm\\ClienteDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\crm\\ClienteDaoImpl.cs",
@@ -531,12 +520,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\crm\\ClienteDaoImpl.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAAAwwAQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:22:01.521Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:22:01.521Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "INotificacionDao.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\INotificacionDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\INotificacionDao.cs",
@@ -544,12 +532,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\INotificacionDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:22:25.242Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:22:25.242Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "NotificacionDaoImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\NotificacionDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\NotificacionDaoImpl.cs",
@@ -557,12 +544,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\NotificacionDaoImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:22:31.379Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:22:31.379Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "IReporteVentasDao.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteVentasDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteVentasDao.cs",
@@ -570,12 +556,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteVentasDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:24:19.916Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:24:19.916Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "ReporteVentasDaoImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteVentasDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteVentasDaoImpl.cs",
@@ -583,12 +568,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteVentasDaoImpl.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:24:40.182Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:24:40.182Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 31,
               "Title": "ReporteReclamoDaoImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteReclamoDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteReclamoDaoImpl.cs",
@@ -596,12 +580,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteReclamoDaoImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:24:29.772Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:24:29.772Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 32,
               "Title": "DetalleReservaDaoImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\DetalleReservaDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\DetalleReservaDaoImpl.cs",
@@ -609,12 +592,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\DetalleReservaDaoImpl.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAYwAgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:24:54.372Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:24:54.372Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 33,
               "Title": "IDetalleReservaDao.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\IDetalleReservaDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\IDetalleReservaDao.cs",
@@ -622,12 +604,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\IDetalleReservaDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:25:01.592Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:25:01.592Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 34,
               "Title": "IReservaDao.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\IReservaDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\IReservaDao.cs",
@@ -635,12 +616,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\IReservaDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:25:07.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:25:07.855Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 35,
               "Title": "IServicioDao.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\IServicioDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\IServicioDao.cs",
@@ -648,12 +628,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\IServicioDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:25:23.453Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:25:23.453Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 36,
               "Title": "ReservaDaoImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\ReservaDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\ReservaDaoImpl.cs",
@@ -661,12 +640,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\ReservaDaoImpl.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAgwAQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:25:43.485Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:25:43.485Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 37,
               "Title": "ServicioDaoImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\ServicioDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\ServicioDaoImpl.cs",
@@ -674,12 +652,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\ServicioDaoImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:26:10.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:26:10.385Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 38,
               "Title": "IReporteReclamoDao.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteReclamoDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteReclamoDao.cs",
@@ -687,12 +664,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteReclamoDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:23:57.045Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:23:57.045Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 42,
               "Title": "UsuarioDaoImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auth\\UsuarioDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\auth\\UsuarioDaoImpl.cs",
@@ -700,12 +676,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\auth\\UsuarioDaoImpl.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAgwA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:21:21.59Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:21:21.59Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 41,
               "Title": "IUsuarioDao.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auth\\IUsuarioDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\auth\\IUsuarioDao.cs",
@@ -713,12 +688,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\auth\\IUsuarioDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:20:22.396Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:20:22.396Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 40,
               "Title": "LogAuditoriaDaoImpl.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auditoria\\LogAuditoriaDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\auditoria\\LogAuditoriaDaoImpl.cs",
@@ -726,12 +700,11 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\auditoria\\LogAuditoriaDaoImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:16:01.191Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:16:01.191Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 39,
               "Title": "ILogAuditoriaDao.cs",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auditoria\\ILogAuditoriaDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\auditoria\\ILogAuditoriaDao.cs",
@@ -739,21 +712,7 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\auditoria\\ILogAuditoriaDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:15:59.296Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 42,
-              "Title": "BaseDao.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\BaseDao.cs",
-              "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\BaseDao.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\BaseDao.cs",
-              "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\BaseDao.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAADwv44AAABTAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:18:22.832Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:15:59.296Z"
             },
             {
               "$type": "Document",
@@ -765,8 +724,7 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\TransactionsManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:19:39.024Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:19:39.024Z"
             },
             {
               "$type": "Document",
@@ -778,8 +736,7 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\IPersistible.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:19:25.672Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:19:25.672Z"
             },
             {
               "$type": "Document",
@@ -791,8 +748,7 @@
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\DefaultBaseDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-01T15:19:20.766Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-01T15:19:20.766Z"
             }
           ]
         }

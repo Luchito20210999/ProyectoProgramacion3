@@ -1,0 +1,6 @@
+db.host=
+db.puerto=
+db.esquema=
+db.usuario=
+db.password=
+db.tipo=
