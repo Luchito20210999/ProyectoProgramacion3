@@ -1,46 +1,32 @@
 package pe.edu.pucp.proyectopro3.dao.reservas;
 
 import pe.edu.pucp.proyectopro3.dao.DefaultBaseDAO;
-import pe.edu.pucp.proyectopro3.modelo.reclamos.EstadoReclamo;
 import pe.edu.pucp.proyectopro3.modelo.reservas.EstadoReserva;
 import pe.edu.pucp.proyectopro3.modelo.reservas.Reserva;
 
 import java.sql.*;
+import java.util.Date;
 
 public class ReservaDAOImpl extends DefaultBaseDAO<Reserva> implements ReservaDAO {
 
     @Override
     protected PreparedStatement comandoCrear(Connection conn, Reserva modelo) throws SQLException {
-        // Procedimiento: sp_InsertReserva(_fReg, _est, _cant, _tot, _fMod, _can, _imp, _idCli)
-        String sql = "{call sp_InsertReserva(?, ?, ?, ?, ?, ?, ?, ?)}";
+        String sql = "{call sp_InsertReserva(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
 
-        cmd.setDate(1, (Date) modelo.getFechaRegistro());
-        cmd.setString(2, modelo.getEstadoReserva().name());
-        cmd.setInt(3, modelo.getCantidadBoletos());
-        cmd.setDouble(4, modelo.getMontoTotal());
-        cmd.setDate(5, new java.sql.Date(modelo.getFechaUltimaModificacion().getTime()));
-        cmd.setString(6, modelo.getCanalVenta());
-        cmd.setDouble(7, modelo.getMontoImpuestos());
-        cmd.setInt(8, modelo.getIdCliente());
+        setCamposReserva(cmd, modelo, 1);
+        cmd.registerOutParameter(11, Types.INTEGER);
+
         return cmd;
     }
 
     @Override
     protected PreparedStatement comandoActualizar(Connection conn, Reserva modelo) throws SQLException {
-        // Procedimiento: sp_UpdateReserva(_id, _fReg, _est, _cant, _tot, _fMod, _can, _imp, _idCli)
-        String sql = "{call sp_UpdateReserva(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+        String sql = "{call sp_UpdateReserva(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
 
         cmd.setInt(1, modelo.getIdReserva());
-        cmd.setDate(2, new java.sql.Date(modelo.getFechaRegistro().getTime()));
-        cmd.setString(3, modelo.getEstadoReserva().name());
-        cmd.setInt(4, modelo.getCantidadBoletos());
-        cmd.setDouble(5, modelo.getMontoTotal());
-        cmd.setDate(6, new java.sql.Date(modelo.getFechaUltimaModificacion().getTime()));
-        cmd.setString(7, modelo.getCanalVenta());
-        cmd.setDouble(8, modelo.getMontoImpuestos());
-        cmd.setInt(9, modelo.getIdCliente());
+        setCamposReserva(cmd, modelo, 2);
 
         return cmd;
     }
@@ -55,34 +41,73 @@ public class ReservaDAOImpl extends DefaultBaseDAO<Reserva> implements ReservaDA
 
     @Override
     protected PreparedStatement comandoLeer(Connection conn, Integer id) throws SQLException {
-        // Búsqueda individual por ID (asumiendo SELECT estándar o un SP de búsqueda)
-        String sql = "SELECT * FROM Reserva WHERE idReserva = ?";
-        PreparedStatement cmd = conn.prepareStatement(sql);
+        String sql = "{call sp_ListReservaById(?)}";
+        CallableStatement cmd = conn.prepareCall(sql);
         cmd.setInt(1, id);
         return cmd;
     }
 
     @Override
     protected PreparedStatement comandoLeerTodos(Connection conn) throws SQLException {
-        String sql = "{call sp_ListReservas()}";
+        String sql = "{call spListReservas()}";
         return conn.prepareCall(sql);
+    }
+
+    @Override
+    protected Integer extraerIdDesdeCallable(CallableStatement cmd) throws SQLException {
+        return cmd.getInt(11);
+    }
+
+    @Override
+    protected Integer extraerIdDesdeGeneratedKeys(ResultSet rs) throws SQLException {
+        return rs.getInt(1);
     }
 
     @Override
     protected Reserva mapearModelo(ResultSet rs) throws SQLException {
         Reserva reserva = new Reserva();
 
-        reserva.setIdReserva(rs.getInt("idReserva"));
-        reserva.setFechaRegistro(rs.getDate("fechaRegistro"));
-        reserva.setEstadoReserva(EstadoReserva.valueOf(rs.getString("estadoReserva")));
-        String estadoStr = rs.getString("estadoReserva");
-        reserva.setCantidadBoletos(rs.getInt("cantidadBoletos"));
-        reserva.setMontoTotal(rs.getDouble("montoTotal"));
-        reserva.setFechaUltimaModificacion(rs.getDate("fechaUltimaModificacion"));
-        reserva.setCanalVenta(rs.getString("canalVenta"));
-        reserva.setMontoImpuestos(rs.getDouble("montoImpuestos"));
-        reserva.setIdCliente(rs.getInt("idCliente"));
+        reserva.setIdReserva(rs.getInt("id_reserva"));
+        reserva.setFechaRegistro(rs.getTimestamp("fecha_registro"));
+        reserva.setEstadoReserva(EstadoReserva.valueOf(rs.getString("estado_reserva")));
+        reserva.setCantidadBoletos(rs.getInt("cantidad_boletos"));
+        reserva.setMontoTotal(rs.getDouble("monto_total"));
+        reserva.setFechaUltimaModificacion(rs.getTimestamp("fecha_ultima_modif"));
+        reserva.setCanalVenta(rs.getString("canal_venta"));
+        reserva.setMontoImpuestos(rs.getDouble("monto_impuestos"));
+        reserva.setCodigoBokun(rs.getString("codigo_bokun"));
+        reserva.setIdUsuario(rs.getInt("id_usuario"));
+        reserva.setIdCliente(rs.getInt("id_cliente"));
 
         return reserva;
+    }
+
+    private void setCamposReserva(CallableStatement cmd, Reserva modelo, int inicio) throws SQLException {
+        setTimestamp(cmd, inicio, modelo.getFechaRegistro());
+        cmd.setString(inicio + 1, modelo.getEstadoReserva().name());
+        cmd.setInt(inicio + 2, modelo.getCantidadBoletos());
+        cmd.setDouble(inicio + 3, modelo.getMontoTotal());
+        setTimestamp(cmd, inicio + 4, modelo.getFechaUltimaModificacion());
+        cmd.setString(inicio + 5, modelo.getCanalVenta());
+        cmd.setDouble(inicio + 6, modelo.getMontoImpuestos());
+        cmd.setString(inicio + 7, modelo.getCodigoBokun());
+        setIdUsuario(cmd, inicio + 8, modelo.getIdUsuario());
+        cmd.setInt(inicio + 9, modelo.getIdCliente());
+    }
+
+    private void setTimestamp(CallableStatement cmd, int index, Date value) throws SQLException {
+        if (value == null) {
+            cmd.setNull(index, Types.TIMESTAMP);
+        } else {
+            cmd.setTimestamp(index, new Timestamp(value.getTime()));
+        }
+    }
+
+    private void setIdUsuario(CallableStatement cmd, int index, int idUsuario) throws SQLException {
+        if (idUsuario <= 0) {
+            cmd.setNull(index, Types.INTEGER);
+        } else {
+            cmd.setInt(index, idUsuario);
+        }
     }
 }

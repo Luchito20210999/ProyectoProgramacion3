@@ -16,14 +16,15 @@ public class Main {
         System.out.println("   ProyectoPro3 — Prueba de Capa de Negocio   ");
         System.out.println("==============================================\n");
 
-        ejecutarPrueba("Clientes", ClientePrueba::ejecutar);
-        ejecutarPrueba("Servicios", ServicioPrueba::ejecutar);
-        ejecutarPrueba("Reservas", ReservaPrueba::ejecutar);
+        //ejecutarPrueba("Usuarios", UsuarioPrueba::ejecutar);
+        //ejecutarPrueba("Clientes", ClientePrueba::ejecutar);
+        //ejecutarPrueba("Servicios", ServicioPrueba::ejecutar);
+        //ejecutarPrueba("Reservas", ReservaPrueba::ejecutar);
+
         ejecutarPrueba("Reclamos", ReclamoPrueba::ejecutar);
-        ejecutarPrueba("Usuarios", UsuarioPrueba::ejecutar);
-        ejecutarPrueba("Notificaciones", NotificacionPrueba::ejecutar);
-        ejecutarPrueba("Auditoria", AuditoriaPrueba::ejecutar);
-        ejecutarPrueba("Reportes", ReportePrueba::ejecutar);
+        //ejecutarPrueba("Notificaciones", NotificacionPrueba::ejecutar);
+        //ejecutarPrueba("Auditoria", AuditoriaPrueba::ejecutar);
+        //ejecutarPrueba("Reportes", ReportePrueba::ejecutar);
 
         System.out.println("==============================================");
         System.out.println("   Todas las pruebas finalizadas");

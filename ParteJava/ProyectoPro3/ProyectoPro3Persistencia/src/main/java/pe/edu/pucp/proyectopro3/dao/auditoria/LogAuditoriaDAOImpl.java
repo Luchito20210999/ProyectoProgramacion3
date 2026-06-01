@@ -9,13 +9,14 @@ public class LogAuditoriaDAOImpl extends DefaultBaseDAO<LogAuditoria> implements
 
     @Override
     protected PreparedStatement comandoCrear(Connection conn, LogAuditoria modelo) throws SQLException {
-        String sql = "{call sp_InsertLogAuditoria(?, ?, ?, ?, ?)}";
+        String sql = "{call sp_InsertLogAuditoria(?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
         cmd.setString(1, modelo.getDescripcion());
         cmd.setString(2, modelo.getAccion());
         cmd.setTimestamp(3, new java.sql.Timestamp(modelo.getFechaRegistro().getTime()));
         cmd.setString(4, modelo.getOrigenAccion());
         cmd.setInt(5, modelo.getIdUsuario());
+        cmd.registerOutParameter(6, Types.INTEGER);
 
         return cmd;
     }
@@ -32,17 +33,26 @@ public class LogAuditoriaDAOImpl extends DefaultBaseDAO<LogAuditoria> implements
 
     @Override
     protected PreparedStatement comandoLeer(Connection conn, Integer id) throws SQLException {
-        String sql = "SELECT * FROM LogAuditoria WHERE idLogAuditoria = ?";
-        PreparedStatement cmd = conn.prepareStatement(sql);
+        String sql = "{call sp_ListLogAuditoriaById(?)}";
+        CallableStatement cmd = conn.prepareCall(sql);
         cmd.setInt(1, id);
         return cmd;
     }
 
     @Override
     protected PreparedStatement comandoLeerTodos(Connection conn) throws SQLException {
-        // sp_ListLogAuditoria()
-        String sql = "{call sp_ListLogAuditoria()}";
+        String sql = "{call spListLogAuditoria()}";
         return conn.prepareCall(sql);
+    }
+
+    @Override
+    protected Integer extraerIdDesdeCallable(CallableStatement cmd) throws SQLException {
+        return cmd.getInt(6);
+    }
+
+    @Override
+    protected Integer extraerIdDesdeGeneratedKeys(ResultSet rs) throws SQLException {
+        return rs.getInt(1);
     }
 
     @Override
@@ -54,7 +64,6 @@ public class LogAuditoriaDAOImpl extends DefaultBaseDAO<LogAuditoria> implements
         log.setAccion(rs.getString("accion"));
         log.setFechaRegistro(rs.getTimestamp("fecha_registro"));
         log.setOrigenAccion(rs.getString("origenAccion"));
-        log.setIdUsuario(rs.getInt("id_usuario"));
         int idUsu = rs.getInt("id_usuario");
         if (!rs.wasNull()) {
             log.setIdUsuario(idUsu);

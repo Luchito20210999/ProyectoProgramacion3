@@ -25,7 +25,7 @@ public class Crypto {
     }
 
     public static void main(String[] args) throws Exception {
-        String password = "olas";
+        String password = "contra_pro3_salchipapa";
         System.out.println(encrypt(password));
     }
 }

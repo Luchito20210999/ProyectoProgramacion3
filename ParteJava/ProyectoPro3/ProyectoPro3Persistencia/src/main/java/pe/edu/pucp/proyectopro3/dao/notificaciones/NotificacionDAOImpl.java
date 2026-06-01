@@ -2,7 +2,6 @@ package pe.edu.pucp.proyectopro3.dao.notificaciones;
 
 import pe.edu.pucp.proyectopro3.dao.DefaultBaseDAO;
 import pe.edu.pucp.proyectopro3.modelo.notificaciones.Notificacion;
-import pe.edu.pucp.proyectopro3.modelo.notificaciones.TipoEvento;
 
 import java.sql.*;
 
@@ -10,15 +9,11 @@ public class NotificacionDAOImpl extends DefaultBaseDAO<Notificacion> implements
 
     @Override
     protected PreparedStatement comandoCrear(Connection conn, Notificacion modelo) throws SQLException {
-        String sql = "{call sp_InsertNotificacion(?, ?, ?, ?, ?)}";
+        String sql = "{call sp_InsertNotificacion(?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
 
-        cmd.setString(1, modelo.getMensaje());
-        cmd.setString(2, modelo.getTipoNotificacion());
-        cmd.setTimestamp(3, new java.sql.Timestamp(modelo.getFechaEnvio().getTime()));
-        cmd.setBoolean(4, modelo.isLeido());
-        cmd.setInt(5, modelo.getIdUsuario());
-        cmd.setString(6,modelo.getTipoEvento().name());
+        setCamposNotificacion(cmd, modelo, 1);
+        cmd.registerOutParameter(6, Types.INTEGER);
 
         return cmd;
     }
@@ -29,12 +24,7 @@ public class NotificacionDAOImpl extends DefaultBaseDAO<Notificacion> implements
         CallableStatement cmd = conn.prepareCall(sql);
 
         cmd.setInt(1, modelo.getIdNotificacion());
-        cmd.setString(2, modelo.getMensaje());
-        cmd.setString(3, modelo.getTipoNotificacion());
-        cmd.setTimestamp(4, new java.sql.Timestamp(modelo.getFechaEnvio().getTime()));
-        cmd.setBoolean(5, modelo.isLeido());
-        cmd.setInt(6, modelo.getIdUsuario());
-        cmd.setString(7,modelo.getTipoEvento().name());
+        setCamposNotificacion(cmd, modelo, 2);
 
         return cmd;
     }
@@ -49,16 +39,26 @@ public class NotificacionDAOImpl extends DefaultBaseDAO<Notificacion> implements
 
     @Override
     protected PreparedStatement comandoLeer(Connection conn, Integer id) throws SQLException {
-        String sql = "SELECT * FROM Notificacion WHERE idNotificacion = ?";
-        PreparedStatement cmd = conn.prepareStatement(sql);
+        String sql = "{call sp_ListNotificacionById(?)}";
+        CallableStatement cmd = conn.prepareCall(sql);
         cmd.setInt(1, id);
         return cmd;
     }
 
     @Override
     protected PreparedStatement comandoLeerTodos(Connection conn) throws SQLException {
-        String sql = "{call sp_ListNotificacion()}";
+        String sql = "{call spListNotificaciones()}";
         return conn.prepareCall(sql);
+    }
+
+    @Override
+    protected Integer extraerIdDesdeCallable(CallableStatement cmd) throws SQLException {
+        return cmd.getInt(6);
+    }
+
+    @Override
+    protected Integer extraerIdDesdeGeneratedKeys(ResultSet rs) throws SQLException {
+        return rs.getInt(1);
     }
 
     @Override
@@ -68,11 +68,28 @@ public class NotificacionDAOImpl extends DefaultBaseDAO<Notificacion> implements
         notificacion.setIdNotificacion(rs.getInt("id_notificacion"));
         notificacion.setMensaje(rs.getString("mensaje"));
         notificacion.setTipoNotificacion(rs.getString("tipo_notificacion"));
-        notificacion.setFechaEnvio(rs.getDate("fecha_envio"));
-        notificacion.setLeido(rs.getBoolean("leido"));
+        notificacion.setFechaEnvio(rs.getTimestamp("fecha_envio"));
+        notificacion.setLeido("Y".equalsIgnoreCase(rs.getString("leido")));
         notificacion.setIdUsuario(rs.getInt("id_usuario"));
-        notificacion.setTipoEvento(TipoEvento.valueOf(rs.getString("tipo_evento")));
 
         return notificacion;
+    }
+
+    private void setCamposNotificacion(CallableStatement cmd, Notificacion modelo, int inicio) throws SQLException {
+        cmd.setString(inicio, modelo.getMensaje());
+        cmd.setString(inicio + 1, obtenerTipoNotificacion(modelo));
+        cmd.setTimestamp(inicio + 2, new java.sql.Timestamp(modelo.getFechaEnvio().getTime()));
+        cmd.setString(inicio + 3, modelo.isLeido() ? "Y" : "N");
+        cmd.setInt(inicio + 4, modelo.getIdUsuario());
+    }
+
+    private String obtenerTipoNotificacion(Notificacion modelo) {
+        if (modelo.getTipoNotificacion() != null && !modelo.getTipoNotificacion().isBlank()) {
+            return modelo.getTipoNotificacion();
+        }
+        if (modelo.getTipoEvento() != null) {
+            return modelo.getTipoEvento().name();
+        }
+        return "GENERAL";
     }
 }

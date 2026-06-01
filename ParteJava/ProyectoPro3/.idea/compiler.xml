@@ -8,9 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ProyectoPro3Modelo" />
         <module name="ProyectoPro3Negocio" />
+        <module name="ProyectoPro3App" />
         <module name="ProyectoPro3DBManager" />
         <module name="ProyectoPro3Persistencia" />
-        <module name="ProyectoPro3App" />
       </profile>
     </annotationProcessing>
   </component>

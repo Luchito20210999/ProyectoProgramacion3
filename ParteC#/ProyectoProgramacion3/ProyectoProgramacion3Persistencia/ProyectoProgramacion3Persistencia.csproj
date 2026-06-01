@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProyectoProgramacion3DBManager\ProyectoProgramacion3DBManager.csproj" />
+    <ProjectReference Include="..\ProyectoProgramacion3Model\ProyectoProgramacion3Model.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DAO\" />
+  </ItemGroup>
+
+</Project>

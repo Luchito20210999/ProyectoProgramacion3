@@ -3,7 +3,6 @@ package pe.edu.pucp.proyectopro3.dao.crm;
 import pe.edu.pucp.proyectopro3.dao.DefaultBaseDAO;
 import pe.edu.pucp.proyectopro3.modelo.crm.Cliente;
 import pe.edu.pucp.proyectopro3.modelo.crm.TipoDocumento;
-import pe.edu.pucp.proyectopro3.modelo.reclamos.EstadoReclamo;
 
 import java.sql.*;
 
@@ -11,39 +10,28 @@ public class ClienteDAOImpl extends DefaultBaseDAO<Cliente> implements ClienteDA
 
     @Override
     protected PreparedStatement comandoCrear(Connection conn, Cliente modelo) throws SQLException {
-        // sp_InsertCliente(_nom, _ape, _tipoDoc, _numDoc, _nac, _corr, _fReg, _tel, _fNac)
-        String sql = "{call sp_InsertCliente(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+        // sp_InsertCliente(_nom, _ape, _tipoDoc, _numDoc, _corr, _nac, _fReg, _tel, _fNac, OUT _id_generado)
+        String sql = "{call sp_InsertCliente(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
 
-        cmd.setString(1, modelo.getNombres());
-        cmd.setString(2, modelo.getApellidos());
-        cmd.setString(3, modelo.getTipoDocumento().name()); // Conversión de Enum a String
-        cmd.setString(4, modelo.getNumeroContacto());
-        cmd.setString(5, modelo.getCorreo());
-        cmd.setString(6, modelo.getNacionalidad());
-        cmd.setDate(7, new java.sql.Date(modelo.getFechaRegistro().getTime()));
-        cmd.setString(8, modelo.getNumeroContacto());
-        cmd.setDate(9, new java.sql.Date(modelo.getFechaNacimiento().getTime()));
+        setCamposCliente(cmd, modelo, 1);
+
+        // Parámetro OUT: _id_generado
+        cmd.registerOutParameter(10, Types.INTEGER);
 
         return cmd;
     }
 
     @Override
     protected PreparedStatement comandoActualizar(Connection conn, Cliente modelo) throws SQLException {
-        // sp_UpdateCliente(_id, _nom, _ape, _tipoDoc, _numDoc, _nac, _corr, _fReg, _tel, _fNac)
+        // sp_UpdateCliente(_id, _nom, _ape, _tipoDoc, _numDoc, _corr, _nac, _fReg, _tel, _fNac)
         String sql = "{call sp_UpdateCliente(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
 
         cmd.setInt(1, modelo.getIdCliente());
-        cmd.setString(2, modelo.getNombres());
-        cmd.setString(3, modelo.getApellidos());
-        cmd.setString(4, modelo.getTipoDocumento().name());
-        cmd.setString(5, modelo.getNumeroDocumento());
-        cmd.setString(6, modelo.getCorreo());
-        cmd.setString(7, modelo.getNacionalidad());
-        cmd.setDate(8, new java.sql.Date(modelo.getFechaRegistro().getTime()));
-        cmd.setString(9, modelo.getNumeroContacto());
-        cmd.setDate(10, new java.sql.Date(modelo.getFechaNacimiento().getTime()));
+
+        // Los campos empiezan desde la posición 2 porque la posición 1 es el ID
+        setCamposCliente(cmd, modelo, 2);
 
         return cmd;
     }
@@ -58,16 +46,15 @@ public class ClienteDAOImpl extends DefaultBaseDAO<Cliente> implements ClienteDA
 
     @Override
     protected PreparedStatement comandoLeer(Connection conn, Integer id) throws SQLException {
-        // Al no haber un SP específico para "buscar por ID", usamos un SELECT estándar
-        String sql = "SELECT * FROM Cliente WHERE id_cliente = ?";
-        PreparedStatement cmd = conn.prepareStatement(sql);
+        String sql = "{call sp_ListClienteById(?)}";
+        CallableStatement cmd = conn.prepareCall(sql);
         cmd.setInt(1, id);
         return cmd;
     }
 
     @Override
     protected PreparedStatement comandoLeerTodos(Connection conn) throws SQLException {
-        String sql = "{call sp_ListClientes()}";
+        String sql = "{call spListClientes()}";
         return conn.prepareCall(sql);
     }
 
@@ -87,5 +74,28 @@ public class ClienteDAOImpl extends DefaultBaseDAO<Cliente> implements ClienteDA
         cliente.setFechaNacimiento(rs.getDate("fecha_nacimiento"));
 
         return cliente;
+    }
+
+    @Override
+    protected Integer extraerIdDesdeCallable(CallableStatement cmd) throws SQLException {
+        // En sp_InsertCliente, el parámetro OUT _id_generado está en la posición 10
+        return cmd.getInt(10);
+    }
+
+    @Override
+    protected Integer extraerIdDesdeGeneratedKeys(ResultSet rs) throws SQLException {
+        return rs.getInt(1);
+    }
+
+    private void setCamposCliente(CallableStatement cmd, Cliente modelo, int inicio) throws SQLException {
+        cmd.setString(inicio, modelo.getNombres());
+        cmd.setString(inicio + 1, modelo.getApellidos());
+        cmd.setString(inicio + 2, modelo.getTipoDocumento().name());
+        cmd.setString(inicio + 3, modelo.getNumeroDocumento());
+        cmd.setString(inicio + 4, modelo.getCorreo());
+        cmd.setString(inicio + 5, modelo.getNacionalidad());
+        cmd.setDate(inicio + 6, new java.sql.Date(modelo.getFechaRegistro().getTime()));
+        cmd.setString(inicio + 7, modelo.getNumeroContacto());
+        cmd.setDate(inicio + 8, new java.sql.Date(modelo.getFechaNacimiento().getTime()));
     }
 }

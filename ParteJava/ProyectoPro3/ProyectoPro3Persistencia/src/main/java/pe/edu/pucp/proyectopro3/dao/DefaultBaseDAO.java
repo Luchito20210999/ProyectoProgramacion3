@@ -12,6 +12,6 @@ public abstract class DefaultBaseDAO<M> extends BaseDAO<M, Integer> {
 
     @Override
     protected Integer extraerIdDesdeCallable(CallableStatement cmd) throws SQLException {
-        return cmd.getInt("p_id");
+        return cmd.getInt("_id_generado");
     }
 }

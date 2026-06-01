@@ -9,37 +9,22 @@ public class ServicioDAOImpl extends DefaultBaseDAO<Servicio> implements Servici
 
     @Override
     protected PreparedStatement comandoCrear(Connection conn, Servicio modelo) throws SQLException {
-        // sp_InsertServicio(_nom, _desc, _pre, _dur, _idioma, _cap, _recojo, _ciu)
-        String sql = "{call sp_InsertServicio(?, ?, ?, ?, ?, ?, ?, ?)}";
+        String sql = "{call sp_InsertServicio(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
 
-        cmd.setString(1, modelo.getNombre());
-        cmd.setString(2, modelo.getDescripcion());
-        cmd.setDouble(3, modelo.getPrecioUSD());
-        cmd.setDouble(4, modelo.getDuracionHoras());
-        cmd.setString(5, modelo.getIdiomaGuia()); // Campo corregido
-        cmd.setInt(6, modelo.getCapacidadMaxima());
-        cmd.setBoolean(7, modelo.isIncluyeRecojo());
-        cmd.setString(8, modelo.getCiudadDestino()); // Campo corregido
+        setCamposServicio(cmd, modelo, 1);
+        cmd.registerOutParameter(9, Types.INTEGER);
 
         return cmd;
     }
 
     @Override
     protected PreparedStatement comandoActualizar(Connection conn, Servicio modelo) throws SQLException {
-        // sp_UpdateServicio(_id, _nom, _desc, _pre, _dur, _idioma, _cap, _recojo, _ciu)
         String sql = "{call sp_UpdateServicio(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
 
         cmd.setInt(1, modelo.getIdServicio());
-        cmd.setString(2, modelo.getNombre());
-        cmd.setString(3, modelo.getDescripcion());
-        cmd.setDouble(4, modelo.getPrecioUSD());
-        cmd.setDouble(5, modelo.getDuracionHoras());
-        cmd.setString(6, modelo.getIdiomaGuia());
-        cmd.setInt(7, modelo.getCapacidadMaxima());
-        cmd.setBoolean(8, modelo.isIncluyeRecojo());
-        cmd.setString(9, modelo.getCiudadDestino());
+        setCamposServicio(cmd, modelo, 2);
 
         return cmd;
     }
@@ -54,32 +39,53 @@ public class ServicioDAOImpl extends DefaultBaseDAO<Servicio> implements Servici
 
     @Override
     protected PreparedStatement comandoLeer(Connection conn, Integer id) throws SQLException {
-        String sql = "SELECT * FROM Servicio WHERE idServicio = ?";
-        PreparedStatement cmd = conn.prepareStatement(sql);
+        String sql = "{call sp_ListServicioById(?)}";
+        CallableStatement cmd = conn.prepareCall(sql);
         cmd.setInt(1, id);
         return cmd;
     }
 
     @Override
     protected PreparedStatement comandoLeerTodos(Connection conn) throws SQLException {
-        String sql = "{call sp_ListServicios()}";
+        String sql = "{call spListServicios()}";
         return conn.prepareCall(sql);
+    }
+
+    @Override
+    protected Integer extraerIdDesdeCallable(CallableStatement cmd) throws SQLException {
+        return cmd.getInt(9);
+    }
+
+    @Override
+    protected Integer extraerIdDesdeGeneratedKeys(ResultSet rs) throws SQLException {
+        return rs.getInt(1);
     }
 
     @Override
     protected Servicio mapearModelo(ResultSet rs) throws SQLException {
         Servicio servicio = new Servicio();
 
-        servicio.setIdServicio(rs.getInt("idServicio"));
+        servicio.setIdServicio(rs.getInt("id_servicio"));
         servicio.setNombre(rs.getString("nombre"));
         servicio.setDescripcion(rs.getString("descripcion"));
-        servicio.setPrecioUSD(rs.getDouble("precioUSD")); // Según SQL
-        servicio.setDuracionHoras(rs.getDouble("duracionHoras")); // Según SQL
-        servicio.setIdiomaGuia(rs.getString("idiomaGuia")); // Campo corregido
-        servicio.setCapacidadMaxima(rs.getInt("capacidadMaxima"));
-        servicio.setIncluyeRecojo(rs.getBoolean("incluyeRecojo"));
-        servicio.setCiudadDestino(rs.getString("ciudadDestino")); // Campo corregido
+        servicio.setPrecioUSD(rs.getDouble("precio_usd"));
+        servicio.setDuracionHoras(rs.getDouble("duracion_horas"));
+        servicio.setIdiomaGuia(rs.getString("idioma_guia"));
+        servicio.setCapacidadMaxima(rs.getInt("capacidad_maxima"));
+        servicio.setIncluyeRecojo("Y".equalsIgnoreCase(rs.getString("incluye_recojo")));
+        servicio.setCiudadDestino(rs.getString("ciudad_destino"));
 
         return servicio;
+    }
+
+    private void setCamposServicio(CallableStatement cmd, Servicio modelo, int inicio) throws SQLException {
+        cmd.setString(inicio, modelo.getNombre());
+        cmd.setString(inicio + 1, modelo.getDescripcion());
+        cmd.setDouble(inicio + 2, modelo.getPrecioUSD());
+        cmd.setDouble(inicio + 3, modelo.getDuracionHoras());
+        cmd.setString(inicio + 4, modelo.getIdiomaGuia());
+        cmd.setInt(inicio + 5, modelo.getCapacidadMaxima());
+        cmd.setString(inicio + 6, modelo.isIncluyeRecojo() ? "Y" : "N");
+        cmd.setString(inicio + 7, modelo.getCiudadDestino());
     }
 }

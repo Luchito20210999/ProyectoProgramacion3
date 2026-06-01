@@ -1,6 +1,9 @@
 package pe.edu.pucp.proyectopro3.dao.auth;
 
 import pe.edu.pucp.proyectopro3.dao.DefaultBaseDAO;
+import pe.edu.pucp.proyectopro3.modelo.auth.Administrador;
+import pe.edu.pucp.proyectopro3.modelo.auth.Analista;
+import pe.edu.pucp.proyectopro3.modelo.auth.Operador;
 import pe.edu.pucp.proyectopro3.modelo.auth.Usuario;
 import pe.edu.pucp.proyectopro3.modelo.crm.TipoDocumento;
 
@@ -10,34 +13,25 @@ public class UsuarioDAOImpl extends DefaultBaseDAO<Usuario> implements UsuarioDA
 
     @Override
     protected PreparedStatement comandoCrear(Connection conn, Usuario modelo) throws SQLException {
-        String sql = "{call sp_InsertUsuario(?, ?, ?, ?, ?, ?, ?, ?)}";
+        // sp_InsertUsuario(_nom, _ape, _tipoDoc, _numDoc, _corr, _pass, _tel, _tipoUsu, OUT _id_generado)
+        String sql = "{call sp_InsertUsuario(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
 
-        cmd.setString(1, modelo.getNombres());
-        cmd.setString(2, modelo.getApellidos());
-        cmd.setString(3, modelo.getTipoDocumento().name());
-        cmd.setString(4, modelo.getNumeroDocumento());
-        cmd.setString(5, modelo.getCorreo());
-        cmd.setString(6, modelo.getContrasena());
-        cmd.setString(7, modelo.getNumeroContacto());
-        cmd.registerOutParameter(8, Types.INTEGER);
+        setCamposUsuario(cmd, modelo, 1);
+
+        cmd.registerOutParameter(9, Types.INTEGER);
 
         return cmd;
     }
 
     @Override
     protected PreparedStatement comandoActualizar(Connection conn, Usuario modelo) throws SQLException {
-        String sql = "{call sp_UpdateUsuario(?, ?, ?, ?, ?, ?, ?, ?)}";
+        // sp_UpdateUsuario(_id, _nom, _ape, _tipoDoc, _numDoc, _corr, _pass, _tel, _tipoUsu)
+        String sql = "{call sp_UpdateUsuario(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
 
         cmd.setInt(1, modelo.getIdUsuario());
-        cmd.setString(2, modelo.getNombres());
-        cmd.setString(3, modelo.getApellidos());
-        cmd.setString(4, modelo.getTipoDocumento().name());
-        cmd.setString(5, modelo.getNumeroDocumento());
-        cmd.setString(6, modelo.getCorreo());
-        cmd.setString(7, modelo.getContrasena());
-        cmd.setString(8, modelo.getNumeroContacto());
+        setCamposUsuario(cmd, modelo, 2);
 
         return cmd;
     }
@@ -52,41 +46,64 @@ public class UsuarioDAOImpl extends DefaultBaseDAO<Usuario> implements UsuarioDA
 
     @Override
     protected PreparedStatement comandoLeer(Connection conn, Integer id) throws SQLException {
-        String sql = "SELECT * FROM Usuario WHERE id_usuario = ?";
-        PreparedStatement cmd = conn.prepareStatement(sql);
+        String sql = "{call sp_ListUsuarioById(?)}";
+        CallableStatement cmd = conn.prepareCall(sql);
         cmd.setInt(1, id);
         return cmd;
     }
 
     @Override
     protected PreparedStatement comandoLeerTodos(Connection conn) throws SQLException {
-        String sql = "{call sp_ListUsuarios()}";
+        String sql = "{call spListUsuarios()}";
         return conn.prepareCall(sql);
     }
 
     @Override
     protected Integer extraerIdDesdeCallable(CallableStatement cmd) throws SQLException {
-        return cmd.getInt(8);
+        return cmd.getInt(9);
     }
 
     @Override
     protected Usuario mapearModelo(ResultSet rs) throws SQLException {
-        Usuario user = new Usuario();
+        Usuario usuario = new Usuario();
 
-        user.setIdUsuario(rs.getInt("id_usuario"));
-        user.setNombres(rs.getString("nombres"));
-        user.setApellidos(rs.getString("apellidos"));
-        user.setTipoDocumento(TipoDocumento.valueOf(rs.getString("tipo_documento")));
-        user.setNumeroDocumento(rs.getString("numero_documento"));
-        user.setCorreo(rs.getString("correo"));
-        user.setContrasena(rs.getString("contrasena"));
-        user.setNumeroContacto(rs.getString("numero_contacto"));
+        usuario.setIdUsuario(rs.getInt("id_usuario"));
+        usuario.setNombres(rs.getString("nombres"));
+        usuario.setApellidos(rs.getString("apellidos"));
+        usuario.setTipoDocumento(TipoDocumento.valueOf(rs.getString("tipo_documento")));
+        usuario.setNumeroDocumento(rs.getString("numero_documento"));
+        usuario.setCorreo(rs.getString("correo"));
+        usuario.setContrasena(rs.getString("contrasena"));
+        usuario.setNumeroContacto(rs.getString("numero_contacto"));
 
-        int idUsu = rs.getInt("id_usuario");
-        if (!rs.wasNull()) {
-            user.setIdUsuario(idUsu);
+        return usuario;
+    }
+
+    @Override
+    protected Integer extraerIdDesdeGeneratedKeys(ResultSet rs) throws SQLException {
+        return rs.getInt(1);
+    }
+
+    private void setCamposUsuario(CallableStatement cmd, Usuario modelo, int inicio) throws SQLException {
+        cmd.setString(inicio, modelo.getNombres());
+        cmd.setString(inicio + 1, modelo.getApellidos());
+        cmd.setString(inicio + 2, modelo.getTipoDocumento().name());
+        cmd.setString(inicio + 3, modelo.getNumeroDocumento());
+        cmd.setString(inicio + 4, modelo.getCorreo());
+        cmd.setString(inicio + 5, modelo.getContrasena());
+        cmd.setString(inicio + 6, modelo.getNumeroContacto());
+        cmd.setString(inicio + 7, obtenerTipoUsuario(modelo));
+    }
+
+    private String obtenerTipoUsuario(Usuario usuario) {
+        if (usuario instanceof Administrador) {
+            return "ADMINISTRADOR";
+        } else if (usuario instanceof Operador) {
+            return "OPERADOR";
+        } else if (usuario instanceof Analista) {
+            return "ANALISTA";
         }
 
-        return user;
+        return "USUARIO";
     }
 }
