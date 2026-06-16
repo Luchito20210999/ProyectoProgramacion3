@@ -1,2 +1,3 @@
 appsettings.json
 db.properties
+**/target/

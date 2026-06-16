@@ -8,10 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="ProyectoPro3Modelo" />
         <module name="ProyectoPro3Negocio" />
+        <module name="ProyectoPro3_API_bokun" />
         <module name="ProyectoPro3App" />
         <module name="ProyectoPro3DBManager" />
         <module name="ProyectoPro3Persistencia" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="ProyectoPro3_API_bokun" target="25" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -29,6 +29,7 @@ public class AuditoriaPrueba {
         nuevo.setDescripcion("Inicio de sesion de prueba");
         nuevo.setFechaRegistro(new Date());
         nuevo.setOrigenAccion("127.0.0.1");
+        nuevo.setIdUsuario(1);
         auditoriaBO.guardar(nuevo, Estado.Nuevo);
         System.out.println("  Log registrado con ID: " + nuevo.getIdLogAuditoria());
 

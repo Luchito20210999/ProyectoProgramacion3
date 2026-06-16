@@ -8,6 +8,8 @@ public class WebhookBokun {
     private String accesKey;
     private List<WebhookLog> webhookLog;
 
+    public WebhookBokun() {}
+
     public WebhookBokun(int IDBokun, String secretKey, String accesKey, List<WebhookLog> webhookLog) {
         this.IDBokun = IDBokun;
         this.secretKey = secretKey;
@@ -27,9 +29,7 @@ public class WebhookBokun {
         return secretKey;
     }
 
-    public void setSecretKey(String secretKey) {
-        this.secretKey = secretKey;
-    }
+    public void setSecretKey(String secretKey) {this.secretKey = secretKey;}
 
     public String getAccesKey() {
         return accesKey;
