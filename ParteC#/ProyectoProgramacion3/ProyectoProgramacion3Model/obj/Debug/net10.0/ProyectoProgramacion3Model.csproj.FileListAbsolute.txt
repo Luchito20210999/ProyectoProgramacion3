@@ -10,3 +10,15 @@ C:\Users\Luis\Desktop\Proyecto_PRO3\Repositorio\ProyectoProgramacion3\ParteC#\Pr
 C:\Users\Luis\Desktop\Proyecto_PRO3\Repositorio\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Model\obj\Debug\net10.0\refint\ProyectoProgramacion3Model.dll
 C:\Users\Luis\Desktop\Proyecto_PRO3\Repositorio\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Model\obj\Debug\net10.0\ProyectoProgramacion3Model.pdb
 C:\Users\Luis\Desktop\Proyecto_PRO3\Repositorio\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Model\obj\Debug\net10.0\ref\ProyectoProgramacion3Model.dll
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Model\bin\Debug\net10.0\ProyectoProgramacion3Model.deps.json
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Model\bin\Debug\net10.0\ProyectoProgramacion3Model.dll
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Model\bin\Debug\net10.0\ProyectoProgramacion3Model.pdb
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Model\obj\Debug\net10.0\ProyectoProgramacion3Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Model\obj\Debug\net10.0\ProyectoProgramacion3Model.AssemblyInfoInputs.cache
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Model\obj\Debug\net10.0\ProyectoProgramacion3Model.AssemblyInfo.cs
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Model\obj\Debug\net10.0\ProyectoProgramacion3Model.csproj.CoreCompileInputs.cache
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Model\obj\Debug\net10.0\ProyectoProgramacion3Model.sourcelink.json
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Model\obj\Debug\net10.0\ProyectoProgramacion3Model.dll
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Model\obj\Debug\net10.0\refint\ProyectoProgramacion3Model.dll
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Model\obj\Debug\net10.0\ProyectoProgramacion3Model.pdb
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Model\obj\Debug\net10.0\ref\ProyectoProgramacion3Model.dll

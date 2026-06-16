@@ -33,8 +33,11 @@ public class BokunApiClient {
 
     public static BokunApiClient desdeProperties() {
         ResourceBundle props = ResourceBundle.getBundle("bokun");
-        String accessKey = props.getString("bokun.accessKey");
-        String secretKey = props.getString("bokun.secretKey");
+        String accessKey = obtenerConfiguracion(props, "bokun.accessKey",
+                "BOKUN_ACCESS_KEY");
+        String secretKey = obtenerConfiguracion(props, "bokun.secretKey",
+                "BOKUN_SECRET_KEY");
+        validarCredenciales(accessKey, secretKey);
         return new BokunApiClient(accessKey, secretKey);
     }
 
@@ -70,5 +73,26 @@ public class BokunApiClient {
         mac.init(new SecretKeySpec(secretKey.getBytes("UTF-8"), "HmacSHA1"));
         byte[] firmaBytes = mac.doFinal(mensaje.getBytes("UTF-8"));
         return Base64.getEncoder().encodeToString(firmaBytes);
+    }
+
+    private static String obtenerConfiguracion(ResourceBundle props,
+                                               String propertyKey,
+                                               String envKey) {
+        String valorEnv = System.getenv(envKey);
+        if (valorEnv != null && !valorEnv.isBlank()) {
+            return valorEnv.trim();
+        }
+        return props.getString(propertyKey).trim();
+    }
+
+    private static void validarCredenciales(String accessKey, String secretKey) {
+        if (accessKey == null || accessKey.isBlank()
+                || secretKey == null || secretKey.isBlank()
+                || "TU_ACCESS_KEY_AQUI".equals(accessKey)
+                || "TU_SECRET_KEY_AQUI".equals(secretKey)) {
+            throw new IllegalStateException(
+                    "Configura las credenciales de Bókun en bokun.properties "
+                    + "o en las variables BOKUN_ACCESS_KEY y BOKUN_SECRET_KEY.");
+        }
     }
 }

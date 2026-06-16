@@ -23,10 +23,17 @@ public class WebhookBokunBOImpl extends BaseBO implements WebhookBokunBO {
             String bookingId = extraerBookingId(rawJson);
             System.out.println("[WebhookBO] bookingId extraído: " + bookingId);
 
-            BokunApiClient apiClient = BokunApiClient.desdeProperties();
-            String jsonCompleto = apiClient.obtenerBookingCompleto(bookingId);
-            System.out.println("[WebhookBO] JSON completo obtenido desde Bókun ("
-                    + jsonCompleto.length() + " chars)");
+            String jsonCompleto;
+            if (payloadYaEsBookingCompleto(rawJson)) {
+                jsonCompleto = rawJson;
+                System.out.println("[WebhookBO] Payload completo recibido en el webhook ("
+                        + jsonCompleto.length() + " chars)");
+            } else {
+                BokunApiClient apiClient = BokunApiClient.desdeProperties();
+                jsonCompleto = apiClient.obtenerBookingCompleto(bookingId);
+                System.out.println("[WebhookBO] JSON completo obtenido desde Bókun ("
+                        + jsonCompleto.length() + " chars)");
+            }
 
             this.webhookDAO.procesarWebhook(jsonCompleto);
             System.out.println("[WebhookBO] Booking " + bookingId
@@ -78,5 +85,10 @@ public class WebhookBokunBOImpl extends BaseBO implements WebhookBokunBO {
             throw new IllegalArgumentException(
                     "Formato de bookingId no reconocido en el payload de Bókun");
         }
+    }
+
+    private boolean payloadYaEsBookingCompleto(String rawJson) {
+        return rawJson.contains("\"activityBookings\"")
+                && rawJson.contains("\"customer\"");
     }
 }

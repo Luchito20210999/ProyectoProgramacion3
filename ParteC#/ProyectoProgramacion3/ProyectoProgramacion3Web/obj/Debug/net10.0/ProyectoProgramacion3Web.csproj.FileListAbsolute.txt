@@ -135,3 +135,8 @@ C:\Users\Luis\Desktop\Proyecto_PRO3\Repositorio\ProyectoProgramacion3\ParteC#\Pr
 C:\Users\Luis\Desktop\Proyecto_PRO3\Repositorio\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Web\bin\Debug\net10.0\ProyectoProgramacion3Model.pdb
 C:\Users\Luis\Desktop\Proyecto_PRO3\Repositorio\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Web\bin\Debug\net10.0\ProyectoProgramacion3Persistencia.pdb
 C:\Users\Luis\Desktop\Proyecto_PRO3\Repositorio\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Web\obj\Debug\net10.0\Proyecto.C2D82A82.Up2Date
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Web\obj\Debug\net10.0\EmbeddedAttribute.cs
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Web\obj\Debug\net10.0\ValidatableTypeAttribute.cs
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Web\obj\Debug\net10.0\ProyectoProgramacion3Web.dll
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Web\obj\Debug\net10.0\refint\ProyectoProgramacion3Web.dll
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Web\obj\Debug\net10.0\ProyectoProgramacion3Web.pdb

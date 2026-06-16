@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj": {}
+    "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj": {
+    "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj",
+        "projectUniqueName": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj",
         "projectName": "ProyectoProgramacion3DBManager",
-        "projectPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj",
-        "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\obj\\",
+        "projectPath": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj",
+        "packagesPath": "C:\\Users\\CodexSandboxOnline\\.nuget\\packages\\",
+        "outputPath": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Charly\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -30,7 +30,6 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -49,7 +48,6 @@
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.Extensions.Configuration": {
@@ -355,20 +353,20 @@
         }
       }
     },
-    "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Model\\ProyectoProgramacion3Model.csproj": {
+    "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Model\\ProyectoProgramacion3Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Model\\ProyectoProgramacion3Model.csproj",
+        "projectUniqueName": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Model\\ProyectoProgramacion3Model.csproj",
         "projectName": "ProyectoProgramacion3Model",
-        "projectPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Model\\ProyectoProgramacion3Model.csproj",
-        "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Model\\obj\\",
+        "projectPath": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Model\\ProyectoProgramacion3Model.csproj",
+        "packagesPath": "C:\\Users\\CodexSandboxOnline\\.nuget\\packages\\",
+        "outputPath": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Charly\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -381,7 +379,6 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -400,7 +397,6 @@
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",
@@ -696,20 +692,20 @@
         }
       }
     },
-    "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj": {
+    "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj",
+        "projectUniqueName": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj",
         "projectName": "ProyectoProgramacion3Negocio",
-        "projectPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj",
-        "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\obj\\",
+        "projectPath": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj",
+        "packagesPath": "C:\\Users\\CodexSandboxOnline\\.nuget\\packages\\",
+        "outputPath": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Charly\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -722,11 +718,10 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj": {
-                "projectPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj"
+              "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj": {
+                "projectPath": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj"
               }
             }
           }
@@ -745,7 +740,6 @@
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",
@@ -1041,20 +1035,20 @@
         }
       }
     },
-    "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj": {
+    "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj",
+        "projectUniqueName": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj",
         "projectName": "ProyectoProgramacion3Persistencia",
-        "projectPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj",
-        "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\obj\\",
+        "projectPath": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj",
+        "packagesPath": "C:\\Users\\CodexSandboxOnline\\.nuget\\packages\\",
+        "outputPath": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Charly\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -1067,14 +1061,13 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj": {
-                "projectPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj"
+              "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj": {
+                "projectPath": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj"
               },
-              "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Model\\ProyectoProgramacion3Model.csproj": {
-                "projectPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Model\\ProyectoProgramacion3Model.csproj"
+              "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Model\\ProyectoProgramacion3Model.csproj": {
+                "projectPath": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Model\\ProyectoProgramacion3Model.csproj"
               }
             }
           }
@@ -1093,7 +1086,6 @@
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "imports": [
             "net461",
@@ -1389,20 +1381,20 @@
         }
       }
     },
-    "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj": {
+    "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj",
+        "projectUniqueName": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj",
         "projectName": "ProyectoProgramacion3Web",
-        "projectPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj",
-        "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\obj\\",
+        "projectPath": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj",
+        "packagesPath": "C:\\Users\\CodexSandboxOnline\\.nuget\\packages\\",
+        "outputPath": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Charly\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -1415,11 +1407,10 @@
         },
         "frameworks": {
           "net10.0": {
-            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj": {
-                "projectPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj"
+              "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj": {
+                "projectPath": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj"
               }
             }
           }
@@ -1438,7 +1429,6 @@
       },
       "frameworks": {
         "net10.0": {
-          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.AspNetCore.App.Internal.Assets": {
