@@ -1,197 +1,196 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\",
+  "WorkspaceRootPath": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\crm\\iclientebo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\crm\\iclientebo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\crm\\iclientebo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\crm\\clienteboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\crm\\clienteboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\crm\\clienteboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\10.0.203\\Sdks\\Microsoft.NET.Sdk.Razor\\targets\\Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3web\\appsetting.example.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3web\\appsetting.example.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\appsetting.example.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3web\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3web\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\basedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\basedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\basedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reportes\\ireporteventasbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reportes\\ireporteventasbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\reportes\\ireporteventasbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reportes\\reporteventasboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reportes\\reporteventasboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\reportes\\reporteventasboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reportes\\reportereclamoboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reportes\\reportereclamoboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\reportes\\reportereclamoboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reservas\\ireservabo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reservas\\ireservabo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\reservas\\ireservabo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reservas\\iserviciobo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reservas\\iserviciobo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\reservas\\iserviciobo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reservas\\reservaboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reservas\\reservaboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\reservas\\reservaboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reservas\\servicioboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reservas\\servicioboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\reservas\\servicioboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reportes\\ireportereclamobo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reportes\\ireportereclamobo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\reportes\\ireportereclamobo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reclamos\\reclamoboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reclamos\\reclamoboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\reclamos\\reclamoboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reclamos\\ireclamobo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\reclamos\\ireclamobo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\reclamos\\ireclamobo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\auth\\iusuariobo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\auth\\iusuariobo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\auth\\iusuariobo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\auth\\usuarioboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\auth\\usuarioboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\auth\\usuarioboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\notificaciones\\inotificacionbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\notificaciones\\inotificacionbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\notificaciones\\inotificacionbo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\notificaciones\\notificacionboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\notificaciones\\notificacionboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\notificaciones\\notificacionboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\auditoria\\logauditoriaboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\auditoria\\logauditoriaboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\auditoria\\logauditoriaboimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\auditoria\\ilogauditoriabo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\auditoria\\ilogauditoriabo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\auditoria\\ilogauditoriabo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\igestionable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\igestionable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\igestionable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\basebo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3negocio\\bo\\basebo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{70C4D1D5-00D4-437D-A538-28E45F5180A1}|ProyectoProgramacion3Negocio\\ProyectoProgramacion3Negocio.csproj|solutionrelative:proyectoprogramacion3negocio\\bo\\basebo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\crm\\clientedaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\crm\\clientedaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\crm\\clientedaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\crm\\iclientedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\crm\\iclientedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\crm\\iclientedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reclamos\\ireclamodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reclamos\\ireclamodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\reclamos\\ireclamodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reclamos\\reclamodaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reclamos\\reclamodaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\reclamos\\reclamodaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\notificaciones\\inotificaciondao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\notificaciones\\inotificaciondao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\notificaciones\\inotificaciondao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\notificaciones\\notificaciondaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\notificaciones\\notificaciondaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\notificaciones\\notificaciondaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reportes\\ireporteventasdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reportes\\ireporteventasdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\reportes\\ireporteventasdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reportes\\reporteventasdaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reportes\\reporteventasdaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\reportes\\reporteventasdaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reportes\\reportereclamodaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reportes\\reportereclamodaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\reportes\\reportereclamodaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reservas\\detallereservadaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reservas\\detallereservadaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\reservas\\detallereservadaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reservas\\idetallereservadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reservas\\idetallereservadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\reservas\\idetallereservadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reservas\\ireservadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reservas\\ireservadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\reservas\\ireservadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reservas\\iserviciodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reservas\\iserviciodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\reservas\\iserviciodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reservas\\reservadaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reservas\\reservadaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\reservas\\reservadaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reservas\\serviciodaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reservas\\serviciodaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\reservas\\serviciodaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reportes\\ireportereclamodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\reportes\\ireportereclamodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\reportes\\ireportereclamodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\auditoria\\ilogauditoriadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\auditoria\\ilogauditoriadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\auditoria\\ilogauditoriadao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\auditoria\\logauditoriadaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\auditoria\\logauditoriadaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\auditoria\\logauditoriadaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\auth\\iusuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\auth\\iusuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\auth\\iusuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\auth\\usuariodaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\auth\\usuariodaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\auth\\usuariodaoimpl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\transactionsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\transactionsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\transactionsmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\ipersistible.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\ipersistible.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\ipersistible.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\luis\\desktop\\proyecto_pro3\\repositorio\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\defaultbasedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|c:\\users\\jordanpc\\desktop\\proyectoprogramacion3\\partec#\\proyectoprogramacion3\\proyectoprogramacion3persistencia\\dao\\defaultbasedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{03296E3C-10E4-47FA-9493-58D28ADF8C82}|ProyectoProgramacion3Persistencia\\ProyectoProgramacion3Persistencia.csproj|solutionrelative:proyectoprogramacion3persistencia\\dao\\defaultbasedao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -207,9 +206,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "appsetting.example.json",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsetting.example.json",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsetting.example.json",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\appsetting.example.json",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsetting.example.json",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsetting.example.json",
               "RelativeToolTip": "ProyectoProgramacion3Web\\appsetting.example.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -217,12 +216,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 47,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsettings.json",
-              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsettings.json",
               "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsettings.json",
-              "RelativeToolTip": "ProyectoProgramacion3Web\\appsettings.json",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2026-06-01T15:59:03.975Z"
@@ -231,9 +230,9 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ClienteBOImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\crm\\ClienteBOImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\crm\\ClienteBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\crm\\ClienteBOImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\crm\\ClienteBOImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\crm\\ClienteBOImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\crm\\ClienteBOImpl.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAowAYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -243,9 +242,9 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "IClienteBO.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\crm\\IClienteBO.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\crm\\IClienteBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\crm\\IClienteBO.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\crm\\IClienteBO.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\crm\\IClienteBO.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\crm\\IClienteBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -257,20 +256,20 @@
               "DocumentIndex": 2,
               "Title": "Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets",
               "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\10.0.203\\Sdks\\Microsoft.NET.Sdk.Razor\\targets\\Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets",
-              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\10.0.203\\Sdks\\Microsoft.NET.Sdk.Razor\\targets\\Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\10.0.203\\Sdks\\Microsoft.NET.Sdk.Razor\\targets\\Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets",
               "ToolTip": "C:\\Program Files\\dotnet\\sdk\\10.0.203\\Sdks\\Microsoft.NET.Sdk.Razor\\targets\\Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets",
-              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\10.0.203\\Sdks\\Microsoft.NET.Sdk.Razor\\targets\\Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets",
+              "RelativeToolTip": "..\\..\\..\\..\\..\\..\\Program Files\\dotnet\\sdk\\10.0.203\\Sdks\\Microsoft.NET.Sdk.Razor\\targets\\Microsoft.NET.Sdk.Razor.MvcApplicationPartsDiscovery.targets",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
               "WhenOpened": "2026-06-01T21:54:18.994Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "appsettings.Development.json",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsettings.Development.json",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\appsettings.Development.json",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsettings.Development.json",
               "RelativeToolTip": "ProyectoProgramacion3Web\\appsettings.Development.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -278,11 +277,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "ReporteVentasBOImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteVentasBOImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteVentasBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteVentasBOImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteVentasBOImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteVentasBOImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteVentasBOImpl.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwAgAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -290,11 +289,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 8,
               "Title": "ReporteReclamoBOImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteReclamoBOImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteReclamoBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteReclamoBOImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteReclamoBOImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteReclamoBOImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reportes\\ReporteReclamoBOImpl.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -302,11 +301,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "BaseDao.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\BaseDao.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\BaseDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\BaseDao.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\BaseDao.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\BaseDao.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\BaseDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAI4AAABTAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -314,11 +313,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "IReporteVentasBO.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteVentasBO.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteVentasBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteVentasBO.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteVentasBO.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteVentasBO.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteVentasBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -326,11 +325,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 9,
               "Title": "IReservaBO.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\IReservaBO.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\IReservaBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reservas\\IReservaBO.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\IReservaBO.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\IReservaBO.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reservas\\IReservaBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -338,11 +337,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 10,
               "Title": "IServicioBO.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\IServicioBO.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\IServicioBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reservas\\IServicioBO.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\IServicioBO.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\IServicioBO.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reservas\\IServicioBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -350,11 +349,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
               "Title": "ReservaBOImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\ReservaBOImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\ReservaBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reservas\\ReservaBOImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\ReservaBOImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\ReservaBOImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reservas\\ReservaBOImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -362,11 +361,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "ServicioBOImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\ServicioBOImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\ServicioBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reservas\\ServicioBOImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\ServicioBOImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reservas\\ServicioBOImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reservas\\ServicioBOImpl.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAAQAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -374,11 +373,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 13,
               "Title": "IReporteReclamoBO.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteReclamoBO.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteReclamoBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteReclamoBO.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteReclamoBO.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteReclamoBO.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reportes\\IReporteReclamoBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -386,11 +385,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 14,
               "Title": "ReclamoBOImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reclamos\\ReclamoBOImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reclamos\\ReclamoBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reclamos\\ReclamoBOImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reclamos\\ReclamoBOImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reclamos\\ReclamoBOImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reclamos\\ReclamoBOImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -398,11 +397,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 15,
               "Title": "IReclamoBO.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reclamos\\IReclamoBO.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reclamos\\IReclamoBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\reclamos\\IReclamoBO.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reclamos\\IReclamoBO.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\reclamos\\IReclamoBO.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\reclamos\\IReclamoBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -410,11 +409,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 19,
               "Title": "NotificacionBOImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\notificaciones\\NotificacionBOImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\notificaciones\\NotificacionBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\notificaciones\\NotificacionBOImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\notificaciones\\NotificacionBOImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\notificaciones\\NotificacionBOImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\notificaciones\\NotificacionBOImpl.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAkwAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -422,11 +421,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 18,
               "Title": "INotificacionBO.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\notificaciones\\INotificacionBO.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\notificaciones\\INotificacionBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\notificaciones\\INotificacionBO.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\notificaciones\\INotificacionBO.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\notificaciones\\INotificacionBO.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\notificaciones\\INotificacionBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -434,11 +433,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 17,
               "Title": "UsuarioBOImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auth\\UsuarioBOImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auth\\UsuarioBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\auth\\UsuarioBOImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auth\\UsuarioBOImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auth\\UsuarioBOImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\auth\\UsuarioBOImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -446,11 +445,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 16,
               "Title": "IUsuarioBO.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auth\\IUsuarioBO.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auth\\IUsuarioBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\auth\\IUsuarioBO.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auth\\IUsuarioBO.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auth\\IUsuarioBO.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\auth\\IUsuarioBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -458,11 +457,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 20,
               "Title": "LogAuditoriaBOImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auditoria\\LogAuditoriaBOImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auditoria\\LogAuditoriaBOImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\auditoria\\LogAuditoriaBOImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auditoria\\LogAuditoriaBOImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auditoria\\LogAuditoriaBOImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\auditoria\\LogAuditoriaBOImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -470,11 +469,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 21,
               "Title": "ILogAuditoriaBO.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auditoria\\ILogAuditoriaBO.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auditoria\\ILogAuditoriaBO.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\auditoria\\ILogAuditoriaBO.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auditoria\\ILogAuditoriaBO.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\auditoria\\ILogAuditoriaBO.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\auditoria\\ILogAuditoriaBO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -482,11 +481,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 22,
               "Title": "IGestionable.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\IGestionable.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\IGestionable.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\IGestionable.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\IGestionable.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\IGestionable.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\IGestionable.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -494,11 +493,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 23,
               "Title": "BaseBo.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\BaseBo.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\BaseBo.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Negocio\\BO\\BaseBo.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\BaseBo.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Negocio\\BO\\BaseBo.cs",
               "RelativeToolTip": "ProyectoProgramacion3Negocio\\BO\\BaseBo.cs",
               "ViewState": "AgIAABcAAAAAAAAAAAAgwAEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -506,11 +505,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 27,
               "Title": "ReclamoDaoImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reclamos\\ReclamoDaoImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reclamos\\ReclamoDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reclamos\\ReclamoDaoImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reclamos\\ReclamoDaoImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reclamos\\ReclamoDaoImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reclamos\\ReclamoDaoImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -518,11 +517,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 26,
               "Title": "IReclamoDao.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reclamos\\IReclamoDao.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reclamos\\IReclamoDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reclamos\\IReclamoDao.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reclamos\\IReclamoDao.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reclamos\\IReclamoDao.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reclamos\\IReclamoDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -530,11 +529,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 25,
               "Title": "IClienteDao.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\crm\\IClienteDao.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\crm\\IClienteDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\crm\\IClienteDao.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\crm\\IClienteDao.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\crm\\IClienteDao.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\crm\\IClienteDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -542,11 +541,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 24,
               "Title": "ClienteDaoImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\crm\\ClienteDaoImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\crm\\ClienteDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\crm\\ClienteDaoImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\crm\\ClienteDaoImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\crm\\ClienteDaoImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\crm\\ClienteDaoImpl.cs",
               "ViewState": "AgIAAEMAAAAAAAAAAAAwwAQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -554,11 +553,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 28,
               "Title": "INotificacionDao.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\INotificacionDao.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\INotificacionDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\INotificacionDao.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\INotificacionDao.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\INotificacionDao.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\INotificacionDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -566,11 +565,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 29,
               "Title": "NotificacionDaoImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\NotificacionDaoImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\NotificacionDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\NotificacionDaoImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\NotificacionDaoImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\NotificacionDaoImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\notificaciones\\NotificacionDaoImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -578,11 +577,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 30,
               "Title": "IReporteVentasDao.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteVentasDao.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteVentasDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteVentasDao.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteVentasDao.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteVentasDao.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteVentasDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -590,11 +589,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 31,
               "Title": "ReporteVentasDaoImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteVentasDaoImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteVentasDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteVentasDaoImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteVentasDaoImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteVentasDaoImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteVentasDaoImpl.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -602,11 +601,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 32,
               "Title": "ReporteReclamoDaoImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteReclamoDaoImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteReclamoDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteReclamoDaoImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteReclamoDaoImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteReclamoDaoImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reportes\\ReporteReclamoDaoImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -614,11 +613,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 33,
               "Title": "DetalleReservaDaoImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\DetalleReservaDaoImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\DetalleReservaDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\DetalleReservaDaoImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\DetalleReservaDaoImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\DetalleReservaDaoImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\DetalleReservaDaoImpl.cs",
               "ViewState": "AgIAABUAAAAAAAAAAAAYwAgAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -626,11 +625,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 34,
               "Title": "IDetalleReservaDao.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\IDetalleReservaDao.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\IDetalleReservaDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\IDetalleReservaDao.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\IDetalleReservaDao.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\IDetalleReservaDao.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\IDetalleReservaDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -638,11 +637,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 35,
               "Title": "IReservaDao.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\IReservaDao.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\IReservaDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\IReservaDao.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\IReservaDao.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\IReservaDao.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\IReservaDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -650,11 +649,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 36,
               "Title": "IServicioDao.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\IServicioDao.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\IServicioDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\IServicioDao.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\IServicioDao.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\IServicioDao.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\IServicioDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -662,11 +661,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 37,
               "Title": "ReservaDaoImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\ReservaDaoImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\ReservaDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\ReservaDaoImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\ReservaDaoImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\ReservaDaoImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\ReservaDaoImpl.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAgwAQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -674,11 +673,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 38,
               "Title": "ServicioDaoImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\ServicioDaoImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\ServicioDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\ServicioDaoImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\ServicioDaoImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reservas\\ServicioDaoImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reservas\\ServicioDaoImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -686,11 +685,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 39,
               "Title": "IReporteReclamoDao.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteReclamoDao.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteReclamoDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteReclamoDao.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteReclamoDao.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteReclamoDao.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\reportes\\IReporteReclamoDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -698,11 +697,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 43,
               "Title": "UsuarioDaoImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auth\\UsuarioDaoImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auth\\UsuarioDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\auth\\UsuarioDaoImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auth\\UsuarioDaoImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auth\\UsuarioDaoImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\auth\\UsuarioDaoImpl.cs",
               "ViewState": "AgIAABoAAAAAAAAAAAAgwA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -710,11 +709,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 42,
               "Title": "IUsuarioDao.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auth\\IUsuarioDao.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auth\\IUsuarioDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\auth\\IUsuarioDao.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auth\\IUsuarioDao.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auth\\IUsuarioDao.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\auth\\IUsuarioDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -722,11 +721,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 41,
               "Title": "LogAuditoriaDaoImpl.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auditoria\\LogAuditoriaDaoImpl.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auditoria\\LogAuditoriaDaoImpl.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\auditoria\\LogAuditoriaDaoImpl.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auditoria\\LogAuditoriaDaoImpl.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auditoria\\LogAuditoriaDaoImpl.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\auditoria\\LogAuditoriaDaoImpl.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -734,11 +733,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 40,
               "Title": "ILogAuditoriaDao.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auditoria\\ILogAuditoriaDao.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auditoria\\ILogAuditoriaDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\auditoria\\ILogAuditoriaDao.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auditoria\\ILogAuditoriaDao.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\auditoria\\ILogAuditoriaDao.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\auditoria\\ILogAuditoriaDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -746,11 +745,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 44,
               "Title": "TransactionsManager.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\TransactionsManager.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\TransactionsManager.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\TransactionsManager.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\TransactionsManager.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\TransactionsManager.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\TransactionsManager.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -758,11 +757,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 45,
               "Title": "IPersistible.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\IPersistible.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\IPersistible.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\IPersistible.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\IPersistible.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\IPersistible.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\IPersistible.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -770,11 +769,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 47,
+              "DocumentIndex": 46,
               "Title": "DefaultBaseDao.cs",
-              "DocumentMoniker": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\DefaultBaseDao.cs",
+              "DocumentMoniker": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\DefaultBaseDao.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Persistencia\\DAO\\DefaultBaseDao.cs",
-              "ToolTip": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\DefaultBaseDao.cs",
+              "ToolTip": "C:\\Users\\JordanPC\\Desktop\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3Persistencia\\DAO\\DefaultBaseDao.cs",
               "RelativeToolTip": "ProyectoProgramacion3Persistencia\\DAO\\DefaultBaseDao.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

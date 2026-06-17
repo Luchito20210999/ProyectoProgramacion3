@@ -1,7 +1,4 @@
 <Solution>
-  <Project Path="ProyectoProgramacion3DBManager/ProyectoProgramacion3DBManager.csproj" Id="ccb76a46-0a56-4697-99d5-88fd8cb0614d" />
-  <Project Path="ProyectoProgramacion3Model/ProyectoProgramacion3Model.csproj" Id="e846457b-c284-462a-a0ff-9045b2417861" />
-  <Project Path="ProyectoProgramacion3Negocio/ProyectoProgramacion3Negocio.csproj" Id="70c4d1d5-00d4-437d-a538-28e45f5180a1" />
-  <Project Path="ProyectoProgramacion3Persistencia/ProyectoProgramacion3Persistencia.csproj" Id="03296e3c-10e4-47fa-9493-58d28adf8c82" />
+
   <Project Path="ProyectoProgramacion3Web/ProyectoProgramacion3Web.csproj" />
 </Solution>
