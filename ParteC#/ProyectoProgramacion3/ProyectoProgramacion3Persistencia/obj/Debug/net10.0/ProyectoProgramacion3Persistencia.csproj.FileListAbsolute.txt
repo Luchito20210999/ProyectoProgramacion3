@@ -16,3 +16,6 @@ C:\Users\Luis\Desktop\Proyecto_PRO3\Repositorio\ProyectoProgramacion3\ParteC#\Pr
 C:\Users\Luis\Desktop\Proyecto_PRO3\Repositorio\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Persistencia\obj\Debug\net10.0\refint\ProyectoProgramacion3Persistencia.dll
 C:\Users\Luis\Desktop\Proyecto_PRO3\Repositorio\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Persistencia\obj\Debug\net10.0\ProyectoProgramacion3Persistencia.pdb
 C:\Users\Luis\Desktop\Proyecto_PRO3\Repositorio\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Persistencia\obj\Debug\net10.0\ref\ProyectoProgramacion3Persistencia.dll
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Persistencia\obj\Debug\net10.0\ProyectoProgramacion3Persistencia.dll
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Persistencia\obj\Debug\net10.0\refint\ProyectoProgramacion3Persistencia.dll
+C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Persistencia\obj\Debug\net10.0\ProyectoProgramacion3Persistencia.pdb

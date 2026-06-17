@@ -1,7 +1,9 @@
 using ProyectoProgramacion3Web.Components;
 using ProyectoProgramacion3Web.Services;
+using ProyectoProgramacion3DBManager.DB;
 
 var builder = WebApplication.CreateBuilder(args);
+ConfigurationContext.Initialize(builder.Configuration);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()

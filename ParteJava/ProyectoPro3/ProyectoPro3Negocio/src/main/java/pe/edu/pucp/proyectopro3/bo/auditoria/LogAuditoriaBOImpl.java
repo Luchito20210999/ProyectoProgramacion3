@@ -43,8 +43,10 @@ public class LogAuditoriaBOImpl extends BaseBO implements LogAuditoriaBO {
                 throw new IllegalStateException("Error al registrar el log de auditoría");
             }
             modelo.setIdLogAuditoria(id);
+        } else {
+            throw new UnsupportedOperationException(
+                    "Solo se permite crear nuevos registros de auditoría.");
         }
-
     }
 
     private void validarLog(LogAuditoria log) {
@@ -56,5 +58,6 @@ public class LogAuditoriaBOImpl extends BaseBO implements LogAuditoriaBO {
         if (log.getFechaRegistro() == null) {
             throw new IllegalArgumentException("La fecha del evento es obligatoria");
         }
+        validarIdPositivo(log.getIdUsuario(), "id de usuario");
     }
 }
