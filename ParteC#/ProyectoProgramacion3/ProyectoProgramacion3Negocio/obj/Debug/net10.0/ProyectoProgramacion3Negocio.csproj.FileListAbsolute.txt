@@ -18,6 +18,3 @@ C:\Users\Luis\Desktop\Proyecto_PRO3\Repositorio\ProyectoProgramacion3\ParteC#\Pr
 C:\Users\Luis\Desktop\Proyecto_PRO3\Repositorio\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Negocio\obj\Debug\net10.0\refint\ProyectoProgramacion3Negocio.dll
 C:\Users\Luis\Desktop\Proyecto_PRO3\Repositorio\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Negocio\obj\Debug\net10.0\ProyectoProgramacion3Negocio.pdb
 C:\Users\Luis\Desktop\Proyecto_PRO3\Repositorio\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Negocio\obj\Debug\net10.0\ref\ProyectoProgramacion3Negocio.dll
-C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Negocio\obj\Debug\net10.0\ProyectoProgramacion3Negocio.dll
-C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Negocio\obj\Debug\net10.0\refint\ProyectoProgramacion3Negocio.dll
-C:\pucp\26.1\pro3\PROYECTO_TA\ProyectoProgramacion3\ParteC#\ProyectoProgramacion3\ProyectoProgramacion3Negocio\obj\Debug\net10.0\ProyectoProgramacion3Negocio.pdb

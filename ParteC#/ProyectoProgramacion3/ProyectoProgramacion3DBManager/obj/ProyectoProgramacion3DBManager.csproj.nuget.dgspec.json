@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj": {}
+    "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj": {}
   },
   "projects": {
-    "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj": {
+    "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj",
+        "projectUniqueName": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj",
         "projectName": "ProyectoProgramacion3DBManager",
-        "projectPath": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj",
-        "packagesPath": "C:\\Users\\CodexSandboxOnline\\.nuget\\packages\\",
-        "outputPath": "C:\\pucp\\26.1\\pro3\\PROYECTO_TA\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\obj\\",
+        "projectPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\ProyectoProgramacion3DBManager.csproj",
+        "packagesPath": "C:\\Users\\Luis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Luis\\Desktop\\Proyecto_PRO3\\Repositorio\\ProyectoProgramacion3\\ParteC#\\ProyectoProgramacion3\\ProyectoProgramacion3DBManager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Charly\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Luis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -30,6 +30,7 @@
         },
         "frameworks": {
           "net10.0": {
+            "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {}
           }
@@ -48,6 +49,7 @@
       },
       "frameworks": {
         "net10.0": {
+          "framework": "net10.0",
           "targetAlias": "net10.0",
           "dependencies": {
             "Microsoft.Extensions.Configuration": {

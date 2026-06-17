@@ -1,0 +1,156 @@
+@page "/clientes"
+@namespace ProyectoProgramacion3Web.Components.Pages.Clientes
+
+<PageTitle>Clientes - SACR</PageTitle>
+
+<div class="clientes-container">
+    <!-- Encabezado de la página -->
+    <div class="clientes-header">
+        <div class="header-titles">
+            <h1 class="clientes-title">Clientes</h1>
+            <p class="clientes-subtitle">Base de clientes registrados.</p>
+        </div>
+        <div class="header-actions">
+            <button class="btn btn-primary" @onclick='() => AbrirModal("Nuevo")'>
+                <span class="btn-icon">＋</span> Nuevo cliente
+            </button>
+        </div>
+    </div>
+    
+    <!-- Tabla principal de clientes -->
+    <div class="table-card">
+        <div class="table-responsive">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th class="text-center" style="width: 60px;">N°</th>
+                        <th>Cliente</th>
+                        <th>Tipo doc.</th>
+                        <th>N° doc.</th>
+                        <th>País</th>
+                        <th>Correo</th>
+                        <th>Contacto</th>
+                        <th>Registro</th>
+                        <th class="text-center" style="width: 180px;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (ListadoClientes != null && ListadoClientes.Any())
+                    {
+                        @foreach (var cli in ListadoClientes)
+                        {
+                            <tr>
+                                <td class="text-center font-mono text-muted">@cli.Id</td>
+                                <td class="font-semibold text-dark">@cli.Nombres @cli.Apellidos</td>
+                                <td>@cli.TipoDocumento</td>
+                                <td class="font-mono">@cli.NumeroDocumento</td>
+                                <td>@cli.Nacionalidad</td>
+                                <td>@cli.Correo</td>
+                                <td>@cli.Contacto</td>
+                                <td>@cli.FechaRegistro.ToString("dd/MM/yyyy")</td>
+                                <td class="text-center">
+                                    <div class="row-actions">
+                                        <button class="btn-row btn-row-reservas" @onclick="() => VerReservas(cli)">Reservas</button>
+                                        <button class="btn-row btn-row-edit" @onclick='() => AbrirModal("Editar", cli)'>Editar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="9" class="text-center text-muted py-8">
+                                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">👥</div>
+                                No hay clientes registrados en la base de datos.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Modal emergente para cliente (Crear/Editar) -->
+    @if (IsModalOpen)
+    {
+        <div class="modal-backdrop">
+            <div class="modal-window">
+                <div class="modal-header">
+                    <h2>@ModalTitle</h2>
+                    <button class="modal-close-btn" @onclick="CerrarModal">×</button>
+                </div>
+                
+                <div class="modal-body">
+                    <form @onsubmit="GuardarCliente" @onsubmit:preventDefault>
+                        <div class="modal-grid">
+                            <!-- Nombres -->
+                            <div class="modal-group">
+                                <label for="modal-nombres">Nombres</label>
+                                <input id="modal-nombres" class="modal-input" type="text" 
+                                       @bind="FormCliente.Nombres" required placeholder="Ej. Lucía" />
+                            </div>
+                            
+                            <!-- Apellidos -->
+                            <div class="modal-group">
+                                <label for="modal-apellidos">Apellidos</label>
+                                <input id="modal-apellidos" class="modal-input" type="text" 
+                                       @bind="FormCliente.Apellidos" required placeholder="Ej. Fernández" />
+                            </div>
+                            
+                            <!-- Tipo de Documento -->
+                            <div class="modal-group">
+                                <label for="modal-tipodoc">Tipo documento</label>
+                                <select id="modal-tipodoc" class="modal-select" @bind="FormCliente.TipoDocumento" required>
+                                    <option value="DNI">DNI</option>
+                                    <option value="Pasaporte">Pasaporte</option>
+                                    <option value="CE">Carnet de Extranjería</option>
+                                </select>
+                            </div>
+                            
+                            <!-- N° de Documento -->
+                            <div class="modal-group">
+                                <label for="modal-numdoc">N° documento</label>
+                                <input id="modal-numdoc" class="modal-input" type="text" 
+                                       @bind="FormCliente.NumeroDocumento" required placeholder="Ej. 74839201" />
+                            </div>
+                            
+                            <!-- Nacionalidad -->
+                            <div class="modal-group">
+                                <label for="modal-nac">Nacionalidad</label>
+                                <input id="modal-nac" class="modal-input" type="text" 
+                                       @bind="FormCliente.Nacionalidad" required placeholder="Ej. Perú" />
+                            </div>
+                            
+                            <!-- Fecha de Nacimiento -->
+                            <div class="modal-group">
+                                <label for="modal-nacimiento">Fecha nacimiento</label>
+                                <input id="modal-nacimiento" class="modal-input" type="date" 
+                                       @bind="FormCliente.FechaNacimiento" @bind:format="yyyy-MM-dd" required />
+                            </div>
+                            
+                            <!-- Correo -->
+                            <div class="modal-group">
+                                <label for="modal-correo">Correo</label>
+                                <input id="modal-correo" class="modal-input" type="email" 
+                                       @bind="FormCliente.Correo" required placeholder="Ej. lucia.fernandez@email.com" />
+                            </div>
+                            
+                            <!-- Contacto -->
+                            <div class="modal-group">
+                                <label for="modal-contacto">Contacto</label>
+                                <input id="modal-contacto" class="modal-input" type="text" 
+                                       @bind="FormCliente.Contacto" required placeholder="Ej. +51 987 654 321" />
+                            </div>
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" @onclick="CerrarModal">Cancelar</button>
+                            <button type="submit" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</div>
