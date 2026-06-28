@@ -10,8 +10,9 @@ public class Servicio {
     private int capacidadMaxima;
     private boolean incluyeRecojo;
     private String ciudadDestino;
+    private Boolean activo;
 
-    public Servicio(int idServicio, String nombre, String descripcion, double precioUSD, double duracionHoras, String idiomaGuia, int capacidadMaxima, boolean incluyeRecojo, String ciudadDestino) {
+    public Servicio(int idServicio, String nombre, String descripcion, double precioUSD, double duracionHoras, String idiomaGuia, int capacidadMaxima, boolean incluyeRecojo, String ciudadDestino, Boolean activo) {
         this.idServicio = idServicio;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -21,6 +22,7 @@ public class Servicio {
         this.capacidadMaxima = capacidadMaxima;
         this.incluyeRecojo = incluyeRecojo;
         this.ciudadDestino = ciudadDestino;
+        this.activo = activo;
     }
 
     public Servicio() {
@@ -98,4 +100,8 @@ public class Servicio {
     public void setCiudadDestino(String ciudadDestino) {
         this.ciudadDestino = ciudadDestino;
     }
+
+    public boolean getActivo(){ return activo; }
+
+    public void setActivo(boolean activo){ this.activo = activo; }
 }

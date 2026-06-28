@@ -13,8 +13,9 @@ public class Cliente {
     private Date fechaRegistro;
     private String numeroContacto;
     private Date fechaNacimiento;
+    private Boolean activo;
 
-    public Cliente(int idCliente, String nombres, String apellidos, TipoDocumento tipoDocumento, String numeroDocumento, String correo, String nacionalidad, Date fechaRegistro, String numeroContacto, Date fechaNacimiento) {
+    public Cliente(int idCliente, String nombres, String apellidos, TipoDocumento tipoDocumento, String numeroDocumento, String correo, String nacionalidad, Date fechaRegistro, String numeroContacto, Date fechaNacimiento, Boolean activo) {
         this.idCliente = idCliente;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -25,6 +26,7 @@ public class Cliente {
         this.fechaRegistro = fechaRegistro;
         this.numeroContacto = numeroContacto;
         this.fechaNacimiento = fechaNacimiento;
+        this.activo = activo;
     }
 
     public Cliente() {
@@ -110,4 +112,8 @@ public class Cliente {
     public void setFechaNacimiento(Date fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
+
+    public boolean getActivo(){ return activo; }
+
+    public void setActivo(boolean activo){ this.activo = activo; }
 }

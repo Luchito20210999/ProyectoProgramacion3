@@ -16,10 +16,11 @@ public class Usuario {
     private String contrasena;
     private String numeroContacto;
     private String tipoUsuario;
+    private Boolean activo;
     private List<Notificacion> notificacions;
     private List<LogAuditoria> logsAuditorias;
 
-    public Usuario(int idUsuario, String nombres, String apellidos, TipoDocumento tipoDocumento, String numeroDocumento, String correo, String contrasena, String numeroContacto, String tipoUsuario) {
+    public Usuario(int idUsuario, String nombres, String apellidos, TipoDocumento tipoDocumento, String numeroDocumento, String correo, String contrasena, String numeroContacto, String tipoUsuario, Boolean activo) {
         this.idUsuario = idUsuario;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -29,6 +30,7 @@ public class Usuario {
         this.contrasena = contrasena;
         this.numeroContacto = numeroContacto;
         this.tipoUsuario = tipoUsuario;
+        this.activo = activo;
     }
 
     public Usuario() {
@@ -106,6 +108,10 @@ public class Usuario {
     public void setTipoUsuario(String tipoUsuario) {
         this.tipoUsuario = tipoUsuario;
     }
+
+    public boolean getActivo(){ return activo; }
+
+    public void setActivo(boolean activo){ this.activo = activo; }
 
     public List<Notificacion> getNotificacions() {
         return notificacions;
