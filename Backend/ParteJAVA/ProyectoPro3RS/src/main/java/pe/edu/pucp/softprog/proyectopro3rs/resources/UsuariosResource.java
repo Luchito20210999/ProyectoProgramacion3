@@ -93,35 +93,55 @@ public class UsuariosResource {
         return Response.noContent().build();
     }
 
+//    @POST
+//    @Path("login")
+//    public Response login(Usuario cuenta) {
+//        if (cuenta == null || cuenta.getCorreo() == null || cuenta.getContrasena() == null) {
+//            return Response.status(Response.Status.BAD_REQUEST)
+//                    .entity(Map.of("error", "Credenciales incompletas"))
+//                    .build();
+//        }
+//
+//        Usuario usuario = this.usuarioBO.listar().stream()
+//                .filter(u -> cuenta.getCorreo().equalsIgnoreCase(u.getCorreo()))
+//                .findFirst()
+//                .orElse(null);
+//
+//        String tipoUsuario = cuenta.getTipoUsuario();
+//        if ((tipoUsuario == null || tipoUsuario.isBlank()) && usuario != null) {
+//            tipoUsuario = usuario.getTipoUsuario();
+//        }
+//
+//        boolean success = tipoUsuario != null && !tipoUsuario.isBlank()
+//                && this.usuarioBO.login(
+//                cuenta.getCorreo(),
+//                cuenta.getContrasena(),
+//                tipoUsuario);
+//
+//        if (success) {
+//            usuario.setContrasena(null);
+//            return Response.status(Response.Status.OK)
+//                    .entity(usuario)
+//                    .build();
+//        }
+//
+//        return Response.status(401)
+//                .entity("Usuario o password incorrectos")
+//                .build();
+//    }
+
     @POST
     @Path("login")
     public Response login(Usuario cuenta) {
-        if (cuenta == null || cuenta.getCorreo() == null || cuenta.getContrasena() == null) {
-            return Response.status(Response.Status.BAD_REQUEST)
-                    .entity(Map.of("error", "Credenciales incompletas"))
-                    .build();
-        }
-
-        Usuario usuario = this.usuarioBO.listar().stream()
-                .filter(u -> cuenta.getCorreo().equalsIgnoreCase(u.getCorreo()))
-                .findFirst()
-                .orElse(null);
-
-        String tipoUsuario = cuenta.getTipoUsuario();
-        if ((tipoUsuario == null || tipoUsuario.isBlank()) && usuario != null) {
-            tipoUsuario = usuario.getTipoUsuario();
-        }
-
-        boolean success = tipoUsuario != null && !tipoUsuario.isBlank()
-                && this.usuarioBO.login(
-                cuenta.getCorreo(),
-                cuenta.getContrasena(),
-                tipoUsuario);
+        boolean success =
+                this.usuarioBO.login(
+                        cuenta.getCorreo(),
+                        cuenta.getContrasena(),
+                        cuenta.getTipoUsuario());
 
         if (success) {
-            usuario.setContrasena(null);
             return Response.status(Response.Status.OK)
-                    .entity(usuario)
+                    .entity("Login exitoso")
                     .build();
         }
 
