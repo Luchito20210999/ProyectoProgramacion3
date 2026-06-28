@@ -119,17 +119,4 @@ public class UsuarioDAOImpl extends DefaultBaseDAO<Usuario> implements UsuarioDA
         cmd.setString(inicio + 7, modelo.getTipoUsuario());
         cmd.setBoolean(inicio + 8, modelo.getActivo());
     }
-
-    @Override
-    public Usuario leerPorCorreo(String correo) {
-        return ejecutarComando(conn -> {
-            String sql = "SELECT * FROM Usuario WHERE correo = ? LIMIT 1";
-            try (PreparedStatement cmd = conn.prepareStatement(sql)) {
-                cmd.setString(1, correo);
-                try (ResultSet rs = cmd.executeQuery()) {
-                    return rs.next() ? mapearModelo(rs) : null;
-                }
-            }
-        });
-    }
 }

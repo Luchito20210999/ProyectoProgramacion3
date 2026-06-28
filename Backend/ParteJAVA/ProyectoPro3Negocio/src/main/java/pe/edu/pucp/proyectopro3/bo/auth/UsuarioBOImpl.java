@@ -24,21 +24,9 @@ public class UsuarioBOImpl extends BaseBO implements UsuarioBO {
     public boolean login(String username, String password, String tipoUsuario) {
         validarTextoObligatorio(username, "username");
         validarTextoObligatorio(password, "password");
-        
-        Usuario usuario = this.usuarioDao.leerPorCorreo(username);
-        if (usuario == null || usuario.getTipoUsuario() == null) {
-            return false;
-        }
-        if (!usuario.getTipoUsuario().equalsIgnoreCase(tipoUsuario)) {
-            return false;
-        }
-        
-        String savedHash = usuario.getContrasena();
-        if (savedHash != null && (savedHash.startsWith("$2a$") || savedHash.startsWith("$2b$") || savedHash.startsWith("$2y$"))) {
-            return org.mindrot.jbcrypt.BCrypt.checkpw(password, savedHash);
-        } else {
-            return password.equals(savedHash) || (savedHash != null && savedHash.equalsIgnoreCase(hashSHA256(password)));
-        }
+        validarTextoObligatorio(password, "tipoUsuario");
+
+        return usuarioDao.login(username,password,tipoUsuario);
     }
 
     // ====================================================================
