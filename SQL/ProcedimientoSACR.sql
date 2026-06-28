@@ -891,3 +891,311 @@ BEGIN
     WHERE id_detalle_reporte_reclamo = p_id_detalle_reporte_reclamo;
 END //
 DELIMITER ;
+
+-- ==========================================
+-- Integracion Bokun: dispersa webhook completo
+-- ==========================================
+
+DROP PROCEDURE IF EXISTS sp_ProcesarYDispersarWebhookBokun;
+DELIMITER //
+CREATE PROCEDURE sp_ProcesarYDispersarWebhookBokun(
+    IN p_raw_json LONGTEXT
+)
+BEGIN
+    DECLARE v_cli_nombres VARCHAR(50);
+    DECLARE v_cli_apellidos VARCHAR(50);
+    DECLARE v_cli_correo VARCHAR(80);
+    DECLARE v_cli_documento VARCHAR(20);
+    DECLARE v_cli_nacionalidad VARCHAR(30);
+    DECLARE v_cli_contacto VARCHAR(20);
+    DECLARE v_id_cliente INT DEFAULT NULL;
+
+    DECLARE v_usr_nombres VARCHAR(50);
+    DECLARE v_usr_apellidos VARCHAR(50);
+    DECLARE v_usr_correo VARCHAR(35);
+    DECLARE v_id_usuario INT DEFAULT NULL;
+
+    DECLARE v_res_bookingId VARCHAR(80);
+    DECLARE v_res_fecha_reg DATETIME;
+    DECLARE v_res_estado_raw VARCHAR(30);
+    DECLARE v_res_estado VARCHAR(15);
+    DECLARE v_res_cant_boletos INT DEFAULT 1;
+    DECLARE v_res_monto_total DECIMAL(12, 2) DEFAULT 0;
+    DECLARE v_res_fecha_modif DATETIME;
+    DECLARE v_res_canal VARCHAR(50);
+    DECLARE v_res_impuestos DECIMAL(12, 2) DEFAULT 0;
+    DECLARE v_res_codigo_bokun VARCHAR(80);
+    DECLARE v_id_reserva INT DEFAULT NULL;
+
+    DECLARE v_array_len INT DEFAULT 0;
+    DECLARE i INT DEFAULT 0;
+
+    DECLARE v_srv_nombre VARCHAR(50);
+    DECLARE v_srv_descripcion VARCHAR(80);
+    DECLARE v_srv_precio DECIMAL(10, 2);
+    DECLARE v_srv_duracion DECIMAL(5, 2);
+    DECLARE v_srv_idioma VARCHAR(35);
+    DECLARE v_srv_capacidad INT;
+    DECLARE v_srv_recojo CHAR(1);
+    DECLARE v_srv_destino VARCHAR(40);
+    DECLARE v_id_servicio INT DEFAULT NULL;
+
+    DECLARE v_det_cantidad INT;
+    DECLARE v_det_subtotal DECIMAL(12, 2);
+    DECLARE v_id_detalle INT;
+    DECLARE v_id_log_webhook INT;
+
+    SET v_res_bookingId = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, '$.bookingId')), 'null');
+    IF v_res_bookingId IS NULL OR v_res_bookingId = '' THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'El JSON de Bokun no contiene bookingId';
+    END IF;
+
+    SET v_res_codigo_bokun = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, '$.confirmationCode')), 'null');
+    IF v_res_codigo_bokun IS NULL OR v_res_codigo_bokun = '' THEN
+        SET v_res_codigo_bokun = v_res_bookingId;
+    END IF;
+    SET v_res_codigo_bokun = SUBSTRING(v_res_codigo_bokun, 1, 80);
+
+    -- Cliente
+    SET v_cli_correo = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, '$.customer.email')), 'null');
+    IF v_cli_correo IS NULL OR v_cli_correo = '' THEN
+        SET v_cli_correo = CONCAT('bokun_', SUBSTRING(v_res_bookingId, 1, 40), '@no-email.local');
+    END IF;
+    SET v_cli_correo = SUBSTRING(v_cli_correo, 1, 80);
+
+    SET v_cli_nombres = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, '$.customer.firstName')), 'null');
+    SET v_cli_apellidos = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, '$.customer.lastName')), 'null');
+    SET v_cli_documento = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, '$.customer.personalIdNumber')), 'null');
+    SET v_cli_nacionalidad = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, '$.customer.nationality')), 'null');
+    SET v_cli_contacto = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, '$.customer.phoneNumber')), 'null');
+
+    IF v_cli_nombres IS NULL OR v_cli_nombres = '' THEN SET v_cli_nombres = 'CLIENTE'; END IF;
+    IF v_cli_apellidos IS NULL OR v_cli_apellidos = '' THEN SET v_cli_apellidos = 'BOKUN'; END IF;
+    IF v_cli_documento IS NULL OR v_cli_documento = '' THEN SET v_cli_documento = CONCAT('BK', SUBSTRING(v_res_bookingId, 1, 18)); END IF;
+    IF v_cli_nacionalidad IS NULL OR v_cli_nacionalidad = '' THEN SET v_cli_nacionalidad = 'PE'; END IF;
+    IF v_cli_contacto IS NULL OR v_cli_contacto = '' THEN SET v_cli_contacto = '00000000'; END IF;
+
+    SELECT id_cliente INTO v_id_cliente
+    FROM Cliente
+    WHERE correo = v_cli_correo
+       OR (tipo_documento = 'OTROS' AND numero_documento = SUBSTRING(v_cli_documento, 1, 20))
+    LIMIT 1;
+
+    IF v_id_cliente IS NULL THEN
+        CALL sp_InsertCliente(
+            SUBSTRING(v_cli_nombres, 1, 50),
+            SUBSTRING(v_cli_apellidos, 1, 50),
+            'OTROS',
+            SUBSTRING(v_cli_documento, 1, 20),
+            v_cli_correo,
+            SUBSTRING(v_cli_nacionalidad, 1, 30),
+            CURDATE(),
+            SUBSTRING(v_cli_contacto, 1, 20),
+            '2000-01-01',
+            v_id_cliente
+        );
+    END IF;
+
+    -- Usuario operador de Bokun, si viene en el JSON.
+    SET v_usr_correo = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, '$.extranetUser.username')), 'null');
+    SET v_usr_nombres = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, '$.extranetUser.firstName')), 'null');
+    SET v_usr_apellidos = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, '$.extranetUser.lastName')), 'null');
+
+    IF v_usr_correo IS NOT NULL AND v_usr_correo <> '' THEN
+        SET v_usr_correo = SUBSTRING(v_usr_correo, 1, 35);
+        IF v_usr_nombres IS NULL OR v_usr_nombres = '' THEN SET v_usr_nombres = 'USUARIO'; END IF;
+        IF v_usr_apellidos IS NULL OR v_usr_apellidos = '' THEN SET v_usr_apellidos = 'BOKUN'; END IF;
+
+        SELECT id_usuario INTO v_id_usuario
+        FROM Usuario
+        WHERE correo = v_usr_correo
+        LIMIT 1;
+
+        IF v_id_usuario IS NULL THEN
+            CALL sp_InsertUsuario(
+                SUBSTRING(v_usr_nombres, 1, 50),
+                SUBSTRING(v_usr_apellidos, 1, 50),
+                'DNI',
+                CONCAT('BK', SUBSTRING(v_res_bookingId, 1, 18)),
+                v_usr_correo,
+                SHA2('PasswordBokun2026!', 256),
+                '00000000',
+                'EXTRANET_USER',
+                v_id_usuario
+            );
+        END IF;
+    END IF;
+
+    -- Reserva
+    SET v_res_fecha_reg = FROM_UNIXTIME(COALESCE(JSON_EXTRACT(p_raw_json, '$.creationDate'), UNIX_TIMESTAMP() * 1000) / 1000);
+    SET v_res_estado_raw = UPPER(NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, '$.status')), 'null'));
+    SET v_res_estado = CASE
+        WHEN v_res_estado_raw IN ('CONFIRMED', 'ARRIVED', 'COMPLETED') THEN 'APROBADO'
+        WHEN v_res_estado_raw IN ('CANCELLED', 'CANCELED', 'EXPIRED', 'REJECTED') THEN 'RECHAZADO'
+        WHEN v_res_estado_raw IN ('PENDING', 'ON_HOLD', 'RESERVED') THEN 'PENDIENTE'
+        ELSE 'OBSERVADO'
+    END;
+
+    SET v_res_monto_total = COALESCE(JSON_EXTRACT(p_raw_json, '$.totalPrice'), JSON_EXTRACT(p_raw_json, '$.invoice.totalAsMoney.amount'), 0);
+    SET v_res_canal = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, '$.bookingChannel.title')), 'null');
+    IF v_res_canal IS NULL OR v_res_canal = '' THEN SET v_res_canal = 'Bokun'; END IF;
+    SET v_res_canal = SUBSTRING(v_res_canal, 1, 50);
+    SET v_res_impuestos = COALESCE(JSON_EXTRACT(p_raw_json, '$.invoice.totalTaxAsMoney.amount'), 0);
+
+    IF JSON_EXTRACT(p_raw_json, '$.cancellationDate') IS NOT NULL
+       AND JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, '$.cancellationDate')) <> 'null' THEN
+        SET v_res_fecha_modif = FROM_UNIXTIME(JSON_EXTRACT(p_raw_json, '$.cancellationDate') / 1000);
+    ELSE
+        SET v_res_fecha_modif = NOW();
+    END IF;
+
+    SET v_res_cant_boletos = COALESCE(JSON_EXTRACT(p_raw_json, '$.activityBookings[0].totalParticipants'), 1);
+
+    SELECT id_reserva INTO v_id_reserva
+    FROM Reserva
+    WHERE codigo_bokun = v_res_codigo_bokun
+    LIMIT 1;
+
+    IF v_id_reserva IS NULL THEN
+        CALL sp_InsertReserva(
+            v_res_fecha_reg,
+            v_res_estado,
+            v_res_cant_boletos,
+            v_res_monto_total,
+            v_res_fecha_modif,
+            v_res_canal,
+            v_res_impuestos,
+            v_res_codigo_bokun,
+            v_id_usuario,
+            v_id_cliente,
+            v_id_reserva
+        );
+    ELSE
+        CALL sp_UpdateReserva(
+            v_id_reserva,
+            v_res_fecha_reg,
+            v_res_estado,
+            v_res_cant_boletos,
+            v_res_monto_total,
+            v_res_fecha_modif,
+            v_res_canal,
+            v_res_impuestos,
+            v_res_codigo_bokun,
+            v_id_usuario,
+            v_id_cliente
+        );
+
+        DELETE FROM Detalle_Reserva
+        WHERE id_reserva = v_id_reserva;
+    END IF;
+
+    -- Detalles
+    SET v_array_len = COALESCE(JSON_LENGTH(JSON_EXTRACT(p_raw_json, '$.activityBookings')), 0);
+
+    WHILE i < v_array_len DO
+        SET v_id_servicio = NULL;
+        SET v_srv_nombre = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, CONCAT('$.activityBookings[', i, '].title'))), 'null');
+        IF v_srv_nombre IS NULL OR v_srv_nombre = '' THEN
+            SET v_srv_nombre = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, CONCAT('$.activityBookings[', i, '].product.title'))), 'null');
+        END IF;
+        IF v_srv_nombre IS NULL OR v_srv_nombre = '' THEN SET v_srv_nombre = CONCAT('Servicio Bokun ', v_res_bookingId); END IF;
+
+        SET v_srv_descripcion = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, CONCAT('$.activityBookings[', i, '].product.excerpt'))), 'null');
+        IF v_srv_descripcion IS NULL OR v_srv_descripcion = '' THEN
+            SET v_srv_descripcion = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, CONCAT('$.activityBookings[', i, '].activity.excerpt'))), 'null');
+        END IF;
+        IF v_srv_descripcion IS NULL OR v_srv_descripcion = '' THEN SET v_srv_descripcion = 'Servicio importado desde Bokun'; END IF;
+
+        SET v_srv_precio = COALESCE(JSON_EXTRACT(p_raw_json, CONCAT('$.activityBookings[', i, '].totalPrice')), 0);
+        SET v_srv_duracion = COALESCE(JSON_EXTRACT(p_raw_json, CONCAT('$.activityBookings[', i, '].activity.durationHours')), 0);
+        SET v_srv_idioma = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, CONCAT('$.activityBookings[', i, '].activity.languages[0]'))), 'null');
+        IF v_srv_idioma IS NULL OR v_srv_idioma = '' THEN SET v_srv_idioma = 'N/D'; END IF;
+        SET v_srv_capacidad = COALESCE(JSON_EXTRACT(p_raw_json, CONCAT('$.activityBookings[', i, '].activity.passCapacity')), 1);
+
+        IF LOWER(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, CONCAT('$.activityBookings[', i, '].pickup')))) = 'true' THEN
+            SET v_srv_recojo = 'Y';
+        ELSE
+            SET v_srv_recojo = 'N';
+        END IF;
+
+        SET v_srv_destino = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, CONCAT('$.activityBookings[', i, '].activity.actualVendor.timeZone'))), 'null');
+        IF v_srv_destino IS NULL OR v_srv_destino = '' THEN
+            SET v_srv_destino = NULLIF(JSON_UNQUOTE(JSON_EXTRACT(p_raw_json, CONCAT('$.activityBookings[', i, '].activity.vendor.timeZone'))), 'null');
+        END IF;
+        IF v_srv_destino IS NULL OR v_srv_destino = '' THEN SET v_srv_destino = 'America/Lima'; END IF;
+
+        SET v_srv_nombre = SUBSTRING(v_srv_nombre, 1, 50);
+        SET v_srv_descripcion = SUBSTRING(v_srv_descripcion, 1, 80);
+        SET v_srv_idioma = SUBSTRING(v_srv_idioma, 1, 35);
+        SET v_srv_destino = SUBSTRING(v_srv_destino, 1, 40);
+
+        SELECT id_servicio INTO v_id_servicio
+        FROM Servicio
+        WHERE nombre = v_srv_nombre
+        LIMIT 1;
+
+        IF v_id_servicio IS NULL THEN
+            CALL sp_InsertServicio(
+                v_srv_nombre,
+                v_srv_descripcion,
+                v_srv_precio,
+                v_srv_duracion,
+                v_srv_idioma,
+                v_srv_capacidad,
+                v_srv_recojo,
+                v_srv_destino,
+                v_id_servicio
+            );
+        END IF;
+
+        SET v_det_cantidad = COALESCE(JSON_EXTRACT(p_raw_json, CONCAT('$.activityBookings[', i, '].totalParticipants')), 1);
+        SET v_det_subtotal = COALESCE(JSON_EXTRACT(p_raw_json, CONCAT('$.activityBookings[', i, '].totalPrice')), 0);
+
+        CALL sp_InsertDetalle_Reserva(
+            v_id_reserva,
+            v_id_servicio,
+            v_det_cantidad,
+            v_det_subtotal,
+            v_id_detalle
+        );
+
+        SET i = i + 1;
+    END WHILE;
+
+    CALL sp_InsertWebhookLog(
+        v_res_bookingId,
+        NOW(),
+        p_raw_json,
+        v_id_reserva,
+        v_id_log_webhook
+    );
+END //
+DELIMITER ;
+
+DROP PROCEDURE IF EXISTS sp_LoginUsuario;
+DELIMITER //
+CREATE PROCEDURE sp_LoginUsuario (
+    IN p_correo VARCHAR(35),
+    IN p_contrasena VARCHAR(80),
+    IN p_tipo_usuario VARCHAR(50),
+    OUT p_valido BOOLEAN
+)
+BEGIN
+    DECLARE v_contrasena_guardada VARCHAR(80) DEFAULT NULL;
+    
+    SELECT contrasena INTO v_contrasena_guardada
+    FROM Usuario
+    WHERE correo = p_correo
+      AND tipo_usuario = p_tipo_usuario
+    LIMIT 1;
+    
+    IF v_contrasena_guardada IS NOT NULL AND 
+       (v_contrasena_guardada = p_contrasena OR v_contrasena_guardada = SHA2(p_contrasena, 256)) THEN
+        SET p_valido = TRUE;
+    ELSE
+        SET p_valido = FALSE;
+    END IF;
+END //
+DELIMITER ;
+

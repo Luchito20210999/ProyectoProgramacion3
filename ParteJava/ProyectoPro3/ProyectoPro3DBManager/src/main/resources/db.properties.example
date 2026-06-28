@@ -1,8 +1,0 @@
-# Copiar este archivo como db.properties en el mismo directorio.
-# La contraseña puede estar cifrada con Crypto de ProyectoPro3DBManager.
-db.host=localhost
-db.puerto=3306
-db.esquema=SACRSoft
-db.usuario=root
-db.password=
-db.tipo=MySQL

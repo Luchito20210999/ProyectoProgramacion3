@@ -221,3 +221,15 @@ CREATE TABLE Detalle_Reporte_Reclamo (
     CONSTRAINT FK_DetalleReclamos_Reclamo FOREIGN KEY (id_reclamo) 
         REFERENCES Reclamo(id_reclamo)
 );
+
+-- 14. TABLA: Webhook_Queue (Cola asincrona de webhooks)
+CREATE TABLE Webhook_Queue (
+    id_queue INT NOT NULL AUTO_INCREMENT,
+    payload LONGTEXT NOT NULL,
+    estado VARCHAR(20) NOT NULL DEFAULT 'PENDIENTE',
+    intentos INT NOT NULL DEFAULT 0,
+    fecha_recepcion DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    fecha_procesamiento DATETIME NULL,
+    mensaje_error VARCHAR(500) NULL,
+    CONSTRAINT PK_Webhook_Queue PRIMARY KEY (id_queue)
+);
