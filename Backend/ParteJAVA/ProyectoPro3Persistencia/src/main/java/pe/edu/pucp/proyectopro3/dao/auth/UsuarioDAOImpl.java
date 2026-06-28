@@ -23,12 +23,12 @@ public class UsuarioDAOImpl extends DefaultBaseDAO<Usuario> implements UsuarioDA
     @Override
     protected PreparedStatement comandoCrear(Connection conn, Usuario modelo) throws SQLException {
         // sp_InsertUsuario(_nom, _ape, _tipoDoc, _numDoc, _corr, _pass, _tel, _tipoUsu, OUT _id_generado)
-        String sql = "{call sp_InsertUsuario(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+        String sql = "{call sp_InsertUsuario(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
 
         setCamposUsuario(cmd, modelo, 1);
 
-        cmd.registerOutParameter(9, Types.INTEGER);
+        cmd.registerOutParameter(10, Types.INTEGER);
 
         return cmd;
     }
@@ -36,7 +36,7 @@ public class UsuarioDAOImpl extends DefaultBaseDAO<Usuario> implements UsuarioDA
     @Override
     protected PreparedStatement comandoActualizar(Connection conn, Usuario modelo) throws SQLException {
         // sp_UpdateUsuario(_id, _nom, _ape, _tipoDoc, _numDoc, _corr, _pass, _tel, _tipoUsu)
-        String sql = "{call sp_UpdateUsuario(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+        String sql = "{call sp_UpdateUsuario(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
 
         cmd.setInt(1, modelo.getIdUsuario());
@@ -82,7 +82,7 @@ public class UsuarioDAOImpl extends DefaultBaseDAO<Usuario> implements UsuarioDA
 
     @Override
     protected Integer extraerIdDesdeCallable(CallableStatement cmd) throws SQLException {
-        return cmd.getInt(9);
+        return cmd.getInt(10);
     }
 
     @Override
@@ -98,6 +98,7 @@ public class UsuarioDAOImpl extends DefaultBaseDAO<Usuario> implements UsuarioDA
         usuario.setContrasena(rs.getString("contrasena"));
         usuario.setNumeroContacto(rs.getString("numero_contacto"));
         usuario.setTipoUsuario(rs.getString("tipo_usuario"));
+        usuario.setActivo(rs.getBoolean("activo"));
 
         return usuario;
     }
@@ -116,6 +117,7 @@ public class UsuarioDAOImpl extends DefaultBaseDAO<Usuario> implements UsuarioDA
         cmd.setString(inicio + 5, modelo.getContrasena());
         cmd.setString(inicio + 6, modelo.getNumeroContacto());
         cmd.setString(inicio + 7, modelo.getTipoUsuario());
+        cmd.setBoolean(inicio + 8, modelo.getActivo());
     }
 
     @Override

@@ -84,7 +84,8 @@ public class ReservaIntegradaPrueba {
                 datos.telefonoUsuario,
                 "op" + datos.sufijoCorto + "@t.com",
                 "password" + datos.sufijoCorto,
-                "Operador"
+                "Operador",
+                true
         );
     }
 

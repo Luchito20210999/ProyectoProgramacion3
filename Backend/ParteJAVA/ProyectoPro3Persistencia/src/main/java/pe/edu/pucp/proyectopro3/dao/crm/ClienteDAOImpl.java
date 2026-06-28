@@ -11,13 +11,13 @@ public class ClienteDAOImpl extends DefaultBaseDAO<Cliente> implements ClienteDA
     @Override
     protected PreparedStatement comandoCrear(Connection conn, Cliente modelo) throws SQLException {
         // sp_InsertCliente(_nom, _ape, _tipoDoc, _numDoc, _corr, _nac, _fReg, _tel, _fNac, OUT _id_generado)
-        String sql = "{call sp_InsertCliente(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+        String sql = "{call sp_InsertCliente(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
 
         setCamposCliente(cmd, modelo, 1);
 
         // Parámetro OUT: _id_generado
-        cmd.registerOutParameter(10, Types.INTEGER);
+        cmd.registerOutParameter(11, Types.INTEGER);
 
         return cmd;
     }
@@ -25,7 +25,7 @@ public class ClienteDAOImpl extends DefaultBaseDAO<Cliente> implements ClienteDA
     @Override
     protected PreparedStatement comandoActualizar(Connection conn, Cliente modelo) throws SQLException {
         // sp_UpdateCliente(_id, _nom, _ape, _tipoDoc, _numDoc, _corr, _nac, _fReg, _tel, _fNac)
-        String sql = "{call sp_UpdateCliente(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+        String sql = "{call sp_UpdateCliente(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
 
         cmd.setInt(1, modelo.getIdCliente());
@@ -72,6 +72,7 @@ public class ClienteDAOImpl extends DefaultBaseDAO<Cliente> implements ClienteDA
         cliente.setFechaRegistro(rs.getDate("fecha_registro"));
         cliente.setNumeroContacto(rs.getString("numero_contacto"));
         cliente.setFechaNacimiento(rs.getDate("fecha_nacimiento"));
+        cliente.setActivo(rs.getBoolean("activo"));
 
         return cliente;
     }
@@ -79,7 +80,7 @@ public class ClienteDAOImpl extends DefaultBaseDAO<Cliente> implements ClienteDA
     @Override
     protected Integer extraerIdDesdeCallable(CallableStatement cmd) throws SQLException {
         // En sp_InsertCliente, el parámetro OUT _id_generado está en la posición 10
-        return cmd.getInt(10);
+        return cmd.getInt(11);
     }
 
     @Override
@@ -97,5 +98,6 @@ public class ClienteDAOImpl extends DefaultBaseDAO<Cliente> implements ClienteDA
         cmd.setDate(inicio + 6, new java.sql.Date(modelo.getFechaRegistro().getTime()));
         cmd.setString(inicio + 7, modelo.getNumeroContacto());
         cmd.setDate(inicio + 8, new java.sql.Date(modelo.getFechaNacimiento().getTime()));
+        cmd.setBoolean(inicio + 9, modelo.getActivo());
     }
 }

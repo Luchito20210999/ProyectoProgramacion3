@@ -9,18 +9,18 @@ public class ServicioDAOImpl extends DefaultBaseDAO<Servicio> implements Servici
 
     @Override
     protected PreparedStatement comandoCrear(Connection conn, Servicio modelo) throws SQLException {
-        String sql = "{call sp_InsertServicio(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+        String sql = "{call sp_InsertServicio(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
 
         setCamposServicio(cmd, modelo, 1);
-        cmd.registerOutParameter(9, Types.INTEGER);
+        cmd.registerOutParameter(10, Types.INTEGER);
 
         return cmd;
     }
 
     @Override
     protected PreparedStatement comandoActualizar(Connection conn, Servicio modelo) throws SQLException {
-        String sql = "{call sp_UpdateServicio(?, ?, ?, ?, ?, ?, ?, ?, ?)}";
+        String sql = "{call sp_UpdateServicio(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
 
         cmd.setInt(1, modelo.getIdServicio());
@@ -53,7 +53,7 @@ public class ServicioDAOImpl extends DefaultBaseDAO<Servicio> implements Servici
 
     @Override
     protected Integer extraerIdDesdeCallable(CallableStatement cmd) throws SQLException {
-        return cmd.getInt(9);
+        return cmd.getInt(10);
     }
 
     @Override
@@ -74,6 +74,7 @@ public class ServicioDAOImpl extends DefaultBaseDAO<Servicio> implements Servici
         servicio.setCapacidadMaxima(rs.getInt("capacidad_maxima"));
         servicio.setIncluyeRecojo("Y".equalsIgnoreCase(rs.getString("incluye_recojo")));
         servicio.setCiudadDestino(rs.getString("ciudad_destino"));
+        servicio.setActivo(rs.getBoolean("activo"));
 
         return servicio;
     }
@@ -87,5 +88,6 @@ public class ServicioDAOImpl extends DefaultBaseDAO<Servicio> implements Servici
         cmd.setInt(inicio + 5, modelo.getCapacidadMaxima());
         cmd.setString(inicio + 6, modelo.isIncluyeRecojo() ? "Y" : "N");
         cmd.setString(inicio + 7, modelo.getCiudadDestino());
+        cmd.setBoolean(inicio + 8, modelo.getActivo());
     }
 }
