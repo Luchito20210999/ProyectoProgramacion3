@@ -1,0 +1,21 @@
+{
+  "JavaApi": {
+    "BaseUrl": "http://localhost:8080/WebApplication/api/"
+  },
+  "RestResources": {
+    "Reservas": "http://localhost:8080/WebApplication/api/v1/reservas",
+    "Clientes": "http://localhost:8080/WebApplication/api/v1/clientes",
+    "Servicios": "http://localhost:8080/WebApplication/api/v1/servicios",
+    "Usuarios": "http://localhost:8080/WebApplication/api/v1/usuarios",
+    "Reclamos": "http://localhost:8080/WebApplication/api/v1/reclamos",
+    "Notificaciones": "http://localhost:8080/WebApplication/api/v1/notificaciones",
+    "Auditoria": "http://localhost:8080/WebApplication/api/v1/auditoria"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}

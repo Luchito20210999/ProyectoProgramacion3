@@ -1,0 +1,137 @@
+.app-container[b-l1ewv7hcst] {
+    display: flex;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.content-container[b-l1ewv7hcst] {
+    margin-left: 280px;
+    width: calc(100% - 280px);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.top-bar[b-l1ewv7hcst] {
+    height: 70px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 3rem;
+    position: sticky;
+    top: 0;
+    z-index: 90;
+    box-sizing: border-box;
+}
+
+.top-bar-user[b-l1ewv7hcst] {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.user-role[b-l1ewv7hcst] {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #64748b;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.user-avatar[b-l1ewv7hcst] {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #0ea5e9;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 2px 4px rgba(14, 165, 233, 0.2);
+    user-select: none;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.page-body[b-l1ewv7hcst] {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-color: #f8fafc;
+}
+
+.page-loading-overlay[b-l1ewv7hcst] {
+    position: absolute;
+    inset: 70px 0 0 0;
+    z-index: 80;
+    display: grid;
+    place-items: center;
+    background: rgba(248, 250, 252, 0.72);
+    backdrop-filter: blur(1px);
+    pointer-events: none;
+}
+
+.page-loading-card[b-l1ewv7hcst] {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.85rem 1.1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #334155;
+    font-size: 0.95rem;
+    font-weight: 700;
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+}
+
+.page-spinner[b-l1ewv7hcst] {
+    width: 22px;
+    height: 22px;
+    border: 3px solid #dbeafe;
+    border-top-color: #0ea5e9;
+    border-radius: 50%;
+    animation: page-spin-b-l1ewv7hcst 0.75s linear infinite;
+}
+
+@keyframes page-spin-b-l1ewv7hcst {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#blazor-error-ui[b-l1ewv7hcst] {
+    color-scheme: light only;
+    background: lightyellow;
+    bottom: 0;
+    box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    font-family: 'Inter', sans-serif;
+}
+
+#blazor-error-ui .dismiss[b-l1ewv7hcst] {
+    cursor: pointer;
+    position: absolute;
+    right: 0.75rem;
+    top: 0.5rem;
+}
+
+@media (max-width: 900px) {
+    .content-container[b-l1ewv7hcst] {
+        margin-left: 0;
+        width: 100%;
+    }
+    [b-l1ewv7hcst] .nav-sidebar {
+        display: none; /* simple responsive handling */
+    }
+}

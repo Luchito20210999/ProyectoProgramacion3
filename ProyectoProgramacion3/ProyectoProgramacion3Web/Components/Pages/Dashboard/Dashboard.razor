@@ -1,0 +1,164 @@
+@page "/dashboard"
+@namespace ProyectoProgramacion3Web.Components.Pages.Dashboard
+
+<PageTitle>Dashboard - SACR</PageTitle>
+
+<div class="dashboard-container">
+    <!-- Encabezado de la página -->
+    <div class="dashboard-header">
+        <h1 class="dashboard-title">Dashboard</h1>
+        <p class="dashboard-subtitle">Vista general de operaciones</p>
+    </div>
+    
+    <!-- Bloques de métricas (KPIs) -->
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <span class="metric-label">Reservas hoy</span>
+            <span class="metric-value">@ReservasHoy</span>
+            
+        </div>
+        
+        <div class="metric-card">
+            <span class="metric-label">Ventas (USD)</span>
+            <span class="metric-value">$@VentasUSD.ToString("N2")</span>
+            <span class="metric-secondary">Monto acumulado de la semana</span>
+        </div>
+        
+        <div class="metric-card">
+            <span class="metric-label">Reclamos pendientes</span>
+            <span class="metric-value">@ReclamosPendientes</span>
+            
+        </div>
+        
+        <div class="metric-card">
+            <span class="metric-label">% Incidencias</span>
+            <span class="metric-value">@PorcentajeIncidencias.ToString("N1")%</span>
+            
+        </div>
+    </div>
+    
+    <!-- Bloque combinado de gráfico y reclamos -->
+    <div class="charts-grid">
+        <!-- Columna izquierda: gráfico de ventas -->
+        <div class="chart-card">
+            <div class="card-header">
+                <div class="card-title-group">
+                    <h3>Ventas últimos 7 días</h3>
+                    <p class="card-subtitle-small">Resume el monto total de reservas válidas por día de servicio</p>
+                </div>
+                <span class="currency-tag">USD</span>
+            </div>
+            
+            @if (TieneDatosGrafico)
+            {
+                <div class="chart-outer-frame">
+                    <!-- Eje vertical izquierdo -->
+                    <div class="chart-y-axis">
+                        <span class="axis-tick">@MaxEjeString</span>
+                        <span class="axis-tick">@HighMedEjeString</span>
+                        <span class="axis-tick">@LowMedEjeString</span>
+                        <span class="axis-tick">@MinEjeString</span>
+                    </div>
+                    
+                    <!-- Área de dibujo del gráfico -->
+                    <div class="bar-chart-container">
+                        <!-- Rejilla horizontal tenue de fondo -->
+                        <div class="chart-grid-lines">
+                            <div class="grid-line"></div>
+                            <div class="grid-line"></div>
+                            <div class="grid-line"></div>
+                            <div class="grid-line"></div>
+                        </div>
+                        
+                        <div class="bar-chart">
+                            @if (VentasSieteDias != null)
+                            {
+                                @foreach (var dia in VentasSieteDias)
+                                {
+                                    <div class="bar-column">
+                                        <div class="bar-value-tooltip">$@dia.Monto.ToString("N0")</div>
+                                        <div class="bar-wrapper">
+                                            <div class="bar-fill @(dia.EsMaximo ? "max-value" : "")" style="height: @(dia.PorcentajeAltura)%;"></div>
+                                        </div>
+                                        <span class="bar-label">@dia.Dia</span>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+                <div class="empty-chart-state">
+                    <span class="empty-icon">📊</span>
+                    <p class="empty-text">Aún no hay datos suficientes de reservas válidas para construir la tendencia semanal.</p>
+                </div>
+            }
+        </div>
+        
+        <!-- Columna derecha: reclamos por estado -->
+        <div class="claims-card">
+            <div class="card-header">
+                <h3>Reclamos por estado</h3>
+            </div>
+            
+            <ul class="claims-list">
+                @if (ReclamosPorEstado != null)
+                {
+                    @foreach (var item in ReclamosPorEstado)
+                    {
+                        <li class="claim-item">
+                            <span class="claim-badge @item.ColorClase">@item.Estado</span>
+                            <span class="claim-counter">@item.Contador</span>
+                        </li>
+                    }
+                }
+            </ul>
+        </div>
+    </div>
+    
+    <!-- Tabla de últimas reservas -->
+    <div class="table-card">
+        <div class="table-card-header">
+            <h3>Últimas reservas</h3>
+            @if (PuedeVerReservas)
+            {
+                <button class="btn-text-nav" @onclick="VerTodasReservas">Ver todas →</button>
+            }
+        </div>
+        
+        <div class="table-responsive">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Cliente</th>
+                        <th>Servicio</th>
+                        <th>Fecha</th>
+                        <th class="text-right">Monto</th>
+                        <th class="text-center">Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (UltimasReservas != null)
+                    {
+                        @foreach (var res in UltimasReservas)
+                        {
+                            <tr>
+                                <td class="font-mono text-primary font-semibold">@res.Codigo</td>
+                                <td class="font-semibold">@res.Cliente</td>
+                                <td>@res.Servicio</td>
+                                <td>@res.Fecha.ToString("dd/MM/yyyy")</td>
+                                <td class="text-right font-semibold">$@res.Monto.ToString("N2")</td>
+                                <td class="text-center">
+                                    <span class="status-pill @res.EstadoClase">@res.Estado</span>
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,161 @@
+/* Scoped CSS - Módulo Log de Auditoría */
+.auditoria-container[b-2ykedwwqel] {
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.auditoria-header[b-2ykedwwqel] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.auditoria-title[b-2ykedwwqel] {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--color-slate-900);
+    margin: 0;
+    letter-spacing: -0.03em;
+    font-family: var(--font-title);
+}
+
+.auditoria-subtitle[b-2ykedwwqel] {
+    font-size: 0.95rem;
+    color: var(--color-slate-600);
+    margin: 0.25rem 0 0 0;
+}
+
+.filters-card[b-2ykedwwqel], .table-card[b-2ykedwwqel] {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.02);
+}
+
+.table-responsive[b-2ykedwwqel] {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.admin-table[b-2ykedwwqel] {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.admin-table th[b-2ykedwwqel] {
+    text-align: left;
+    padding: 0.85rem 1rem;
+    background-color: #f8fafc;
+    color: #475569;
+    font-weight: 600;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.admin-table td[b-2ykedwwqel] {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+    vertical-align: middle;
+}
+
+.admin-table tr:hover[b-2ykedwwqel] {
+    background-color: #f8fafc;
+}
+
+/* Filtros y Buscador */
+.filters-grid[b-2ykedwwqel] {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 1.25rem;
+    align-items: end;
+}
+
+.filter-group[b-2ykedwwqel] {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.filter-group label[b-2ykedwwqel] {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-slate-600);
+    letter-spacing: 0.05em;
+}
+
+.search-input-wrapper[b-2ykedwwqel] {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-icon[b-2ykedwwqel] {
+    position: absolute;
+    left: 0.85rem;
+    color: var(--color-slate-400);
+    font-size: 0.95rem;
+    pointer-events: none;
+    user-select: none;
+}
+
+.search-input[b-2ykedwwqel] {
+    padding-left: 2.35rem !important;
+}
+
+.date-text[b-2ykedwwqel] {
+    font-family: 'SFMono-Regular', Consolas, "Liberation Mono", monospace;
+    font-weight: 600;
+    color: var(--color-slate-600);
+}
+
+.user-text[b-2ykedwwqel] {
+    font-weight: 700;
+    color: var(--color-slate-900);
+}
+
+.desc-text[b-2ykedwwqel] {
+    font-weight: 500;
+    color: var(--color-slate-800);
+}
+
+.location-text[b-2ykedwwqel] {
+    color: var(--color-slate-600);
+    font-size: 0.82rem;
+    font-style: italic;
+}
+
+/* Badges técnicas estilo código para comandos */
+.code-badge[b-2ykedwwqel] {
+    background-color: var(--color-slate-100);
+    color: var(--color-slate-800);
+    border: 1px solid var(--color-slate-200);
+    border-radius: var(--radius-sm);
+    padding: 0.25rem 0.5rem;
+    font-family: 'SFMono-Regular', Consolas, "Liberation Mono", monospace;
+    font-weight: 700;
+    font-size: 0.775rem;
+    display: inline-block;
+    letter-spacing: 0.02em;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+/* Responsividad */
+@media (max-width: 1024px) {
+    .filters-grid[b-2ykedwwqel] {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .auditoria-container[b-2ykedwwqel] {
+        padding: 1.5rem;
+    }
+}
