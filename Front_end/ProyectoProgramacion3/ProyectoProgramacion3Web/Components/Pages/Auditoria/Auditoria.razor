@@ -1,0 +1,90 @@
+@page "/auditoria"
+@namespace ProyectoProgramacion3Web.Components.Pages.Auditoria
+
+<PageTitle>Log de Auditoría - SACR</PageTitle>
+
+<div class="auditoria-container">
+    <!-- Encabezado de la página -->
+    <div class="auditoria-header">
+        <div class="header-titles">
+            <h1 class="auditoria-title">Log de Auditoría</h1>
+            <p class="auditoria-subtitle">Registro de acciones realizadas por usuarios.</p>
+        </div>
+        <!-- Esta pantalla es puramente consultiva, no incluye acciones de creación en el encabezado -->
+    </div>
+    
+    <!-- Barra de filtros -->
+    <div class="filters-card">
+        <div class="filters-grid">
+            <!-- Búsqueda por texto libre -->
+            <div class="filter-group search-group">
+                <label for="audit-search">Buscar</label>
+                <div class="search-input-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input id="audit-search" class="input-control search-input" type="text" 
+                           placeholder="Buscar por usuario, comando o descripción..." 
+                           @bind="SearchText" @bind:event="oninput" @onkeyup="FiltrarListado" />
+                </div>
+            </div>
+            
+            <!-- Fecha de inicio -->
+            <div class="filter-group date-group">
+                <label for="audit-date-start">Fecha inicio</label>
+                <input id="audit-date-start" class="input-control" type="date" 
+                       @bind="FechaInicio" @bind:after="FiltrarListado" />
+            </div>
+            
+            <!-- Fecha de fin -->
+            <div class="filter-group date-group">
+                <label for="audit-date-end">Fecha fin</label>
+                <input id="audit-date-end" class="input-control" type="date" 
+                       @bind="FechaFin" @bind:after="FiltrarListado" />
+            </div>
+        </div>
+    </div>
+    
+    <!-- Tabla principal de Log de Auditoría -->
+    <div class="table-card">
+        <div class="table-responsive">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th style="width: 160px;">Fecha</th>
+                        <th style="width: 140px;">Usuario</th>
+                        <th style="width: 200px;">Comando</th>
+                        <th>Descripción</th>
+                        <th style="width: 120px;">Ubicación</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (ListadoFiltrado != null && ListadoFiltrado.Any())
+                    {
+                        @foreach (var log in ListadoFiltrado)
+                        {
+                            <tr>
+                                <td class="date-text">@log.Fecha.ToString("dd/MM/yyyy HH:mm")</td>
+                                <td class="user-text">@log.Usuario</td>
+                                <td>
+                                    <!-- Renderizado como badge técnica tipo código -->
+                                    <span class="code-badge">@log.Comando</span>
+                                </td>
+                                <td class="desc-text">@log.Descripcion</td>
+                                <td class="location-text">@log.Ubicacion</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="5" class="text-center text-muted py-12">
+                                <div style="font-size: 3rem; margin-bottom: 0.5rem;">🔍</div>
+                                <h3 style="font-size: 1.25rem; font-weight: 700; color: #0f172a; margin: 0 0 0.25rem 0;">No se encontraron registros.</h3>
+                                <p style="color: #64748b; margin: 0; font-size: 0.9rem;">Prueba modificando los términos de búsqueda o el rango de fechas.</p>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

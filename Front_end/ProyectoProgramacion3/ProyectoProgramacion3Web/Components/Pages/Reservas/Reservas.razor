@@ -1,0 +1,250 @@
+@page "/reservas"
+@namespace ProyectoProgramacion3Web.Components.Pages.Reservas
+
+<PageTitle>Gestion de Reservas - SACR</PageTitle>
+
+<div class="reservas-container">
+    <div class="reservas-header">
+        <div class="header-titles">
+            <h1 class="reservas-title">Gestion de Reservas</h1>
+            <p class="reservas-subtitle">Reservas sincronizadas desde Bokun y gestionadas por el equipo operativo.</p>
+        </div>
+    </div>
+
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <span class="metric-label">Total</span>
+            <span class="metric-value">@TotalCount</span>
+        </div>
+
+        <div class="metric-card">
+            <span class="metric-label">Confirmadas</span>
+            <span class="metric-value">@ConfirmadasCount</span>
+        </div>
+
+        <div class="metric-card">
+            <span class="metric-label">Pendientes</span>
+            <span class="metric-value">@PendientesCount</span>
+        </div>
+
+        <div class="metric-card">
+            <span class="metric-label">Anuladas</span>
+            <span class="metric-value">@AnuladasCount</span>
+        </div>
+    </div>
+
+    <div class="filters-card">
+        @if (!string.IsNullOrEmpty(MensajeCarga))
+        {
+            <div class="alert-error-box">@MensajeCarga</div>
+        }
+
+        <div class="filters-bar">
+            <div class="filter-control search-input-wrapper">
+                <span class="search-icon" aria-hidden="true">&#128269;</span>
+                <input class="input-filter" type="text" placeholder="Buscar por codigo, cliente o servicio..."
+                       @bind="SearchText" @bind:event="oninput" @onkeyup="FiltrarListado" />
+            </div>
+
+            <div class="filter-control">
+                <select class="select-filter" @bind="SelectedEstado" @bind:after="FiltrarListado">
+                    <option value="TODOS">Todos los estados</option>
+                    <option value="CONFIRMADA">CONFIRMADA</option>
+                    <option value="PENDIENTE">PENDIENTE</option>
+                    <option value="ANULADA">ANULADA</option>
+                </select>
+            </div>
+
+            <div class="filter-control">
+                <input class="date-filter" type="date" @bind="SelectedFecha" @bind:after="FiltrarListado" />
+            </div>
+
+            <div class="filter-flex"></div>
+
+            @if (!string.IsNullOrEmpty(SearchText) || SelectedEstado != "TODOS" || SelectedFecha.HasValue || ClienteIdQuery.HasValue)
+            {
+                <button class="btn-clear" @onclick="LimpiarFiltros">Limpiar filtros</button>
+            }
+        </div>
+    </div>
+
+    <div class="table-card">
+        <div class="table-responsive">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th>Codigo</th>
+                        <th>Cliente</th>
+                        <th>Servicio</th>
+                        <th>Fecha servicio</th>
+                        <th class="text-center">Pax</th>
+                        <th class="text-right">Monto</th>
+                        <th class="text-center">Estado</th>
+                        <th class="text-center">Accion</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (ListadoFiltrado != null && ListadoFiltrado.Any())
+                    {
+                        @foreach (var res in ListadoFiltrado)
+                        {
+                            <tr>
+                                <td class="font-mono text-primary font-bold">@res.Codigo</td>
+                                <td class="font-semibold">@res.Cliente</td>
+                                <td>@res.Servicio</td>
+                                <td>@res.FechaServicio.ToString("dd/MM/yyyy")</td>
+                                <td class="text-center">@res.Pax</td>
+                                <td class="text-right font-semibold">$@res.Monto.ToString("N2")</td>
+                                <td class="text-center">
+                                    <span class="status-pill @res.EstadoClase">@res.Estado</span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row-actions">
+                                        <button class="btn-row btn-row-view" @onclick='() => AbrirModal("Ver", res)'>Ver</button>
+                                        <button class="btn-row btn-row-edit" @onclick='() => AbrirModal("Editar", res)'>Editar</button>
+                                        <button class="btn-row btn-row-cancel"
+                                                disabled="@(res.Estado == "Anulada")"
+                                                @onclick="() => AnularReserva(res)">Anular</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="8" class="text-center text-muted py-8">
+                                No se encontraron reservas que coincidan con los filtros seleccionados.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    @if (IsModalOpen)
+    {
+        <div class="modal-backdrop">
+            <div class="modal-window">
+                <div class="modal-header">
+                    <h2>@ModalTitle</h2>
+                    <button class="modal-close-btn" @onclick="CerrarModal">x</button>
+                </div>
+
+                <div class="modal-body">
+                    @if (!string.IsNullOrEmpty(ErrorMessage))
+                    {
+                        <div class="alert-error-box">@ErrorMessage</div>
+                    }
+
+                    <form @onsubmit="GuardarReserva" @onsubmit:preventDefault>
+                        <div class="modal-grid">
+                            <div class="modal-group">
+                                <label for="modal-codigo">Codigo de reserva</label>
+                                <input id="modal-codigo" class="modal-input" type="text"
+                                       @bind="FormReserva.Codigo" disabled required />
+                            </div>
+
+                            <div class="modal-group">
+                                <label for="modal-servicio">Servicio turistico</label>
+                                <input id="modal-servicio" class="modal-input" type="text"
+                                       @bind="FormReserva.Servicio" disabled required />
+                            </div>
+
+                            <div class="modal-group">
+                                <label for="modal-cliente">Cliente</label>
+                                <input id="modal-cliente" class="modal-input" type="text"
+                                       @bind="FormReserva.Cliente" disabled required />
+                            </div>
+
+                            <div class="modal-group">
+                                <label>Documento cliente</label>
+                                <input class="modal-input" type="text"
+                                       value="@($"{FormReserva.ClienteTipoDocumento} {FormReserva.ClienteNumeroDocumento}".Trim())" disabled />
+                            </div>
+
+                            <div class="modal-group">
+                                <label>Correo cliente</label>
+                                <input class="modal-input" type="text"
+                                       value="@FormReserva.ClienteCorreo" disabled />
+                            </div>
+
+                            <div class="modal-group">
+                                <label>Nacionalidad</label>
+                                <input class="modal-input" type="text"
+                                       value="@FormReserva.ClienteNacionalidad" disabled />
+                            </div>
+
+                            <div class="modal-group">
+                                <label>Precio base</label>
+                                <input class="modal-input" type="text"
+                                       value="@($"$ {FormReserva.ServicioPrecioUSD:N2}")" disabled />
+                            </div>
+
+                            <div class="modal-group">
+                                <label>Duracion</label>
+                                <input class="modal-input" type="text"
+                                       value="@($"{FormReserva.ServicioDuracionHoras:N1} h")" disabled />
+                            </div>
+
+                            <div class="modal-group">
+                                <label>Capacidad maxima</label>
+                                <input class="modal-input" type="text"
+                                       value="@FormReserva.ServicioCapacidadMaxima" disabled />
+                            </div>
+
+                            <div class="modal-group">
+                                <label>Idioma guia</label>
+                                <input class="modal-input" type="text"
+                                       value="@FormReserva.ServicioIdiomaGuia" disabled />
+                            </div>
+
+                            <div class="modal-group">
+                                <label>Incluye recojo</label>
+                                <input class="modal-input" type="text"
+                                       value="@(FormReserva.ServicioIncluyeRecojo ? "Si" : "No")" disabled />
+                            </div>
+
+                            <div class="modal-group">
+                                <label for="modal-pax">Pax</label>
+                                <input id="modal-pax" class="modal-input" type="number" min="1"
+                                       @bind="FormReserva.Pax" disabled="@IsReadOnly" required />
+                            </div>
+
+                            <div class="modal-group">
+                                <label for="modal-fecha">Fecha del servicio</label>
+                                <input id="modal-fecha" class="modal-input" type="date"
+                                       @bind="FormReserva.FechaServicio" @bind:format="yyyy-MM-dd" disabled="@IsReadOnly" required />
+                            </div>
+
+                            <div class="modal-group">
+                                <label for="modal-monto">Monto calculado (USD)</label>
+                                <input id="modal-monto" class="modal-input" type="number" step="0.01"
+                                       @bind="FormReserva.Monto" disabled required />
+                            </div>
+
+                            <div class="modal-group full-width">
+                                <label for="modal-estado">Estado de Reserva</label>
+                                <select id="modal-estado" class="modal-select"
+                                        @bind="FormReserva.Estado" disabled="@IsReadOnly">
+                                    <option value="Confirmada">Confirmada</option>
+                                    <option value="Pendiente">Pendiente</option>
+                                    <option value="Anulada">Anulada</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" @onclick="CerrarModal">Cancelar</button>
+                            @if (ShowGuardarBtn)
+                            {
+                                <button type="submit" class="btn btn-primary">Guardar</button>
+                            }
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,233 @@
+﻿@page "/ventas"
+@namespace ProyectoProgramacion3Web.Components.Pages.Ventas
+
+<PageTitle>Reporte de Ventas - SACR</PageTitle>
+
+<div class="ventas-container">
+    <!-- Encabezado de la pÃ¡gina -->
+    <div class="ventas-header">
+        <div class="header-titles">
+            <h1 class="ventas-title">Reporte de Ventas</h1>
+            <p class="ventas-subtitle">AnÃ¡lisis de ingresos por periodo, servicio y canal.</p>
+        </div>
+        <div class="header-actions">
+            <!-- Boton Generar reporte -->
+            <button class="btn btn-primary" @onclick="GenerarReporte">
+                Generar reporte
+            </button>
+        </div>
+    </div>
+    
+    <!-- Bloque de filtros -->
+    <div class="filters-card">
+        <div class="filters-grid">
+            <div class="filter-group">
+                <label for="fecha-inicio">Fecha inicio</label>
+                <input id="fecha-inicio" class="input-control" type="date" @bind="FechaInicio" @bind:after="FiltrarDatos" />
+            </div>
+            
+            <div class="filter-group">
+                <label for="fecha-fin">Fecha fin</label>
+                <input id="fecha-fin" class="input-control" type="date" @bind="FechaFin" @bind:after="FiltrarDatos" />
+            </div>
+            
+            <div class="filter-group">
+                <label for="filtro-servicio">Servicio</label>
+                <select id="filtro-servicio" class="select-control" @bind="ServicioSeleccionado" @bind:after="FiltrarDatos">
+                    <option value="Todos">Todos</option>
+                    <option value="City Tour Lima">City Tour Lima</option>
+                    <option value="Machu Picchu Full Day">Machu Picchu Full Day</option>
+                    <option value="Valle Sagrado">Valle Sagrado</option>
+                    <option value="Islas Ballestas">Islas Ballestas</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="filtro-canal">Canal</label>
+                <select id="filtro-canal" class="select-control" @bind="CanalSeleccionado" @bind:after="FiltrarDatos">
+                    <option value="Todos">Todos</option>
+                    <option value="Bokun">Bokun</option>
+                    <option value="Directo">Directo</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <!-- CuadrÃ­cula de mÃ©tricas KPI -->
+    <div class="metrics-grid">
+        <!-- KPI: Total ventas -->
+        <div class="metric-card">
+            <span class="metric-label">Total ventas</span>
+            <span class="metric-value">$@TotalVentas.ToString("N2")</span>
+            
+        </div>
+        
+        <!-- KPI: Reservas -->
+        <div class="metric-card">
+            <span class="metric-label">Reservas</span>
+            <span class="metric-value">@ReservasCount</span>
+            
+        </div>
+        
+        <!-- KPI: Ticket promedio -->
+        <div class="metric-card">
+            <span class="metric-label">Ticket promedio</span>
+            <span class="metric-value">$@TicketPromedio.ToString("N2")</span>
+            
+        </div>
+        
+        <!-- KPI: Pax atendidos -->
+        <div class="metric-card">
+            <span class="metric-label">Pax atendidos</span>
+            <span class="metric-value">@PaxAtendidos</span>
+            
+        </div>
+    </div>
+    
+    <!-- Zona combinada de grÃ¡fico y top servicios -->
+    <div class="combined-grid">
+        <!-- Columna izquierda: GrÃ¡fico de ventas por mes -->
+        <div class="chart-card">
+            <div class="card-header">
+                <div class="card-title-group">
+                    <h3>Ventas por mes</h3>
+                    <p class="card-subtitle-small">Tendencia de ingresos primer semestre 2026</p>
+                </div>
+                <span class="currency-tag">USD</span>
+            </div>
+            
+            <div class="chart-outer-frame">
+                <!-- Eje Y de ticks visuales -->
+                <div class="chart-y-axis">
+                    <span class="axis-tick">$@((MaxMontoMes).ToString("N0"))</span>
+                    <span class="axis-tick">$@((MaxMontoMes * 0.75m).ToString("N0"))</span>
+                    <span class="axis-tick">$@((MaxMontoMes * 0.5m).ToString("N0"))</span>
+                    <span class="axis-tick">$@((MaxMontoMes * 0.25m).ToString("N0"))</span>
+                    <span class="axis-tick">$0</span>
+                </div>
+                
+                <!-- Contenedor del grÃ¡fico y las barras -->
+                <div class="bar-chart-container">
+                    <!-- LÃ­neas de rejilla de fondo -->
+                    <div class="chart-grid-lines">
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                        <div class="grid-line"></div>
+                    </div>
+                    
+                    <!-- Barras visuales -->
+                    <div class="bar-chart">
+                        @if (VentasPorMes != null && VentasPorMes.Any())
+                        {
+                            var maxMonto = VentasPorMes.Max(v => v.Monto);
+                            @foreach (var item in VentasPorMes)
+                            {
+                                <div class="bar-column">
+                                    <!-- Tooltip de valor al hacer hover -->
+                                    <div class="bar-value-tooltip">$@item.Monto.ToString("N2")</div>
+                                    
+                                    <!-- Columna fÃ­sica de la barra -->
+                                    <div class="bar-wrapper">
+                                        <div class="bar-fill @(item.Monto == maxMonto && maxMonto > 0 ? "max-value" : "")" 
+                                             style="height: @(item.PorcentajeAltura.ToString("F1"))%;">
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Leyenda del mes -->
+                                    <span class="bar-label">@item.Mes</span>
+                                </div>
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Columna derecha: Top de servicios -->
+        <div class="top-services-card">
+            <div class="card-header">
+                <div class="card-title-group">
+                    <h3>Top servicios</h3>
+                    <p class="card-subtitle-small">ClasificaciÃ³n por rentabilidad acumulada</p>
+                </div>
+            </div>
+            
+            <div class="top-services-table-wrapper">
+                <table class="top-services-table">
+                    <tbody>
+                        @if (TopServicios != null && TopServicios.Any())
+                        {
+                            @foreach (var ts in TopServicios)
+                            {
+                                <tr>
+                                    <td class="service-name">@ts.Servicio</td>
+                                    <td class="service-monto">$ @ts.TotalMonto.ToString("N0")</td>
+                                </tr>
+                            }
+                        }
+                        else
+                        {
+                            <tr>
+                                <td colspan="2" class="text-center text-muted">Sin datos</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Tabla de detalle transaccional -->
+    <div class="detail-card">
+        <div class="card-header">
+            <div class="card-title-group">
+                <h3>Detalle</h3>
+                <p class="card-subtitle-small">Listado transaccional de reservas incluidas en el anÃ¡lisis</p>
+            </div>
+            <span class="rows-count-badge">Mostrando @(Math.Min(20, ListadoFiltrado.Count)) de @ListadoFiltrado.Count registros</span>
+        </div>
+        
+        <div class="table-container">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th style="width: 100px;">Reserva</th>
+                        <th>Cliente</th>
+                        <th>Servicio</th>
+                        <th class="text-center" style="width: 120px;">Fecha</th>
+                        <th class="text-center" style="width: 80px;">Pax</th>
+                        <th class="text-right" style="width: 120px;">Monto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (ListadoFiltrado != null && ListadoFiltrado.Any())
+                    {
+                        @foreach (var res in ListadoFiltrado.Take(20))
+                        {
+                            <tr>
+                                <td class="booking-code">@res.Codigo</td>
+                                <td class="client-name">@res.Cliente</td>
+                                <td class="service-name-row">@res.Servicio</td>
+                                <td class="text-center text-muted">@res.Fecha.ToString("dd/MM/yyyy")</td>
+                                <td class="text-center font-bold">@res.Pax</td>
+                                <td class="text-right booking-amount">$@res.Monto.ToString("N2")</td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="6" class="text-center text-muted py-8">
+                                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">ðŸ”</div>
+                                No se encontraron registros que coincidan con los filtros aplicados.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

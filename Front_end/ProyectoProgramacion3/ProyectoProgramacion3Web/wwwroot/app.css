@@ -1,0 +1,373 @@
+/* --- SACR GLOBAL ADMINISTRATIVE STYLE SHEET & DESIGN SYSTEM --- */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    --font-title: 'Outfit', 'Inter', sans-serif;
+    
+    /* Harmonious Color Palette */
+    --color-slate-900: #0f172a;
+    --color-slate-800: #1e293b;
+    --color-slate-600: #475569;
+    --color-slate-400: #94a3b8;
+    --color-slate-200: #e2e8f0;
+    --color-slate-100: #f1f5f9;
+    --color-slate-50: #f8fafc;
+    
+    --color-sky-500: #0ea5e9;
+    --color-sky-600: #0284c7;
+    --color-sky-700: #0369a1;
+    --color-sky-100: #e0f2fe;
+    
+    --color-danger-500: #ef4444;
+    --color-danger-600: #dc2626;
+    --color-danger-100: #fee2e2;
+    
+    --color-success-600: #15803d;
+    --color-success-100: #dcfce7;
+    
+    --radius-lg: 12px;
+    --radius-md: 8px;
+    --radius-sm: 6px;
+    
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(15, 23, 42, 0.02), 0 2px 4px -1px rgba(15, 23, 42, 0.01);
+    --shadow-lg: 0 10px 15px -3px rgba(15, 23, 42, 0.05), 0 4px 6px -2px rgba(15, 23, 42, 0.02);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+}
+
+body {
+    background-color: #f8fafc;
+    color: var(--color-slate-800);
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 0;
+}
+
+h1:focus {
+    outline: none;
+}
+
+/* --- Shared Layout Elements --- */
+.admin-card {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    border: 1px solid var(--color-slate-200);
+    box-shadow: var(--shadow-md);
+}
+
+/* --- Shared Input Controls --- */
+.input-control,
+.select-control {
+    height: 40px;
+    padding: 0 0.75rem;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--color-slate-400);
+    background-color: #ffffff;
+    color: var(--color-slate-900);
+    font-size: 0.875rem;
+    font-weight: 500;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+.input-control:focus,
+.select-control:focus {
+    border-color: var(--color-sky-500);
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.15);
+}
+
+.alert-error-box {
+    background-color: var(--color-danger-100);
+    border-left: 4px solid var(--color-danger-500);
+    padding: 0.85rem 1rem;
+    border-radius: var(--radius-sm);
+    display: flex;
+    gap: 0.6rem;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+}
+
+.alert-text {
+    font-size: 0.875rem;
+    color: var(--color-danger-600);
+    font-weight: 600;
+}
+
+.validation-list {
+    margin: 0.5rem 0 0 1rem;
+    padding: 0;
+    font-weight: 500;
+}
+
+.validation-list li + li {
+    margin-top: 0.25rem;
+}
+
+/* --- Shared Buttons --- */
+.btn {
+    padding: 0.6rem 1.25rem;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-sizing: border-box;
+    border: none;
+    font-family: var(--font-sans);
+}
+
+.btn-primary {
+    background-color: var(--color-sky-500);
+    color: #ffffff;
+    box-shadow: 0 1px 2px rgba(14, 165, 233, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-sky-600);
+    transform: translateY(-1px);
+}
+
+.btn-excel,
+.btn-export {
+    background-color: #ffffff;
+    border: 1px solid var(--color-slate-400);
+    color: var(--color-slate-600);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-excel:hover,
+.btn-export:hover {
+    background-color: var(--color-slate-50);
+    border-color: var(--color-slate-400);
+    color: var(--color-slate-900);
+}
+
+.btn-danger {
+    background-color: var(--color-danger-500);
+    color: #ffffff;
+}
+
+.btn-danger:hover {
+    background-color: var(--color-danger-600);
+    transform: translateY(-1px);
+}
+
+.btn-cancel {
+    background-color: #ffffff;
+    border: 1px solid var(--color-slate-400);
+    color: var(--color-slate-600);
+}
+
+.btn-cancel:hover {
+    background-color: var(--color-slate-50);
+    color: var(--color-slate-900);
+}
+
+/* Row Action Buttons in Tables */
+.row-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+}
+
+.btn-row {
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.775rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.15s ease;
+}
+
+.btn-row-edit {
+    background-color: var(--color-sky-100);
+    color: var(--color-sky-700);
+}
+
+.btn-row-edit:hover {
+    background-color: #bae6fd;
+}
+
+.btn-row-delete {
+    background-color: var(--color-danger-100);
+    color: var(--color-danger-600);
+}
+
+.btn-row-delete:hover {
+    background-color: #fecaca;
+}
+
+/* --- Shared Table Styles --- */
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: var(--radius-md);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 0.85rem 1rem;
+    background-color: var(--color-slate-50);
+    color: var(--color-slate-600);
+    font-weight: 600;
+    border-bottom: 1px solid var(--color-slate-200);
+}
+
+.admin-table td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid var(--color-slate-100);
+    color: var(--color-slate-800);
+    vertical-align: middle;
+}
+
+.admin-table tr:hover {
+    background-color: var(--color-slate-50);
+}
+
+/* --- Shared KPI Metrics Elements --- */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.metric-card {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    border: 1px solid var(--color-slate-200);
+    box-shadow: var(--shadow-md);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.2s ease;
+}
+
+.metric-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.metric-label {
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-slate-600);
+    letter-spacing: 0.05em;
+}
+
+.metric-value {
+    font-size: 1.85rem;
+    font-weight: 800;
+    color: var(--color-slate-900);
+    letter-spacing: -0.02em;
+}
+
+.metric-secondary {
+    font-size: 0.78rem;
+    color: var(--color-slate-600);
+}
+
+/* --- Shared Modals & Overlays --- */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(15, 23, 42, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    backdrop-filter: blur(2px);
+}
+
+.modal-window {
+    background: #ffffff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    width: 650px;
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    animation: modalSlide 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes modalSlide {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.98);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 1.5rem;
+    border-bottom: 1px solid var(--color-slate-100);
+}
+
+.modal-header h2, .modal-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-slate-900);
+    margin: 0;
+}
+
+.modal-close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--color-slate-400);
+    cursor: pointer;
+    transition: color 0.15s;
+    line-height: 1;
+}
+
+.modal-close-btn:hover {
+    color: var(--color-slate-600);
+}
+
+.modal-body {
+    padding: 1.5rem;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    padding: 1.25rem 1.5rem;
+    background-color: var(--color-slate-50);
+    border-top: 1px solid var(--color-slate-100);
+}
+
+/* --- Shared Utility Classes --- */
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.font-mono { font-family: 'SFMono-Regular', Consolas, "Liberation Mono", monospace; }
+.font-bold { font-weight: 700 !important; }
+.text-muted { color: var(--color-slate-600) !important; }
+.text-white { color: #ffffff !important; }
+.w-full { width: 100% !important; }
