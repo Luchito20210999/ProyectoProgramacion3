@@ -128,7 +128,7 @@ public class UsuariosResource {
 //        return Response.status(401)
 //                .entity("Usuario o password incorrectos")
 //                .build();
-//    }
+//    }S
 
     @POST
     @Path("login")

@@ -22,8 +22,9 @@ public class UsuarioBOImpl extends BaseBO implements UsuarioBO {
 
     @Override
     public boolean login(String username, String password, String tipoUsuario) {
+        String hash = org.mindrot.jbcrypt.BCrypt.hashpw(password, org.mindrot.jbcrypt.BCrypt.gensalt());
         validarTextoObligatorio(username, "username");
-        validarTextoObligatorio(password, "password");
+        validarTextoObligatorio(hash, "password");
         validarTextoObligatorio(password, "tipoUsuario");
 
         return usuarioDao.login(username,password,tipoUsuario);
@@ -56,13 +57,12 @@ public class UsuarioBOImpl extends BaseBO implements UsuarioBO {
     public void guardar(Usuario modelo, Estado estado) {
         validarUsuario(modelo);
         validarEstado(estado);
-
+        String contrasenaPlana = modelo.getContrasena();
+        if (contrasenaPlana != null && !contrasenaPlana.isBlank()) {
+            String hash = org.mindrot.jbcrypt.BCrypt.hashpw(contrasenaPlana, org.mindrot.jbcrypt.BCrypt.gensalt());
+            modelo.setContrasena(hash);
+        }
         if (estado == Estado.Nuevo) {
-            String contrasenaPlana = modelo.getContrasena();
-            if (contrasenaPlana != null && !contrasenaPlana.isBlank()) {
-                String hash = org.mindrot.jbcrypt.BCrypt.hashpw(contrasenaPlana, org.mindrot.jbcrypt.BCrypt.gensalt());
-                modelo.setContrasena(hash);
-            }
             Integer id = this.usuarioDao.crear(modelo);
             if (id == null || id <= 0) {
                 throw new IllegalStateException("No se pudo registrar el nuevo usuario");
@@ -73,22 +73,6 @@ public class UsuarioBOImpl extends BaseBO implements UsuarioBO {
             if (!this.usuarioDao.actualizar(modelo)) {
                 throw new IllegalStateException("No se pudo actualizar el usuario con id: " + modelo.getIdUsuario());
             }
-        }
-    }
-
-    private String hashSHA256(String input) {
-        try {
-            java.security.MessageDigest digest = java.security.MessageDigest.getInstance("SHA-256");
-            byte[] hash = digest.digest(input.getBytes(java.nio.charset.StandardCharsets.UTF_8));
-            StringBuilder hexString = new StringBuilder();
-            for (byte b : hash) {
-                String hex = Integer.toHexString(0xff & b);
-                if (hex.length() == 1) hexString.append('0');
-                hexString.append(hex);
-            }
-            return hexString.toString();
-        } catch (Exception ex) {
-            return input;
         }
     }
 

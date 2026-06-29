@@ -1,9 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\",
+  "WorkspaceRootPath": "C:\\Users\\Diego\\Desktop\\TA_PROG3\\ProyectoProgramacion3\\Front_end\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\hp\\desktop\\proyectitop3\\proyectoprogramacion3\\proyectoprogramacion3web\\services\\sessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\diego\\desktop\\ta_prog3\\proyectoprogramacion3\\front_end\\proyectoprogramacion3web\\appsetting.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\appsetting.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\diego\\desktop\\ta_prog3\\proyectoprogramacion3\\front_end\\proyectoprogramacion3web\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\diego\\desktop\\ta_prog3\\proyectoprogramacion3\\front_end\\proyectoprogramacion3web\\services\\sessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\services\\sessionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,20 +22,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\TA_PROG3\\ProyectoProgramacion3\\Front_end\\ProyectoProgramacion3Web\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\TA_PROG3\\ProyectoProgramacion3\\Front_end\\ProyectoProgramacion3Web\\appsettings.Development.json",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-28T23:27:09.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "appsetting.json",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\TA_PROG3\\ProyectoProgramacion3\\Front_end\\ProyectoProgramacion3Web\\appsetting.json",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\appsetting.json",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\TA_PROG3\\ProyectoProgramacion3\\Front_end\\ProyectoProgramacion3Web\\appsetting.json",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\appsetting.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-28T23:27:04.446Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "SessionService.cs",
-              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Services\\SessionService.cs",
+              "DocumentMoniker": "C:\\Users\\Diego\\Desktop\\TA_PROG3\\ProyectoProgramacion3\\Front_end\\ProyectoProgramacion3Web\\Services\\SessionService.cs",
               "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\Services\\SessionService.cs",
-              "ToolTip": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Services\\SessionService.cs",
+              "ToolTip": "C:\\Users\\Diego\\Desktop\\TA_PROG3\\ProyectoProgramacion3\\Front_end\\ProyectoProgramacion3Web\\Services\\SessionService.cs",
               "RelativeToolTip": "ProyectoProgramacion3Web\\Services\\SessionService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-24T06:53:02.097Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-24T06:53:02.097Z"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
             }
           ]
         }
