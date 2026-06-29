@@ -1,5 +1,6 @@
 package pe.edu.pucp.proyectopro3.dao.auth;
 
+import org.mindrot.jbcrypt.BCrypt;
 import pe.edu.pucp.proyectopro3.dao.DefaultBaseDAO;
 import pe.edu.pucp.proyectopro3.modelo.auth.Usuario;
 import pe.edu.pucp.proyectopro3.modelo.crm.TipoDocumento;
@@ -10,10 +11,14 @@ public class UsuarioDAOImpl extends DefaultBaseDAO<Usuario> implements UsuarioDA
     @Override
     public boolean login(String username, String password, String tipoUsuario) {
         return ejecutarComando(conn -> {
-            try (PreparedStatement cmd = this.comandoLogin(conn, username, password, tipoUsuario)) {
+            try (PreparedStatement cmd = this.comandoLogin(conn, username, tipoUsuario)) {
                 if (cmd instanceof CallableStatement callableCmd) {
                     callableCmd.execute();
-                    return callableCmd.getBoolean("p_valido");
+                    boolean esValido = callableCmd.getBoolean("p_valido");
+                    if (esValido) {
+                        String hashBd = callableCmd.getString("p_hash");
+                        return BCrypt.checkpw(password, hashBd);
+                    }
                 }
                 return false;
             }
@@ -69,14 +74,13 @@ public class UsuarioDAOImpl extends DefaultBaseDAO<Usuario> implements UsuarioDA
 
     protected PreparedStatement comandoLogin(Connection conn,
                                              String username,
-                                             String password,
                                              String tipoUsuario) throws SQLException {
         String sql = "{call sp_LoginUsuario(?, ?, ?, ?)}";
         CallableStatement cmd = conn.prepareCall(sql);
         cmd.setString("p_correo", username);
-        cmd.setString("p_contrasena", password);
         cmd.setString("p_tipo_usuario", tipoUsuario);
         cmd.registerOutParameter("p_valido", Types.BOOLEAN);
+        cmd.registerOutParameter("p_hash", Types.VARCHAR);
         return cmd;
     }
 

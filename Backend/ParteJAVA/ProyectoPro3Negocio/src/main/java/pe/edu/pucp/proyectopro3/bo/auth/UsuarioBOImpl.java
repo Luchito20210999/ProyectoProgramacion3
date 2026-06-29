@@ -22,10 +22,9 @@ public class UsuarioBOImpl extends BaseBO implements UsuarioBO {
 
     @Override
     public boolean login(String username, String password, String tipoUsuario) {
-        String hash = org.mindrot.jbcrypt.BCrypt.hashpw(password, org.mindrot.jbcrypt.BCrypt.gensalt());
         validarTextoObligatorio(username, "username");
-        validarTextoObligatorio(hash, "password");
-        validarTextoObligatorio(password, "tipoUsuario");
+        validarTextoObligatorio(password, "password");
+        validarTextoObligatorio(tipoUsuario, "tipoUsuario");
 
         return usuarioDao.login(username,password,tipoUsuario);
     }
