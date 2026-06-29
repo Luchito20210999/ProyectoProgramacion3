@@ -1,0 +1,232 @@
+@page "/usuarios"
+@namespace ProyectoProgramacion3Web.Components.Pages.Usuarios
+
+<PageTitle>Gestion de Usuarios - SACR</PageTitle>
+
+<div class="usuarios-container">
+    <div class="usuarios-header">
+        <div class="header-titles">
+            <h1 class="usuarios-title">Gestion de Usuarios</h1>
+            <p class="usuarios-subtitle">Administra cuentas, roles y permisos.</p>
+        </div>
+        <div class="header-actions">
+            <button class="btn btn-primary" @onclick="AbrirModalNuevo">
+                <span class="btn-icon">+</span> Nuevo usuario
+            </button>
+        </div>
+    </div>
+
+    @if (!string.IsNullOrEmpty(SuccessMessage))
+    {
+        <div class="toast-success">@SuccessMessage</div>
+    }
+
+    @if (!string.IsNullOrEmpty(ErrorMessage) && !IsFormModalOpen)
+    {
+        <div class="alert-error-box">
+            <span class="alert-text">@ErrorMessage</span>
+        </div>
+    }
+
+    <div class="tools-card">
+        <div class="tools-bar">
+            <div class="filter-control-wrapper">
+                <select class="select-filter" @bind="FiltroTipo" @bind:after="FiltrarListado">
+                    <option value="Todos los tipos">Todos los tipos</option>
+                    <option value="Administrador">Administrador</option>
+                    <option value="Analista">Analista</option>
+                    <option value="Operador">Operador</option>
+                </select>
+            </div>
+
+            <div class="tools-flex"></div>
+
+            <button class="btn btn-export" @onclick="ExportarListado">
+                <span class="btn-icon">↓</span> Exportar
+            </button>
+        </div>
+    </div>
+
+    <div class="table-card">
+        <div class="table-responsive">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th class="text-center" style="width: 60px;">Nro.</th>
+                        <th>Nombre</th>
+                        <th style="width: 100px;">Tipo doc.</th>
+                        <th>N° doc.</th>
+                        <th>Correo</th>
+                        <th>Tipo</th>
+                        <th class="text-center" style="width: 120px;">Estado</th>
+                        <th class="text-center" style="width: 160px;">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (ListadoFiltrado != null && ListadoFiltrado.Any())
+                    {
+                        var correlative = 1;
+                        @foreach (var u in ListadoFiltrado)
+                        {
+                            <tr class="@(u.Id == UsuarioAnimadoId ? "row-highlight" : "")">
+                                <td class="text-center font-mono text-muted">@correlative</td>
+                                <td class="client-name">@u.NombreCompleto</td>
+                                <td class="font-bold">@u.TipoDocumento</td>
+                                <td class="font-mono">@u.NumeroDocumento</td>
+                                <td class="email-text">@u.Correo</td>
+                                <td class="role-text">@u.Tipo</td>
+                                <td class="text-center">
+                                    <span class="status-pill @u.EstadoClase">@u.Estado</span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row-actions">
+                                        <button class="btn-row btn-row-edit" @onclick="() => AbrirModalEditar(u)">Editar</button>
+                                        @if (!EsUsuarioActual(u))
+                                        {
+                                            <button class="btn-row btn-row-delete" @onclick="() => SolicitarEliminar(u)">Eliminar</button>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                            correlative++;
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="8" class="text-center text-muted py-12">
+                                <h3 style="font-size: 1.25rem; font-weight: 700; color: #0f172a; margin: 0 0 0.25rem 0;">No se encontraron usuarios.</h3>
+                                <p style="color: #64748b; margin: 0; font-size: 0.9rem;">No hay cuentas que coincidan con el filtro seleccionado.</p>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    @if (IsFormModalOpen)
+    {
+        <div class="modal-backdrop">
+            <div class="modal-window usuarios-modal-window">
+                <div class="modal-header">
+                    <h2>@ModalTitle</h2>
+                    <button class="modal-close-btn" @onclick="CerrarFormModal">x</button>
+                </div>
+
+                <div class="modal-body">
+                    @if (!string.IsNullOrEmpty(ErrorMessage))
+                    {
+                        <div class="alert-error-box">
+                            <span class="alert-text">@ErrorMessage</span>
+                        </div>
+                    }
+
+                    <form @onsubmit="GuardarUsuario" @onsubmit:preventDefault autocomplete="off">
+                        <div class="modal-grid">
+                            <div class="modal-group">
+                                <label for="form-nombres">Nombres <span class="required-asterisk">*</span></label>
+                                <input id="form-nombres" class="modal-input" type="text" @bind="FormUsuario.Nombres" required placeholder="Nombres del usuario" autocomplete="off" />
+                            </div>
+
+                            <div class="modal-group">
+                                <label for="form-apellidos">Apellidos <span class="required-asterisk">*</span></label>
+                                <input id="form-apellidos" class="modal-input" type="text" @bind="FormUsuario.Apellidos" required placeholder="Apellidos del usuario" autocomplete="off" />
+                            </div>
+
+                            <div class="modal-group">
+                                <label for="form-tipodoc">Tipo de documento</label>
+                                <select id="form-tipodoc" class="modal-select" @bind="FormUsuario.TipoDocumento">
+                                    <option value="DNI">DNI</option>
+                                    <option value="PASAPORTE">PASAPORTE</option>
+                                    <option value="CE">CE</option>
+                                </select>
+                            </div>
+
+                            <div class="modal-group">
+                                <label for="form-numdoc">Numero de documento</label>
+                                <input id="form-numdoc" class="modal-input" type="text" @bind="FormUsuario.NumeroDocumento" placeholder="Nro. de identificacion" autocomplete="off" />
+                            </div>
+
+                            <div class="modal-group">
+                                <label for="form-correo">Correo <span class="required-asterisk">*</span></label>
+                                <input id="form-correo" class="modal-input" type="email" @bind="FormUsuario.Correo" required placeholder="nombre.apellido@sacr.pe" autocomplete="off" />
+                            </div>
+
+                            @if (EsCreacion)
+                            {
+                                <div class="modal-group">
+                                    <label for="form-contrasena">Contrasena <span class="required-asterisk">*</span></label>
+                                    <input id="form-contrasena" name="new-user-password" class="modal-input" type="password" @bind="FormUsuario.Contrasena" required autocomplete="new-password" placeholder="Contrasena inicial" />
+                                </div>
+                            }
+
+                            <div class="modal-group">
+                                <label for="form-telefono">Telefono</label>
+                                <input id="form-telefono" class="modal-input" type="text" @bind="FormUsuario.Telefono" placeholder="Ej. 998877665" autocomplete="off" />
+                            </div>
+
+                            <div class="modal-group">
+                                <label for="form-tipo">Tipo de usuario</label>
+                                <select id="form-tipo" class="modal-select" @bind="FormUsuario.Tipo">
+                                    <option value="Administrador">Administrador</option>
+                                    <option value="Analista">Analista</option>
+                                    <option value="Operador">Operador</option>
+                                </select>
+                            </div>
+
+                            <div class="modal-group">
+                                <label for="form-estado">Estado</label>
+                                <select id="form-estado" class="modal-select" @bind="FormUsuario.Estado">
+                                    <option value="Activo">Activo</option>
+                                    <option value="Inactivo">Inactivo</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" @onclick="CerrarFormModal" disabled="@IsSaving">Cancelar</button>
+                            <button type="submit" class="btn btn-primary" disabled="@IsSaving">
+                                @if (IsSaving)
+                                {
+                                    <span class="mini-spinner"></span>
+                                    <span>Guardando...</span>
+                                }
+                                else
+                                {
+                                    <span>Guardar</span>
+                                }
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+
+    @if (IsDeleteModalOpen && UsuarioAEliminar != null)
+    {
+        <div class="modal-backdrop">
+            <div class="modal-window delete-confirm-window">
+                <div class="modal-header delete-confirm-header">
+                    <h2>Confirmar eliminacion</h2>
+                    <button class="modal-close-btn text-white" @onclick="CerrarDeleteModal">x</button>
+                </div>
+
+                <div class="modal-body delete-confirm-body">
+                    <div class="delete-icon-wrapper">!</div>
+                    <h3>Eliminar cuenta de usuario</h3>
+                    <p class="delete-warning-text">
+                        Esta accion es irreversible. Se eliminara de forma permanente el acceso del usuario
+                        <strong>@UsuarioAEliminar.NombreCompleto</strong> (@UsuarioAEliminar.Correo).
+                    </p>
+
+                    <div class="modal-footer delete-confirm-footer">
+                        <button type="button" class="btn btn-cancel" @onclick="CerrarDeleteModal">Cancelar</button>
+                        <button type="button" class="btn btn-danger" @onclick="EliminarUsuarioConfirmado">Eliminar cuenta</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

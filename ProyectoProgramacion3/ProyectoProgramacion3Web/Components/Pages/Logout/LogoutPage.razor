@@ -1,0 +1,14 @@
+@page "/logout"
+@namespace ProyectoProgramacion3Web.Components.Pages.Logout
+@inject ProyectoProgramacion3Web.Services.SessionService Session
+@inject NavigationManager Navigation
+
+<h3>Cerrando sesión...</h3>
+
+@code {
+    protected override void OnInitialized()
+    {
+        Session.Logout();
+        Navigation.NavigateTo("/auth/logout", forceLoad: true);
+    }
+}

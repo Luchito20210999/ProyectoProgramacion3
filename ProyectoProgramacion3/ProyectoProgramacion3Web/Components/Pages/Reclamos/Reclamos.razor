@@ -1,0 +1,215 @@
+@page "/reclamos"
+@namespace ProyectoProgramacion3Web.Components.Pages.Reclamos
+
+<PageTitle>Gestión de Reclamos - SACR</PageTitle>
+
+<div class="reclamos-container">
+    <!-- Encabezado de la página -->
+    <div class="reclamos-header">
+        <div class="header-titles">
+            <h1 class="reclamos-title">Gestión de Reclamos</h1>
+            <p class="reclamos-subtitle">Atención, evaluación de procedencia y resolución de incidencias.</p>
+        </div>
+        <div class="header-actions">
+            <button class="btn btn-primary" @onclick='() => AbrirModal("Registrar")'>
+                <span class="btn-icon">＋</span> Registrar reclamo
+            </button>
+        </div>
+    </div>
+    
+    <!-- Bloque de métricas KPIs -->
+    <div class="metrics-grid">
+        <div class="metric-card">
+            <span class="metric-label">Pendientes</span>
+            <span class="metric-value">@PendientesCount</span>
+        </div>
+        
+        <div class="metric-card">
+            <span class="metric-label">En atención</span>
+            <span class="metric-value">@EnAtencionCount</span>
+        </div>
+        
+        <div class="metric-card">
+            <span class="metric-label">Procede</span>
+            <span class="metric-value">@ProcedeCount</span>
+        </div>
+        
+        <div class="metric-card">
+            <span class="metric-label">No procede</span>
+            <span class="metric-value">@NoProcedeCount</span>
+        </div>
+    </div>
+    
+    <!-- Barra de filtros -->
+    <div class="filters-card">
+        <div class="filters-bar">
+            <!-- Buscador por texto -->
+            <div class="filter-control search-input-wrapper">
+                <span class="search-icon">🔍</span>
+                <input class="input-filter" type="text" placeholder="Buscar por cliente, reserva o descripción..." 
+                       @bind="SearchText" @bind:event="oninput" @onkeyup="FiltrarListado" />
+            </div>
+            
+            <!-- Selector de estado -->
+            <div class="filter-control">
+                <select class="select-filter" @bind="SelectedEstado" @bind:after="FiltrarListado">
+                    <option value="Todos">Todos los estados</option>
+                    <option value="PENDIENTE">PENDIENTE</option>
+                    <option value="EN_ATENCION">EN_ATENCION</option>
+                    <option value="PROCEDE">PROCEDE</option>
+                    <option value="NO_PROCEDE">NO_PROCEDE</option>
+                </select>
+            </div>
+            
+            <!-- Espacio flexible -->
+            <div class="filter-flex"></div>
+            
+            <!-- Botón de limpieza -->
+            @if (!string.IsNullOrEmpty(SearchText) || SelectedEstado != "Todos")
+            {
+                <button class="btn-clear" @onclick="LimpiarFiltros">Limpiar filtros</button>
+            }
+        </div>
+    </div>
+    
+    <!-- Tabla principal de reclamos -->
+    <div class="table-card">
+        <div class="table-responsive">
+            <table class="admin-table">
+                <thead>
+                    <tr>
+                        <th class="text-center" style="width: 60px;">N°</th>
+                        <th>Reserva</th>
+                        <th>Cliente</th>
+                        <th>Fecha</th>
+                        <th>Descripción</th>
+                        <th class="text-center">Estado</th>
+                        <th class="text-center" style="width: 120px;">Acción</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (ListadoFiltrado != null && ListadoFiltrado.Any())
+                    {
+                        @foreach (var rec in ListadoFiltrado)
+                        {
+                            <tr>
+                                <td class="text-center font-mono text-muted">@rec.Id</td>
+                                <td class="font-mono font-bold text-dark">@rec.CodigoReserva</td>
+                                <td class="font-semibold text-dark">@rec.Cliente</td>
+                                <td>@rec.Fecha.ToString("dd/MM/yyyy")</td>
+                                <td class="text-desc" title="@rec.Descripcion">@rec.Descripcion</td>
+                                <td class="text-center">
+                                    <span class="status-pill @rec.EstadoClase">@rec.Estado</span>
+                                </td>
+                                <td class="text-center">
+                                    <div class="row-actions">
+                                        @if (rec.Estado == "PENDIENTE" || rec.Estado == "EN_ATENCION")
+                                        {
+                                            <button class="btn-row btn-row-atender" @onclick='() => AbrirModal("Atender", rec)'>Atender</button>
+                                        }
+                                        else
+                                        {
+                                            <button class="btn-row btn-row-ver" @onclick='() => AbrirModal("Ver", rec)'>Ver</button>
+                                        }
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="7" class="text-center text-muted py-8">
+                                <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🔍</div>
+                                No se encontraron reclamos que coincidan con los filtros seleccionados.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Modal emergente para Reclamo (Registrar/Atender/Ver) -->
+    @if (IsModalOpen)
+    {
+        <div class="modal-backdrop">
+            <div class="modal-window">
+                <div class="modal-header">
+                    <h2>@ModalTitle</h2>
+                    <button class="modal-close-btn" @onclick="CerrarModal">×</button>
+                </div>
+                
+                <div class="modal-body">
+                    <form @onsubmit="GuardarReclamo" @onsubmit:preventDefault>
+                        <div class="modal-grid">
+                            <!-- Reserva (Editable solo al crear nuevo) -->
+                            <div class="modal-group">
+                                <label for="modal-reserva">Reserva (Código)</label>
+                                <input id="modal-reserva" class="modal-input" type="text" 
+                                       @bind="FormReclamo.CodigoReserva" disabled="@(!IsCreacionEditable)" required placeholder="Ej. BK-10293" />
+                            </div>
+                            
+                            <!-- Cliente (Editable solo al crear nuevo) -->
+                            <div class="modal-group">
+                                <label for="modal-cliente">Cliente</label>
+                                <input id="modal-cliente" class="modal-input" type="text" 
+                                       @bind="FormReclamo.Cliente" disabled="@(!IsCreacionEditable)" required placeholder="Nombre del pasajero" />
+                            </div>
+                            
+                            <!-- Descripción (Editable solo al crear nuevo) -->
+                            <div class="modal-group full-width">
+                                <label for="modal-descripcion">Descripción del problema</label>
+                                <textarea id="modal-descripcion" class="modal-textarea-short" 
+                                          @bind="FormReclamo.Descripcion" disabled="@(!IsCreacionEditable)" required placeholder="Detalle la incidencia ocurrida..."></textarea>
+                            </div>
+                            
+                            <!-- Procedencia / Estado (Editable solo en modo Atender) -->
+                            <div class="modal-group">
+                                <label for="modal-procedencia">Procedencia / Estado</label>
+                                <select id="modal-procedencia" class="modal-select" 
+                                        @bind="FormReclamo.Estado" disabled="@IsResolucionDisabled" required>
+                                    @if (ModalMode == "Registrar")
+                                    {
+                                        <option value="PENDIENTE">PENDIENTE</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="PENDIENTE">PENDIENTE</option>
+                                        <option value="EN_ATENCION">EN_ATENCION</option>
+                                        <option value="PROCEDE">PROCEDE</option>
+                                        <option value="NO_PROCEDE">NO_PROCEDE</option>
+                                    }
+                                </select>
+                            </div>
+                            
+                            <!-- Fecha Resolución (Editable solo en modo Atender) -->
+                            <div class="modal-group">
+                                <label for="modal-fechares">Fecha resolución</label>
+                                <input id="modal-fechares" class="modal-input" type="date" 
+                                       @bind="FormReclamo.FechaResolucion" @bind:format="yyyy-MM-dd" disabled="@IsResolucionDisabled" />
+                            </div>
+                            
+                            <!-- Motivo de resolución (Editable solo en modo Atender) -->
+                            <div class="modal-group full-width">
+                                <label for="modal-motivo">Motivo de resolución</label>
+                                <textarea id="modal-motivo" class="modal-textarea" 
+                                          @bind="FormReclamo.MotivoResolucion" disabled="@IsResolucionDisabled" 
+                                          required="@(FormReclamo.Estado == "PROCEDE" || FormReclamo.Estado == "NO_PROCEDE")"
+                                          placeholder="Explicación detallada de la procedencia o rechazo de la incidencia..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" @onclick="CerrarModal">Cancelar</button>
+                            @if (ShowGuardarBtn)
+                            {
+                                <button type="submit" class="btn btn-primary">Guardar resolución</button>
+                            }
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</div>
