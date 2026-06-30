@@ -1,0 +1,41 @@
+
+// Usuarios con su información detallada y su contraseñas
+
+[
+    {
+        "activo": true,
+        "apellidos": "Administrador",
+        "contrasena": "hash_admin_123",
+        "correo": "admin@sacrsoft.com",
+        "idUsuario": 1,
+        "nombres": "Carlos",
+        "numeroContacto": "987654321",
+        "numeroDocumento": "11111111",
+        "tipoDocumento": "DNI",
+        "tipoUsuario": "Administrador"
+    },
+    {
+        "activo": true,
+        "apellidos": "Operadora",
+        "contrasena": "hash_operador_123",
+        "correo": "operador1@sacrsoft.com",
+        "idUsuario": 2,
+        "nombres": "Maria",
+        "numeroContacto": "987654322",
+        "numeroDocumento": "22222222",
+        "tipoDocumento": "DNI",
+        "tipoUsuario": "Operador"
+    },
+    {
+        "activo": true,
+        "apellidos": "Analista",
+        "contrasena": "hash_analista_123",
+        "correo": "analista1@sacrsoft.com",
+        "idUsuario": 3,
+        "nombres": "Jorge",
+        "numeroContacto": "987654323",
+        "numeroDocumento": "33333333",
+        "tipoDocumento": "CARNET_DE_EXTRANJERIA",
+        "tipoUsuario": "Analista"
+    }
+]

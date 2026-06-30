@@ -1,0 +1,12 @@
+pe\edu\pucp\proyectopro3\app\pruebas\crm\ClientePrueba.class
+pe\edu\pucp\proyectopro3\app\pruebas\reservas\ServicioPrueba.class
+pe\edu\pucp\proyectopro3\app\pruebas\auth\UsuarioPrueba.class
+pe\edu\pucp\proyectopro3\app\pruebas\reservas\ReservaIntegradaPrueba.class
+pe\edu\pucp\proyectopro3\app\pruebas\auditoria\AuditoriaPrueba.class
+pe\edu\pucp\proyectopro3\app\pruebas\webhooks\WebhookPrueba.class
+pe\edu\pucp\proyectopro3\app\Main.class
+pe\edu\pucp\proyectopro3\app\pruebas\reservas\ReservaIntegradaPrueba$DatosPrueba.class
+pe\edu\pucp\proyectopro3\app\pruebas\reportes\ReportePrueba.class
+pe\edu\pucp\proyectopro3\app\pruebas\notificaciones\NotificacionPrueba.class
+pe\edu\pucp\proyectopro3\app\pruebas\reclamos\ReclamoPrueba.class
+pe\edu\pucp\proyectopro3\app\pruebas\reservas\ReservaPrueba.class

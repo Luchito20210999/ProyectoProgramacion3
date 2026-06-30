@@ -1,0 +1,134 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\hp\\desktop\\proyectitop3\\proyectoprogramacion3\\proyectoprogramacion3\\proyectoprogramacion3web\\components\\pages\\calidad\\calidad.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\components\\pages\\calidad\\calidad.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\hp\\desktop\\proyectitop3\\proyectoprogramacion3\\proyectoprogramacion3\\proyectoprogramacion3web\\components\\pages\\calidad\\calidad.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\components\\pages\\calidad\\calidad.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\hp\\desktop\\proyectitop3\\proyectoprogramacion3\\proyectoprogramacion3\\proyectoprogramacion3web\\components\\pages\\ventas\\ventas.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\components\\pages\\ventas\\ventas.razor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\hp\\desktop\\proyectitop3\\proyectoprogramacion3\\proyectoprogramacion3\\proyectoprogramacion3web\\servicios\\base\\restserviceclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\servicios\\base\\restserviceclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\hp\\desktop\\proyectitop3\\proyectoprogramacion3\\proyectoprogramacion3\\proyectoprogramacion3web\\components\\pages\\ventas\\ventas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\components\\pages\\ventas\\ventas.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\hp\\desktop\\proyectitop3\\proyectoprogramacion3\\proyectoprogramacion3\\proyectoprogramacion3web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|c:\\users\\hp\\desktop\\proyectitop3\\proyectoprogramacion3\\proyectoprogramacion3\\proyectoprogramacion3web\\components\\navigation\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B731BCA7-D8C8-6051-71F6-06C4E855EF79}|ProyectoProgramacion3Web\\ProyectoProgramacion3Web.csproj|solutionrelative:proyectoprogramacion3web\\components\\navigation\\navmenu.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Calidad.razor",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Calidad\\Calidad.razor",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\Components\\Pages\\Calidad\\Calidad.razor",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Calidad\\Calidad.razor",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\Components\\Pages\\Calidad\\Calidad.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-29T21:51:40.893Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Calidad.razor.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Calidad\\Calidad.razor.cs",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\Components\\Pages\\Calidad\\Calidad.razor.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Calidad\\Calidad.razor.cs",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\Components\\Pages\\Calidad\\Calidad.razor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAABSAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T21:49:30.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Ventas.razor.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Ventas\\Ventas.razor.cs",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\Components\\Pages\\Ventas\\Ventas.razor.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Ventas\\Ventas.razor.cs",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\Components\\Pages\\Ventas\\Ventas.razor.cs",
+              "ViewState": "AgIAABkAAAAAiJmZmZn5vyQAAABzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T19:27:36.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Ventas.razor",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Ventas\\Ventas.razor",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\Components\\Pages\\Ventas\\Ventas.razor",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Pages\\Ventas\\Ventas.razor",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\Components\\Pages\\Ventas\\Ventas.razor",
+              "ViewState": "AgIAAAEAAADAZWZmZmYUwBIAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-29T19:26:08.034Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsettings.json",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\appsettings.json",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\appsettings.json",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\appsettings.json",
+              "ViewState": "AgIAAAAAAABAZmZmZmYkwBEAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-06-29T19:24:51.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "NavMenu.razor",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Navigation\\NavMenu.razor",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\Components\\Navigation\\NavMenu.razor",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Components\\Navigation\\NavMenu.razor",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\Components\\Navigation\\NavMenu.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-06-29T18:06:37.864Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "RestServiceClient.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Servicios\\Base\\RestServiceClient.cs",
+              "RelativeDocumentMoniker": "ProyectoProgramacion3Web\\Servicios\\Base\\RestServiceClient.cs",
+              "ToolTip": "C:\\Users\\HP\\Desktop\\ProyectitoP3\\ProyectoProgramacion3\\ProyectoProgramacion3\\ProyectoProgramacion3Web\\Servicios\\Base\\RestServiceClient.cs",
+              "RelativeToolTip": "ProyectoProgramacion3Web\\Servicios\\Base\\RestServiceClient.cs",
+              "ViewState": "AgIAAFMAAABYmZmZmZkqwGgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T03:21:03.528Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

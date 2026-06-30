@@ -1,0 +1,184 @@
+<!-- Created with Jaspersoft Studio version 7.0.6.final using JasperReports Library version 7.0.6-5d2a603fdc6b3db8f842a83383e594f41891534d  -->
+<jasperReport name="Reporte_Ventas" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="c399b8ca-8c19-4905-abf1-0ed480649e85">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="TAProyectoProgra3"/>
+	<parameter name="P_FECHA_INICIO" class="java.util.Date"/>
+	<parameter name="P_FECHA_FIN" class="java.util.Date"/>
+	<parameter name="P_NOMBRE_SERVICIO" class="java.lang.String"/>
+	<parameter name="P_CANAL" class="java.lang.String"/>
+	<query language="SQL"><![CDATA[SELECT 
+    r.id_reserva AS idReserva,
+    CONCAT(c.nombres, ' ', c.apellidos) AS cliente,
+    s.nombre AS servicio,
+    DATE_FORMAT(r.fecha_registro, '%d/%m/%Y') AS fechaRecepcion,
+    dr.cantidad AS pasajeros,
+    dr.subtotal AS monto
+FROM 
+    Reserva r
+    INNER JOIN Cliente c ON r.id_cliente = c.id_cliente
+    INNER JOIN Detalle_Reserva dr ON r.id_reserva = dr.id_reserva
+    INNER JOIN Servicio s ON dr.id_servicio = s.id_servicio
+WHERE 
+    r.fecha_registro BETWEEN $P{P_FECHA_INICIO} AND $P{P_FECHA_FIN}
+    AND ($P{P_NOMBRE_SERVICIO} IS NULL OR $P{P_NOMBRE_SERVICIO} = '' OR s.nombre LIKE CONCAT('%', $P{P_NOMBRE_SERVICIO}, '%'))
+    AND ($P{P_CANAL} IS NULL OR $P{P_CANAL} = '' OR r.canal_venta = $P{P_CANAL})
+ORDER BY 
+    r.fecha_registro ASC;]]></query>
+	<field name="idReserva" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_reserva"/>
+		<property name="com.jaspersoft.studio.field.label" value="idReserva"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Reserva"/>
+	</field>
+	<field name="cliente" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="cliente"/>
+	</field>
+	<field name="servicio" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="servicio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Servicio"/>
+	</field>
+	<field name="fechaRecepcion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fechaRecepcion"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaRecepcion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Reserva"/>
+	</field>
+	<field name="pasajeros" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="cantidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="pasajeros"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Detalle_Reserva"/>
+	</field>
+	<field name="monto" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="subtotal"/>
+		<property name="com.jaspersoft.studio.field.label" value="monto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Detalle_Reserva"/>
+	</field>
+	<variable name="MONTO_TOTAL" calculation="Sum" class="java.math.BigDecimal">
+		<expression><![CDATA[$F{monto}.setScale( 2, java.math.RoundingMode.HALF_UP)]]></expression>
+	</variable>
+	<variable name="TOTAL_PASAJEROS" calculation="Sum" class="java.lang.Integer">
+		<expression><![CDATA[$F{pasajeros}]]></expression>
+	</variable>
+	<background splitType="Stretch"/>
+	<title height="59" splitType="Stretch">
+		<element kind="staticText" uuid="9a88219c-2808-45c4-b9b9-1d46e03e4bff" x="0" y="0" width="100" height="30" fontSize="20.0" bold="true" hTextAlign="Left" vTextAlign="Bottom">
+			<text><![CDATA[SACR]]></text>
+		</element>
+		<element kind="staticText" uuid="d9cb882b-7939-4922-9fb1-0b02b7a22a9d" x="0" y="30" width="255" height="20" fontSize="12.0" bold="true" hTextAlign="Left" vTextAlign="Top">
+			<text><![CDATA[Sistema de Atención de Clientes y Reservas]]></text>
+		</element>
+		<element kind="staticText" uuid="93512edd-2896-4877-b5f7-8e4d8d2bbbb1" x="365" y="0" width="188" height="50" fontSize="16.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[REPORTE DE VENTAS]]></text>
+		</element>
+	</title>
+	<pageHeader height="76" splitType="Stretch">
+		<element kind="rectangle" uuid="745f9901-d3bf-47d7-9736-24c4791ced27" x="373" y="30" width="180" height="30"/>
+		<element kind="rectangle" uuid="d8559522-3f11-4644-88c2-70f4ba7494cb" x="187" y="30" width="180" height="30"/>
+		<element kind="rectangle" uuid="3195ba08-7a1b-4a37-9593-d97f94db35b1" x="0" y="30" width="180" height="30"/>
+		<element kind="staticText" uuid="ddf18a7a-a038-4746-abbd-a4adbe79468f" x="187" y="30" width="82" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[MONTO TOTAL GENERADO]]></text>
+		</element>
+		<element kind="staticText" uuid="32d3a313-d219-4878-9986-24747434fd21" x="0" y="30" width="80" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[TOTAL DE REGISTROS PROCESADOS]]></text>
+		</element>
+		<element kind="staticText" uuid="a7be3c50-ce88-4792-a435-79d934844f67" x="373" y="30" width="80" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[TOTAL DE PASAJEROS]]></text>
+		</element>
+		<element kind="line" uuid="1a7650df-85bc-48f9-bdd1-5d82599d249c" x="80" y="30" width="1" height="30"/>
+		<element kind="line" uuid="0f399bc0-2474-4900-b94a-ec4f84e7e87f" x="269" y="30" width="1" height="30"/>
+		<element kind="line" uuid="7f9f0b4a-aaad-49be-aa31-93bea5a065bb" x="453" y="30" width="1" height="30"/>
+		<element kind="textField" uuid="abb13c7e-d3d1-4941-85aa-e8adc0d41d34" x="270" y="30" width="97" height="30" fontSize="10.0" evaluationTime="Report" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$V{MONTO_TOTAL}]]></expression>
+		</element>
+		<element kind="textField" uuid="2be3bf86-6547-4151-a1d9-55c0fe1e43d4" x="454" y="30" width="99" height="30" evaluationTime="Report" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$V{TOTAL_PASAJEROS}]]></expression>
+		</element>
+		<element kind="textField" uuid="a1603540-369a-4d41-95f8-d7a16fb0337b" x="81" y="30" width="100" height="30" evaluationTime="Report" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$V{REPORT_COUNT}]]></expression>
+		</element>
+		<element kind="staticText" uuid="04b001b8-73bd-4279-a5ee-a324bc2c239c" x="140" y="0" width="100" height="19" bold="false" italic="true" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[Periodo consultado:]]></text>
+		</element>
+		<element kind="staticText" uuid="32784ed3-6d51-42ca-b546-2765054f9740" x="320" y="0" width="20" height="19" bold="false" italic="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[al]]></text>
+		</element>
+		<element kind="textField" uuid="83e7c782-b0a5-4723-91ca-76e76f953c5f" x="240" y="0" width="80" height="18" pattern="dd/MM/yyyy" linkType="None" linkTarget="Self" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$P{P_FECHA_INICIO}]]></expression>
+		</element>
+		<element kind="textField" uuid="39bf9be3-ec91-45d2-b6e9-8d2a8bddc611" x="340" y="0" width="80" height="18" pattern="dd/MM/yyyy" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$P{P_FECHA_FIN}]]></expression>
+		</element>
+	</pageHeader>
+	<columnHeader height="34" splitType="Stretch">
+		<element kind="staticText" uuid="8de0aac5-a037-489c-bc86-b8165cd04d93" x="0" y="0" width="40" height="30" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[ID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3e9e98ab-f28e-4c3e-b38b-f5028329076d"/>
+		</element>
+		<element kind="staticText" uuid="c626e45e-dfc6-4540-8e29-883553d7e7c3" x="123" y="0" width="108" height="30" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[CLIENTE]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a81b9e00-1077-4cff-998c-f504b37fea7f"/>
+		</element>
+		<element kind="staticText" uuid="87a68446-ce7c-43ed-a236-0b73f01cee3b" x="43" y="0" width="77" height="30" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[FECHA DE RECEPCIÓN]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4ed1a4c7-869e-4da2-9119-0dac43e00c4c"/>
+		</element>
+		<element kind="staticText" uuid="ecb3167d-4ba3-4a6e-8815-22ac6f4340fc" x="390" y="0" width="86" height="30" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[CANTIDAD DE PASAJEROS]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="451a0c05-d43d-48ba-9584-6b5755aae5ae"/>
+		</element>
+		<element kind="staticText" uuid="c339031e-1ef8-4187-9512-db50829c3a91" x="480" y="0" width="73" height="30" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[MONTO]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="baa11a8d-ba55-414d-bbe5-96bdbe27aeff"/>
+		</element>
+		<element kind="staticText" uuid="9262b4ba-1d11-4b41-9690-0a0ffbb0a45b" x="234" y="0" width="153" height="30" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[SERVICIO]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4720d3f9-467d-4570-bbc5-c05ec0f22488"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<element kind="textField" uuid="6028f269-fc45-4621-85b3-efda6d9bcb35" x="0" y="0" width="40" height="20" fontSize="10.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[String.format("%04d",$F{idReserva})]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3e9e98ab-f28e-4c3e-b38b-f5028329076d"/>
+			</element>
+			<element kind="textField" uuid="49fbc376-74bc-4c2d-9496-7d4b86010db9" x="234" y="0" width="153" height="20" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+				<expression><![CDATA[$F{servicio}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4720d3f9-467d-4570-bbc5-c05ec0f22488"/>
+			</element>
+			<element kind="textField" uuid="9c421d3c-ed4e-4cd4-ac7b-5172e5641d99" x="43" y="0" width="77" height="20" fontSize="10.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{fechaRecepcion}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4ed1a4c7-869e-4da2-9119-0dac43e00c4c"/>
+			</element>
+			<element kind="textField" uuid="70390265-f155-4d09-a09e-c60eacd42e49" x="390" y="0" width="86" height="20" fontSize="10.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{pasajeros}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="451a0c05-d43d-48ba-9584-6b5755aae5ae"/>
+			</element>
+			<element kind="textField" uuid="6624210c-a274-40de-b992-0f53cb4f24cc" x="480" y="0" width="73" height="20" fontSize="10.0" bold="false" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{monto}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="baa11a8d-ba55-414d-bbe5-96bdbe27aeff"/>
+			</element>
+			<element kind="textField" uuid="b7053ac6-0f30-4229-b144-2a567e77f1de" x="123" y="0" width="108" height="20" fontSize="10.0" bold="false" hTextAlign="Left" vTextAlign="Middle">
+				<expression><![CDATA[$F{cliente}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a81b9e00-1077-4cff-998c-f504b37fea7f"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="18" splitType="Stretch"/>
+	<pageFooter height="30" splitType="Stretch">
+		<element kind="staticText" uuid="2a70149e-2c1c-4f86-97d5-29474ae81e08" x="0" y="0" width="200" height="13" italic="true" hTextAlign="Left">
+			<text><![CDATA[Generado por: SACR - Loro Express]]></text>
+		</element>
+		<element kind="textField" uuid="fb8ca9a2-6525-416b-8967-09b2136dee02" x="94" y="13" width="106" height="16" italic="true">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+		<element kind="staticText" uuid="75f63d26-263c-451c-aa54-ec3285c3b4a7" x="0" y="13" width="94" height="16" italic="true">
+			<text><![CDATA[Fecha de impresión:]]></text>
+		</element>
+		<element kind="textField" uuid="d6f3bc55-1a3f-4a2f-a907-78818859c012" x="449" y="0" width="50" height="30" italic="true" hTextAlign="Right">
+			<expression><![CDATA["Página " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="44052753-2e5b-4116-b538-c1ee4ff05749" x="500" y="0" width="53" height="30" evaluationTime="Report" italic="true" hTextAlign="Left">
+			<expression><![CDATA[" de " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+	</pageFooter>
+</jasperReport>

@@ -1,0 +1,13 @@
+wwwroot\app.css
+wwwroot\images\destinos\cusco.png
+wwwroot\images\destinos\Ica.png
+wwwroot\images\destinos\lima.png
+wwwroot\images\destinos\paracas.png
+wwwroot\images\destinos\placeholder.png
+Components\Layout\ReconnectModal.razor.js
+C:\Users\HP\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.8\build\..\_framework\blazor.web.js
+C:\Users\HP\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.8\build\..\_framework\blazor.server.js
+C:\Users\HP\Desktop\ProyectitoP3\ProyectoProgramacion3\ProyectoProgramacion3\ProyectoProgramacion3Web\Components\Layout\ReconnectModal.razor.js
+C:\Users\HP\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.8\_framework\blazor.server.js
+C:\Users\HP\.nuget\packages\microsoft.aspnetcore.app.internal.assets\10.0.8\_framework\blazor.web.js
+C:\Users\HP\Desktop\ProyectitoP3\ProyectoProgramacion3\ProyectoProgramacion3\ProyectoProgramacion3Web\wwwroot\app.css

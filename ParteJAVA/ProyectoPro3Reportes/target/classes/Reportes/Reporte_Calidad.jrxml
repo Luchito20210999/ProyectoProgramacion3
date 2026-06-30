@@ -1,0 +1,272 @@
+<!-- Created with Jaspersoft Studio version 7.0.6.final using JasperReports Library version 7.0.6-5d2a603fdc6b3db8f842a83383e594f41891534d  -->
+<jasperReport name="Reporte_Calidad" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="aeb26fd9-2604-4225-9d5b-d8e1e5bb9905">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="TAProyectoProgra3"/>
+	<parameter name="P_FECHA_INICIO" class="java.util.Date"/>
+	<parameter name="P_FECHA_FIN" class="java.util.Date"/>
+	<parameter name="P_NOMBRE_SERVICIO" class="java.lang.String"/>
+	<query language="SQL"><![CDATA[SELECT 
+    r.id_reserva AS idReserva,
+    CONCAT(c.nombres, ' ', c.apellidos) AS cliente,
+    GROUP_CONCAT(DISTINCT s.nombre SEPARATOR ', ') AS servicio,
+    DATE_FORMAT(rec.fecha_reclamo, '%d/%m/%Y') AS fechaReclamo,
+    rec.estado_reclamo AS estadoReclamo,
+    rec.descripcion AS resolucion,
+    
+    kpi.total_reservas AS kpiTotalReservas,
+    kpi.total_reclamos AS kpiTotalReclamos,
+    IFNULL(ROUND((kpi.total_reclamos / NULLIF(kpi.total_reservas, 0)) * 100, 2), 0) AS kpiPorcentaje,
+    kpi.cant_procede AS kpiProcede,
+    kpi.cant_pendiente AS kpiPendiente,
+    kpi.cant_en_atencion AS kpiEnAtencion,
+    kpi.cant_no_procede AS kpiNoProcede
+    
+FROM Reclamo rec
+INNER JOIN Reserva r ON rec.id_reserva = r.id_reserva
+INNER JOIN Cliente c ON r.id_cliente = c.id_cliente
+INNER JOIN Detalle_Reserva dr ON r.id_reserva = dr.id_reserva
+INNER JOIN Servicio s ON dr.id_servicio = s.id_servicio
+CROSS JOIN (
+SELECT 
+        (SELECT COUNT(DISTINCT r2.id_reserva)
+         FROM Reserva r2
+         INNER JOIN Detalle_Reserva dr2 ON r2.id_reserva = dr2.id_reserva
+         INNER JOIN Servicio s2 ON dr2.id_servicio = s2.id_servicio
+         WHERE DATE(r2.fecha_registro) BETWEEN $P{P_FECHA_INICIO} AND $P{P_FECHA_FIN}
+           AND ($P{P_NOMBRE_SERVICIO} IS NULL OR $P{P_NOMBRE_SERVICIO} = '' OR s2.nombre LIKE CONCAT('%', $P{P_NOMBRE_SERVICIO}, '%'))) AS total_reservas,
+        COUNT(DISTINCT rec2.id_reclamo) AS total_reclamos,
+        SUM(CASE WHEN rec2.estado_reclamo = 'PROCEDE' THEN 1 ELSE 0 END) AS cant_procede,
+        SUM(CASE WHEN rec2.estado_reclamo = 'PENDIENTE' THEN 1 ELSE 0 END) AS cant_pendiente,
+        SUM(CASE WHEN rec2.estado_reclamo = 'EN_ATENCION' THEN 1 ELSE 0 END) AS cant_en_atencion,
+        SUM(CASE WHEN rec2.estado_reclamo = 'NO_PROCEDE' THEN 1 ELSE 0 END) AS cant_no_procede
+    FROM Reclamo rec2
+    INNER JOIN Reserva r3 ON rec2.id_reserva = r3.id_reserva
+    INNER JOIN Detalle_Reserva dr3 ON r3.id_reserva = dr3.id_reserva
+    INNER JOIN Servicio s3 ON dr3.id_servicio = s3.id_servicio
+    WHERE DATE(rec2.fecha_reclamo) BETWEEN $P{P_FECHA_INICIO} AND $P{P_FECHA_FIN}
+      AND ($P{P_NOMBRE_SERVICIO} IS NULL OR $P{P_NOMBRE_SERVICIO} = '' OR s3.nombre LIKE CONCAT('%', $P{P_NOMBRE_SERVICIO}, '%'))
+) AS kpi
+WHERE DATE(rec.fecha_reclamo) BETWEEN $P{P_FECHA_INICIO} AND $P{P_FECHA_FIN}
+AND ($P{P_NOMBRE_SERVICIO} IS NULL OR $P{P_NOMBRE_SERVICIO} = '' OR s.nombre LIKE CONCAT('%', $P{P_NOMBRE_SERVICIO}, '%'))
+GROUP BY 
+    rec.id_reclamo, r.id_reserva, c.nombres, c.apellidos, 
+    rec.fecha_reclamo, rec.estado_reclamo, rec.descripcion,
+    kpi.total_reservas, kpi.total_reclamos, kpi.cant_procede, 
+    kpi.cant_pendiente, kpi.cant_en_atencion, kpi.cant_no_procede
+ORDER BY rec.fecha_reclamo ASC;]]></query>
+	<field name="idReserva" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_reserva"/>
+		<property name="com.jaspersoft.studio.field.label" value="idReserva"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Reserva"/>
+	</field>
+	<field name="cliente" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="cliente"/>
+		<property name="com.jaspersoft.studio.field.label" value="cliente"/>
+	</field>
+	<field name="servicio" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="servicio"/>
+		<property name="com.jaspersoft.studio.field.label" value="servicio"/>
+	</field>
+	<field name="fechaReclamo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fechaReclamo"/>
+		<property name="com.jaspersoft.studio.field.label" value="fechaReclamo"/>
+	</field>
+	<field name="estadoReclamo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="estado_reclamo"/>
+		<property name="com.jaspersoft.studio.field.label" value="estadoReclamo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Reclamo"/>
+	</field>
+	<field name="resolucion" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="descripcion"/>
+		<property name="com.jaspersoft.studio.field.label" value="resolucion"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Reclamo"/>
+	</field>
+	<field name="kpiTotalReservas" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="total_reservas"/>
+		<property name="com.jaspersoft.studio.field.label" value="kpiTotalReservas"/>
+	</field>
+	<field name="kpiTotalReclamos" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="total_reclamos"/>
+		<property name="com.jaspersoft.studio.field.label" value="kpiTotalReclamos"/>
+	</field>
+	<field name="kpiPorcentaje" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="kpiPorcentaje"/>
+		<property name="com.jaspersoft.studio.field.label" value="kpiPorcentaje"/>
+	</field>
+	<field name="kpiProcede" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="cant_procede"/>
+		<property name="com.jaspersoft.studio.field.label" value="kpiProcede"/>
+	</field>
+	<field name="kpiPendiente" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="cant_pendiente"/>
+		<property name="com.jaspersoft.studio.field.label" value="kpiPendiente"/>
+	</field>
+	<field name="kpiEnAtencion" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="cant_en_atencion"/>
+		<property name="com.jaspersoft.studio.field.label" value="kpiEnAtencion"/>
+	</field>
+	<field name="kpiNoProcede" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="cant_no_procede"/>
+		<property name="com.jaspersoft.studio.field.label" value="kpiNoProcede"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="59" splitType="Stretch">
+		<element kind="staticText" uuid="f50a7e64-4ba8-4670-ad3c-2b78feaef96c" x="0" y="0" width="100" height="30" fontSize="20.0" bold="true" hTextAlign="Left" vTextAlign="Bottom">
+			<text><![CDATA[SACR]]></text>
+		</element>
+		<element kind="staticText" uuid="43b671bc-c97c-49f1-9497-47e22f1595d1" x="0" y="30" width="255" height="20" fontSize="12.0" bold="true" hTextAlign="Left" vTextAlign="Top">
+			<text><![CDATA[Sistema de Atención de Clientes y Reservas]]></text>
+		</element>
+		<element kind="staticText" uuid="fdb501b2-5f3c-4fa8-8305-fe87c750b788" x="340" y="0" width="213" height="50" fontSize="16.0" bold="true" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[REPORTE DE CALIDAD]]></text>
+		</element>
+	</title>
+	<pageHeader height="109" splitType="Stretch">
+		<element kind="staticText" uuid="9bdd895f-8589-44b3-956d-07024e62f83c" x="320" y="0" width="20" height="19" bold="false" italic="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[al]]></text>
+		</element>
+		<element kind="staticText" uuid="c4ad753e-3ea7-4c42-b0b7-77e8a139c6b3" x="140" y="0" width="100" height="19" bold="false" italic="true" hTextAlign="Right" vTextAlign="Middle">
+			<text><![CDATA[Periodo consultado:]]></text>
+		</element>
+		<element kind="textField" uuid="073be935-fe08-4d3b-a0ba-741873cb1e28" x="240" y="0" width="80" height="19" pattern="dd/MM/yyyy" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$P{P_FECHA_INICIO}]]></expression>
+		</element>
+		<element kind="textField" uuid="a3eb2637-ef33-4df1-b4e1-2035aa6f503a" x="340" y="0" width="80" height="19" pattern="dd/MM/yyyy" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$P{P_FECHA_FIN}]]></expression>
+		</element>
+		<element kind="rectangle" uuid="74f481ef-6bbb-473c-95d3-eb1f9b78e235" x="373" y="30" width="180" height="30"/>
+		<element kind="rectangle" uuid="dd919eed-f8de-4618-a214-0d6b0267f0ca" x="187" y="30" width="180" height="30"/>
+		<element kind="rectangle" uuid="1b26ccce-7884-43d3-aef8-833fd543729e" x="0" y="30" width="180" height="30"/>
+		<element kind="staticText" uuid="16eaa501-9f8b-46b5-84cc-01d6dc91055b" x="187" y="30" width="82" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[RECLAMOS]]></text>
+		</element>
+		<element kind="staticText" uuid="3050bdeb-77f5-4db4-be32-5a5f06c5db93" x="0" y="30" width="80" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[RESERVAS]]></text>
+		</element>
+		<element kind="staticText" uuid="171ef081-74cd-498c-9c7e-a1d8dddaf579" x="373" y="30" width="80" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[% INCIDENCIAS]]></text>
+		</element>
+		<element kind="line" uuid="427d3ed0-6c86-45bc-b347-f3cad785df5c" x="80" y="30" width="1" height="30"/>
+		<element kind="line" uuid="3bd6edc4-b847-4b46-96a7-09b63a1d61c7" x="269" y="30" width="1" height="30"/>
+		<element kind="line" uuid="34fb2691-269f-4841-923b-8ea0933840e1" x="453" y="30" width="1" height="30"/>
+		<element kind="rectangle" uuid="5968529f-eb55-4749-aff1-7a038fbd8ab1" x="0" y="70" width="120" height="30"/>
+		<element kind="staticText" uuid="60246638-9bc8-4096-b7b2-1b90b95230d2" x="0" y="70" width="60" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[PROCEDE]]></text>
+		</element>
+		<element kind="line" uuid="916000e1-1024-47fe-bfcb-c799e09400bc" x="60" y="70" width="1" height="30"/>
+		<element kind="rectangle" uuid="304f3deb-1961-42b1-a84d-3ef5514522a4" x="420" y="70" width="132" height="30"/>
+		<element kind="staticText" uuid="371d66b8-4cf1-4dc8-8ea3-1a42f710da00" x="420" y="70" width="80" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[NO PROCEDE]]></text>
+		</element>
+		<element kind="line" uuid="4fa21fe1-85f7-4417-a832-ffef8676ae1c" x="500" y="70" width="1" height="30"/>
+		<element kind="rectangle" uuid="2fb1784d-891a-48f0-b9e7-5b5d55ef1a9f" x="130" y="70" width="140" height="30"/>
+		<element kind="staticText" uuid="ac747012-e04a-4e97-83e5-bbd03ddcc3ba" x="130" y="70" width="80" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[PENDIENTE]]></text>
+		</element>
+		<element kind="line" uuid="7721d764-ab73-4c12-be7d-078934da16cf" x="210" y="70" width="1" height="30"/>
+		<element kind="rectangle" uuid="0e094827-8872-40e2-85c9-2d695b9789af" x="280" y="70" width="130" height="30"/>
+		<element kind="staticText" uuid="fd619880-7896-44f3-a308-1093dffa8fd8" x="280" y="70" width="80" height="30" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[EN ATENCIÓN]]></text>
+		</element>
+		<element kind="line" uuid="c28fe738-d6cb-4717-9064-269175887a4b" x="360" y="70" width="1" height="30"/>
+		<element kind="textField" uuid="e98511cf-dcc4-453d-9312-2f713a0d2f0b" x="80" y="31" width="100" height="29" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$F{kpiTotalReservas}]]></expression>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="33b49fed-c0dc-4fa9-bf3d-22444f2b71d8"/>
+		</element>
+		<element kind="textField" uuid="0b8f1a4d-ff70-4492-a179-d7325b880a2a" x="270" y="30" width="96" height="30" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$F{kpiTotalReclamos}]]></expression>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="497f0286-484b-4d2e-b22d-d990dd5101dc"/>
+		</element>
+		<element kind="textField" uuid="2aaa9066-03af-497a-98dd-85e14d5a632a" x="454" y="30" width="96" height="30" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$F{kpiPorcentaje}]]></expression>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="8ec6a763-7b95-4c3b-add2-cd67ce2128b5"/>
+		</element>
+		<element kind="textField" uuid="7a74ba22-9d05-4ac1-9f21-678c1909cbb9" x="60" y="71" width="60" height="28" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$F{kpiProcede}]]></expression>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d4ac6299-d735-460e-bb69-d85fc7b8cfb9"/>
+		</element>
+		<element kind="textField" uuid="bd5453d7-041a-4afb-bbfd-c8c8a0da0d4a" x="210" y="71" width="60" height="28" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$F{kpiPendiente}]]></expression>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="805236da-2891-4ad4-b952-bae2b470042a"/>
+		</element>
+		<element kind="textField" uuid="de88ee6d-f35d-46a0-8e1c-714efd9f252c" x="361" y="70" width="48" height="28" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$F{kpiEnAtencion}]]></expression>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1becd2a1-5b61-4e3f-8b89-01ca4def15d1"/>
+		</element>
+		<element kind="textField" uuid="9ca133cc-b682-496d-acf3-01e9687ce617" x="499" y="70" width="54" height="28" hTextAlign="Center" vTextAlign="Middle">
+			<expression><![CDATA[$F{kpiNoProcede}]]></expression>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cba85440-6fd9-4abd-b5fc-29b3049b9b23"/>
+		</element>
+	</pageHeader>
+	<columnHeader height="22" splitType="Stretch">
+		<element kind="staticText" uuid="c43c74bf-efb5-406f-bcdb-ca906ac266bf" x="0" y="0" width="40" height="20" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[ID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="67908739-f6ed-4b26-a70e-8df56ce5c291"/>
+		</element>
+		<element kind="staticText" uuid="0db4dc8b-33c6-4f4a-a8bb-1872e4a8fe23" x="43" y="0" width="87" height="20" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[CLIENTE]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="505baf8d-affb-4903-b445-c3218487d8fd"/>
+		</element>
+		<element kind="staticText" uuid="00814fee-420a-48ac-b48f-1aa62815ed05" x="132" y="0" width="100" height="20" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[SERVICIO]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dcb77caa-05ce-4862-9b9f-51406ca8f362"/>
+		</element>
+		<element kind="staticText" uuid="3236608e-681f-4d53-8199-9102fd9676ad" x="235" y="0" width="64" height="20" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[FECHA]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9175be25-5aaf-425a-af85-5ed5580b881c"/>
+		</element>
+		<element kind="staticText" uuid="0c4804cf-befb-4f37-8158-78638105f10c" x="302" y="0" width="80" height="20" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[ESTADO]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f1e8a915-8d45-4a51-996f-948f8acb30f1"/>
+		</element>
+		<element kind="staticText" uuid="eb0328fb-9e0b-4ae3-8c43-634ef3a07f1a" x="386" y="0" width="166" height="20" fontSize="10.0" bold="true" hTextAlign="Center" vTextAlign="Middle">
+			<text><![CDATA[RESOLUCIÓN]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c91398e0-d9e9-4532-82fc-c23d429f0aac"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="24" splitType="Stretch">
+			<element kind="textField" uuid="701a56d8-eb53-4672-9c67-6b4b5c1f73af" x="43" y="0" width="87" height="20" hTextAlign="Left" vTextAlign="Middle">
+				<expression><![CDATA[$F{cliente}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="505baf8d-affb-4903-b445-c3218487d8fd"/>
+			</element>
+			<element kind="textField" uuid="37e39cea-400b-4188-be32-f4aafec2f994" x="132" y="0" width="100" height="20" hTextAlign="Left" vTextAlign="Middle">
+				<expression><![CDATA[$F{servicio}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="dcb77caa-05ce-4862-9b9f-51406ca8f362"/>
+			</element>
+			<element kind="textField" uuid="af515706-4ee4-4c49-a461-a3e5db68fd79" x="235" y="0" width="64" height="19" pattern="dd/MM/yyyy" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{fechaReclamo}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9175be25-5aaf-425a-af85-5ed5580b881c"/>
+			</element>
+			<element kind="textField" uuid="dcb31916-7eb9-4894-8985-5c33deec2ef3" x="302" y="0" width="80" height="19" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[$F{estadoReclamo}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="f1e8a915-8d45-4a51-996f-948f8acb30f1"/>
+			</element>
+			<element kind="textField" uuid="07fcef2c-dd78-4f8f-9b6a-6cb1cb70c68e" x="386" y="0" width="166" height="20" hTextAlign="Left" vTextAlign="Middle">
+				<expression><![CDATA[$F{resolucion}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c91398e0-d9e9-4532-82fc-c23d429f0aac"/>
+			</element>
+			<element kind="textField" uuid="2fef4a5f-6d6c-466c-beca-de14bbd7c574" x="0" y="0" width="40" height="20" hTextAlign="Center" vTextAlign="Middle">
+				<expression><![CDATA[String.format("%04d",$F{idReserva})]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="67908739-f6ed-4b26-a70e-8df56ce5c291"/>
+			</element>
+		</band>
+	</detail>
+	<pageFooter height="30" splitType="Stretch">
+		<element kind="staticText" uuid="5e1f1a05-9241-471b-90a4-30e504855662" x="0" y="0" width="200" height="13" italic="true" hTextAlign="Left">
+			<text><![CDATA[Generado por: SACR - Loro Express]]></text>
+		</element>
+		<element kind="textField" uuid="457e8e82-c845-4655-8d7b-07b4b926a27f" x="94" y="13" width="106" height="16" italic="true">
+			<expression><![CDATA[new java.util.Date()]]></expression>
+		</element>
+		<element kind="staticText" uuid="cf87fdf7-d610-4e01-abad-25bca99d4553" x="0" y="13" width="94" height="16" italic="true">
+			<text><![CDATA[Fecha de impresión:]]></text>
+		</element>
+		<element kind="textField" uuid="40c51307-587b-4fdb-8108-b2028f84d832" x="449" y="0" width="50" height="30" italic="true" hTextAlign="Right">
+			<expression><![CDATA["Página " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+		<element kind="textField" uuid="006e3673-21a1-4b88-a530-5791a5b92439" x="500" y="0" width="53" height="30" evaluationTime="Report" italic="true" hTextAlign="Left">
+			<expression><![CDATA[" de " + $V{PAGE_NUMBER}]]></expression>
+		</element>
+	</pageFooter>
+</jasperReport>
